@@ -4,4 +4,4 @@ binary_search:
 
 
 
-STR r0, []
+  STR r0, []
