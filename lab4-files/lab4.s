@@ -6,7 +6,7 @@ binary_search:
         lsr r5,r4,#1        // int middleIndex = endIndex/2
         mov r6,#-1          // int keyIndex = -1
         mov r7,#1           // int NumIters = 1;
-        mov r8,#0           // int x = numbers [ middleIndex ]
+        mov r8,#0           // int x 
         
 
 L1:     cmn r6,#1 // while (keyIndex == -1)
@@ -15,8 +15,8 @@ L1:     cmn r6,#1 // while (keyIndex == -1)
         cmp r3,r4 // if (startIndex > endIndex)
         bhi Break
         
-
-        cmp 
+        ldr r8,[r0,r5] // x = = numbers [ middleIndex ]
+        cmp r8,r1 // if (numbers [ middleIndex ] == key)
         
         b L1 // while keyIndex == -1
 Break:
