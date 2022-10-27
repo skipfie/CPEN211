@@ -1,5 +1,5 @@
 r14 - link register, use to return to main thru command "MOV PC,LR"
-r9 - KEY0 - JEY3
+r9 - KEY0 - KEY3 (KEY0 to restart the loop)
 r7 - SW0 - SW9
 
 main() expects the keyIndex to be stored in r0 at the time of "return"
