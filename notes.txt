@@ -1,0 +1,3 @@
+r14 - link register, use to return to main thru command "MOV PC,LR"
+
+main() expects the keyIndex to be stored in r0 at the time of "return"
