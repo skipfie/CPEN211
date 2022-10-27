@@ -3,3 +3,5 @@ r9 - KEY0 - JEY3
 r7 - SW0 - SW9
 
 main() expects the keyIndex to be stored in r0 at the time of "return"
+
+divide by 2: right-shift one bit to divide by two
