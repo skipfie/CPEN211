@@ -1,0 +1,27 @@
+
+C:/CPEN211/Labs/Lab4/CPEN211/lab4fig1.axf:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <__cs3_interrupt_vector>:
+.include "address_map_arm.s"
+.text
+.globl _start
+_start:
+    LDR R0, =SW_BASE    // R0 = 0xFF200040
+   0:	e59f0010 	ldr	r0, [pc, #16]	; 18 <ICCEOIR+0x8>
+    LDR R1, =LEDR_BASE  // R1 = 0xFF200000
+   4:	e59f1010 	ldr	r1, [pc, #16]	; 1c <ICCEOIR+0xc>
+
+00000008 <L1>:
+L1: LDR R2, [R0]        // R2 = value on SW0 through SW9 on DE1-SoC
+   8:	e5902000 	ldr	r2, [r0]
+    MOV R3, R2, LSL #1  // R3 = R2 << 1 (which is 2*R2)
+   c:	e1a03082 	lsl	r3, r2, #1
+    STR R3, [R1]        // display contents of R3 on red LEDs
+  10:	e5813000 	str	r3, [r1]
+    B   L1              // unconditional branch to L1
+  14:	eafffffb 	b	8 <L1>
+  18:	ff200040 	.word	0xff200040
+  1c:	ff200000 	.word	0xff200000
