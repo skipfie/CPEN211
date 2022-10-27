@@ -1,4 +1,8 @@
+r0 - array
 r1 - key
+r2 - length
+
+r3 - 
 r7 - SW0 - SW9
 r9 - KEY0 - KEY3 (KEY0 to restart the loop)
 r14 - link register, use to return to main thru command "MOV PC,LR"
