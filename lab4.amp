@@ -11,7 +11,8 @@
     <program>
         <type>Assembly Program</type>
         <source_files>
-            <source_file filepath="true">lab4-files/lab4fig1.s</source_file>
+            <source_file filepath="true">lab4-files/lab4.s</source_file>
+            <source_file filepath="true">lab4-files/main.s</source_file>
         </source_files>
         <options>
             <start_symbol>_start</start_symbol>
