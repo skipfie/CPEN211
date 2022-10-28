@@ -28,17 +28,17 @@ OCFLAGS		:= -O srec
 
 # Files
 HDRS		:=
-SRCS		:= lab4-files/lab4fig1.s
+SRCS		:= lab4-files/lab4.s lab4-files/main.s
 OBJS		:= $(patsubst %, %.o, $(SRCS))
 
 # Targets
-COMPILE: lab4fig1.srec
+COMPILE: lab4.srec
 
-lab4fig1.srec: lab4fig1.axf
+lab4.srec: lab4.axf
 	$(RM) $@
 	$(OC) $(OCFLAGS) $< $@
 
-lab4fig1.axf: $(OBJS)
+lab4.axf: $(OBJS)
 	$(RM) $@
 	$(LD) $(LDFLAGS) $(OBJS) -o $@
 
@@ -51,5 +51,5 @@ lab4fig1.axf: $(OBJS)
 	$(AS) $(ASFLAGS) $< -o $@
 
 CLEAN: 
-	$(RM) lab4fig1.srec lab4fig1.axf $(OBJS)
+	$(RM) lab4.srec lab4.axf $(OBJS)
 
