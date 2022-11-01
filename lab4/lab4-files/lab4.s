@@ -9,14 +9,13 @@ binary_search:
         mov r8,#0           // int x
         mov r9,#0           // int y
         
-
 L1:     cmn r6,#1 // while (keyIndex == -1)
         bne Break
         
         cmp r3,r4 // if (startIndex > endIndex)
         bgt Break
         
-        ldr r8,[r0,r5,LSL#2] // x = = numbers [ middleIndex ]
+        ldr r8,[r0,r5,LSL#2] // x == numbers [ middleIndex ]
         cmp r8,r1 // else if (numbers [ middleIndex ] == key)
         moveq r6,r5 // keyIndex = middleIndex
 
