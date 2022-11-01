@@ -1,0 +1,3 @@
+Parnter 1: debug, setup lab4.s
+
+Partner 2: debug, optimize lab4.s
