@@ -1,0 +1,58 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.1
+vregfile
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1667863495
+!i10b 1
+!s100 6WLP=;WQCR57co>fH1Ml>1
+IFogEFb9^LX3eZa_9RdnU]0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 regfile_sv_unit
+S1
+Z3 dC:/Users/qazed/source/git/CPEN211/lab5/lab5-files/regfile
+w1667862386
+8C:/Users/qazed/source/git/CPEN211/lab5/lab5-files/regfile.sv
+FC:/Users/qazed/source/git/CPEN211/lab5/lab5-files/regfile.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1667863495.000000
+!s107 C:/Users/qazed/source/git/CPEN211/lab5/lab5-files/regfile.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/qazed/source/git/CPEN211/lab5/lab5-files/regfile.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+vtb_regfile
+R0
+R1
+!i10b 1
+!s100 Q:BOT3[JE<Lg]]CTYSlb:0
+I5SlmN4dVk<]R^hLjNJ81_1
+R2
+!s105 tb_regfile_sv_unit
+S1
+R3
+w1667863289
+8C:/Users/qazed/source/git/CPEN211/lab5/lab5-files/tb_regfile.sv
+FC:/Users/qazed/source/git/CPEN211/lab5/lab5-files/tb_regfile.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/qazed/source/git/CPEN211/lab5/lab5-files/tb_regfile.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/qazed/source/git/CPEN211/lab5/lab5-files/tb_regfile.sv|
+!i113 1
+R6
+R7

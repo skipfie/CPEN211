@@ -1,0 +1,8 @@
+C:/Users/qazed/source/git/CPEN211/lab5/lab5-files/regfile.sv {1 {vlog -work work -sv -stats=none C:/Users/qazed/source/git/CPEN211/lab5/lab5-files/regfile.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module regfile
+
+Top level modules:
+	regfile
+
+} {} {}}

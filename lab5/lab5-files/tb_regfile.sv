@@ -100,7 +100,7 @@ module tb_regfile(output err);
             nerr = 1'b1;
         end
 
-        w_en = 1'b0; // WRITE ENABLED
+        w_en = 1'b1; // WRITE ENABLED
 
 
 
