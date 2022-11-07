@@ -10,7 +10,7 @@ cModel Technology
 dC:/intelFPGA_lite/18.1
 vregfile
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z1 !s110 1667863495
+Z1 !s110 1667863771
 !i10b 1
 !s100 6WLP=;WQCR57co>fH1Ml>1
 IFogEFb9^LX3eZa_9RdnU]0
@@ -26,7 +26,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1667863495.000000
+Z5 !s108 1667863771.000000
 !s107 C:/Users/qazed/source/git/CPEN211/lab5/lab5-files/regfile.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/qazed/source/git/CPEN211/lab5/lab5-files/regfile.sv|
 !i113 1
@@ -36,13 +36,13 @@ vtb_regfile
 R0
 R1
 !i10b 1
-!s100 Q:BOT3[JE<Lg]]CTYSlb:0
-I5SlmN4dVk<]R^hLjNJ81_1
+!s100 NIX75<zL7jPJ5B<QZLQae1
+IeTV74hnNIZlz79mlV2J641
 R2
 !s105 tb_regfile_sv_unit
 S1
 R3
-w1667863289
+w1667863729
 8C:/Users/qazed/source/git/CPEN211/lab5/lab5-files/tb_regfile.sv
 FC:/Users/qazed/source/git/CPEN211/lab5/lab5-files/tb_regfile.sv
 L0 1

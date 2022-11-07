@@ -183,6 +183,7 @@ module tb_regfile(output err);
             $error("[FAIL] 7979 is written to r7 when w_en is true");
             nerr = 1'b1;
         end
-    end
 
+        $stop;
+    end
 endmodule: tb_regfile
