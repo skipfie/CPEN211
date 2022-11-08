@@ -1,11 +1,9 @@
 module tb_ALU(output err);
-  reg [1:0] ALU_op;
-  reg signed [15:0] val_A;
-  reg signed [15:0] val_B;
   reg nerr = 1'b0;
   assign err = nerr;
 
-  wire signed [15:0] ALU_out;
+  reg [1:0] ALU_op;
+  reg signed [15:0] val_A, val_B, ALU_out;
   wire Z;
 
   ALU dut(.val_A(val_A), .val_B(val_B), .ALU_op(ALU_op), .ALU_out(ALU_out), .Z(Z));
