@@ -1,0 +1,145 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "shift_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_out[13]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_out[14]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_out[15]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_op[1]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_op[0]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_in[3]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_in[4]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_in[5]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_in[6]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_in[7]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_in[8]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_in[9]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_in[10]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_in[11]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_in[12]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_in[13]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_in[14]",
+					"strict" : false
+				},
+				{
+					"name" : "shift_in[15]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
