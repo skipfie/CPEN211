@@ -69,10 +69,10 @@ module tb_ALU(output err);
       nerr = 1'b1;
     end
 
-    val_A = 16'd1; //A = -1
-    val_B = 16'd1; //B = -1
+    val_A = -16'd1; //A = -1
+    val_B = -16'd1; //B = -1
     #5;
-    assert(ALU_out === 16'b1111111111111110) $display("[PASS] %d + %d = %d correct output", val_A, val_B, ALU_out); 
+    assert(ALU_out === -16'd2) $display("[PASS] %d + %d = %d correct output", val_A, val_B, ALU_out); 
     else begin
       $error("[FAIL] %d + %d = %d", val_A, val_B, ALU_out);
       nerr = 1'b1;
