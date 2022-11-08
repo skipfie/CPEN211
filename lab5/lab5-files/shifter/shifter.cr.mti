@@ -1,0 +1,8 @@
+C:/CPEN211/Labs/CPEN211/lab5/lab5-files/shifter.sv {1 {vlog -work work -sv -stats=none C:/CPEN211/Labs/CPEN211/lab5/lab5-files/shifter.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module shifter
+
+Top level modules:
+	shifter
+
+} {} {}}

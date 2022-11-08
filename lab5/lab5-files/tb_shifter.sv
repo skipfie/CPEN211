@@ -38,7 +38,7 @@ module tb_shifter(output err);
         #10;
 
         shift_in = 16'b0010010001010101;
-        shift_op = 2'b00;
+        shift_op = 2'b10;
         assert (shift_out === 16'b0001001000101010) $display("[PASS] B logical right shift one bit where MSB was 0, operation 10");
         else begin
             $error("[FAIL] B logical right shift one bit where MSB was 0, operation 10");
@@ -47,7 +47,7 @@ module tb_shifter(output err);
         #10;
 
         shift_in = 16'b1010010001010101;
-        shift_op = 2'b00;
+        shift_op = 2'b11;
         assert (shift_out === 16'b1101001000101010) $display("[PASS] B arithmetic right shift one bit where MSB was 1, operation 11");
         else begin
             $error("[FAIL] B arithmetic right shift one bit where MSB was 1, operation 11");
@@ -56,7 +56,7 @@ module tb_shifter(output err);
         #10;
 
         shift_in = 16'b0010010001010101;
-        shift_op = 2'b00;
+        shift_op = 2'b11;
         assert (shift_out === 16'b0001001000101010) $display("[PASS] B arithmetic right shift one bit where MSB was 0, operation 11");
         else begin
             $error("[FAIL] B arithmetic right shift one bit where MSB was 0, operation 11");
