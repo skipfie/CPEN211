@@ -1,3 +1,3 @@
 module tb_shifter(output err);
-  // your implementation here
+    reg shift_in 
 endmodule: tb_shifter
