@@ -19,36 +19,41 @@ module datapath(input clk, input [15:0] datapath_in, input wb_sel,
   reg signed [15:0] val_A, val_B, ALU_out;
   wire Z;
 
-  //wb_sel mux
+  //for the rest of the connections
+  reg [15:0] A, B, C;
+
+  //instaniation of ALU, shifter, and regfile
+  ALU alu(.val_A(val_A), .val_B(val_B), .ALU_op(ALU_op), .ALU_out(ALU_out), .Z(Z));
+  shifter shifter(.shift_in(shift_in), .shift_op(shift_op), .shift_out(shift_out));
+  regfile regfile(.w_data(w_data), .w_addr(w_addr), .w_en(w_en), .r_addr(r_addr), .clk(clk), .r_data(r_data));
+
+  //mux #6,7,9
   always_comb begin 
+    if (sel_A == 1)
+      val_A = 16'b0;
+    else 
+      val_A = A;
+    
+    if (sel_B == 1)
+      val_B = {11'b0, datapath_in[4:0]};
+    else 
+      val_B = shift_out;
+
     if (wb_sel == 1)
       w_data = datapath_in;
     else 
-      w_data = 
-
+      w_data = C;
   end
-  //regfile instant
 
+  //three 16bit registers with enable
+  always_ff @(posedge clK) begin
+    if (w_en) r_data <= w_data;
+    if (en_A) A <= r_data;
+    if (en_B) B <= r_data;
+  end
 
-
-  //en_A & en_B & sel_A & sel_B
+  //1bit registers with enable
   always_ff @(posedge clk) begin
-    
+    if (en_C) C <= ALU_out;
   end
-
-
-  //ALU instant
-  always_comb begin
-    
-  end
-
-  ALU alu(.val_A(val_A), .val_B(val_B), .ALU_op(ALU_op), .ALU_out(ALU_out), .Z(Z));
-
-
-  //en_C & en_status
-  always_ff @(posedge clk) begin
-    if (en_C == 1) C <= ALU_out;
-    if (en_status == 1) Zout <= Z; 
-  end
-
 endmodule: datapath
