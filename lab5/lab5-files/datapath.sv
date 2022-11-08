@@ -18,6 +18,8 @@ module datapath(input clk, input [15:0] datapath_in, input wb_sel,
   //for the rest of the connections
   reg [15:0] A, C;
   assign datapath_out = C;
+  reg nZ_out;
+  assign Z_out = nZ_out;
 
   //instaniation of ALU, shifter, and regfile
   ALU alu(.val_A(val_A), .val_B(val_B), .ALU_op(ALU_op), .ALU_out(ALU_out), .Z(Z));
@@ -51,6 +53,6 @@ module datapath(input clk, input [15:0] datapath_in, input wb_sel,
 
   //1bit registers with enable
   always_ff @(posedge clk) begin
-    if (en_status) Z_out <= Z;
+    if (en_status) nZ_out <= Z;
   end
 endmodule: datapath
