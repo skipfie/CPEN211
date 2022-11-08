@@ -1,3 +1,11 @@
 module tb_datapath(output err);
-  // your implementation here
+  reg 
+
+
+  initial begin
+    
+
+    $stop;
+  end
+
 endmodule: tb_datapath

@@ -68,7 +68,6 @@ module tb_shifter(output err);
             $error("[FAIL] B arithmetic right shift one bit where MSB was 0, operation 11");
             nerr = 1'b1;
         end
-        
 
         $stop;
     end

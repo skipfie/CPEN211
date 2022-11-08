@@ -502,5 +502,4 @@ module tb_ALU(output err);
 
     $stop;
   end
-
 endmodule: tb_ALU
