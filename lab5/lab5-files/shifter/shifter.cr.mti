@@ -5,4 +5,11 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	shifter
 
+} {} {}} C:/CPEN211/Labs/CPEN211/lab5/lab5-files/tb_shifter.sv {1 {vlog -work work -sv -stats=none C:/CPEN211/Labs/CPEN211/lab5/lab5-files/tb_shifter.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module tb_shifter
+
+Top level modules:
+	tb_shifter
+
 } {} {}}
