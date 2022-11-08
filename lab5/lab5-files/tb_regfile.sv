@@ -1,5 +1,5 @@
 module tb_regfile(output err);
-    reg nerr;
+    reg nerr = 1'b0;
     assign err = nerr;
 
     reg [15:0] w_data, r_data;
@@ -14,8 +14,6 @@ module tb_regfile(output err);
     end
 
     initial begin
-        nerr = 1'b0;
-
         w_en = 1'b0;
 
         w_data = 16'd6009;

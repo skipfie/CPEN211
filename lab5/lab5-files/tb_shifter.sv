@@ -1,5 +1,5 @@
 module tb_shifter(output err);
-    reg nerr;
+    reg nerr = 1'b0;
     assign err = nerr;
 
     reg [15:0] shift_in;
