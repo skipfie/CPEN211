@@ -8,7 +8,7 @@ module tb_ALU(output err);
   wire signed [15:0] ALU_out;
   wire Z;
 
-  ALU dut(.val_A, .val_B, .ALU_op, .ALU_out, .Z);
+  ALU dut(.val_A(val_A), .val_B(val_B), .ALU_op(ALU_op), .ALU_out(ALU_out), .Z(Z));
 
   initial begin
 
