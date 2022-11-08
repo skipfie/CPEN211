@@ -116,7 +116,7 @@ module tb_datapath(output err);
         en_C = 1'b1;
         #10;
 
-        assert (datapath_out === 16'd0) $display("[PASS] r0 - r0 = 0; r0 = 6969; en_C is true")
+        assert (datapath_out === 16'd0) $display("[PASS] r0 - r0 = 0; r0 = 6969; en_C is true");
         else begin
             $error("[FAIL] r0 - r0 = 0; r0 = 6969; en_C is true");
             nerr = 1'b1;
