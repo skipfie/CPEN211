@@ -173,10 +173,10 @@ module tb_ALU(output err);
       nerr = 1'b1;
     end
 
-    val_A = 16'd1; //A = 2
-    val_B = 16'd2; //B = 1
+    val_A = 16'd6808; //A = 6808
+    val_B = 16'd5739; //B = 5739
     #5;
-    assert(ALU_out === 16'd1) $display("[PASS] %d + %d = %d", val_A, val_B, ALU_out); 
+    assert(ALU_out === 16'd1069) $display("[PASS] %d + %d = %d", val_A, val_B, ALU_out); 
     else begin
       $error("[FAIL] %d + %d = %d", val_A, val_B, ALU_out);
       nerr = 1'b1;
@@ -191,6 +191,34 @@ module tb_ALU(output err);
     val_B = 16'd2; //B = 2
     #5;
     assert(ALU_out === 16'd1111111111111111) $display("[PASS] %d + %d = %d", val_A, val_B, ALU_out); 
+    else begin
+      $error("[FAIL] %d + %d = %d", val_A, val_B, ALU_out);
+      nerr = 1'b1;
+    end
+    assert(Z === 1'b0) $display("[PASS] Z = 0"); 
+    else begin
+      $error("[FAIL] incorrect Z");
+      nerr = 1'b1;
+    end
+
+    val_A = 16'd1; //A = 1
+    val_B = 16'd70; //B = 70
+    #5;
+    assert(ALU_out === 16'd1111111110111011) $display("[PASS] %d + %d = %d", val_A, val_B, ALU_out); 
+    else begin
+      $error("[FAIL] %d + %d = %d", val_A, val_B, ALU_out);
+      nerr = 1'b1;
+    end
+    assert(Z === 1'b0) $display("[PASS] Z = 0"); 
+    else begin
+      $error("[FAIL] incorrect Z");
+      nerr = 1'b1;
+    end
+
+    val_A = 16'd1; //A = 1
+    val_B = 16'd7000; //B = 7000
+    #5;
+    assert(ALU_out === 16'd1110010010101001) $display("[PASS] %d + %d = %d", val_A, val_B, ALU_out); 
     else begin
       $error("[FAIL] %d + %d = %d", val_A, val_B, ALU_out);
       nerr = 1'b1;
