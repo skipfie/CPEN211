@@ -1,10 +1,10 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
 add wave -noupdate /tb_ALU/err
-add wave -noupdate /tb_ALU/val_A
-add wave -noupdate /tb_ALU/val_B
-add wave -noupdate /tb_ALU/ALU_op
-add wave -noupdate /tb_ALU/ALU_out
+add wave -noupdate -radix decimal /tb_ALU/val_A
+add wave -noupdate -radix decimal /tb_ALU/val_B
+add wave -noupdate -radix binary /tb_ALU/ALU_op
+add wave -noupdate -radix decimal /tb_ALU/ALU_out
 add wave -noupdate /tb_ALU/Z
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {0 ps} 0}
@@ -21,6 +21,6 @@ configure wave -gridoffset 0
 configure wave -gridperiod 1
 configure wave -griddelta 40
 configure wave -timeline 0
-configure wave -timelineunits ps
+configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ps} {1 ns}
+WaveRestoreZoom {0 ps} {9450 ps}
