@@ -2,11 +2,9 @@ module tb_regfile(output err);
     reg nerr;
     assign err = nerr;
 
-    reg [15:0] w_data;
+    reg [15:0] w_data, r_data;
     reg [2:0] w_addr, r_addr;
     reg clk, w_en;
-
-    wire [15:0] r_data;
 
     regfile dut(.w_data(w_data), .w_addr(w_addr), .w_en(w_en), .r_addr(r_addr), .clk(clk), .r_data(r_data));
 
