@@ -1,1 +1,8 @@
+C:/CPEN211/Labs/CPEN211/lab5/lab5-files/alu.sv {1 {vlog -work work -sv -stats=none C:/CPEN211/Labs/CPEN211/lab5/lab5-files/alu.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ALU
 
+Top level modules:
+	ALU
+
+} {} {}}
