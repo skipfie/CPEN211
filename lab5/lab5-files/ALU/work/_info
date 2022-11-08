@@ -10,15 +10,15 @@ cModel Technology
 Z0 dC:/CPEN211/Labs/CPEN211/lab5/lab5-files/ALU
 vALU
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1667870065
+Z2 !s110 1667871451
 !i10b 1
-!s100 hE@_VS^MmVbgL9RC75cn43
-InlVOkIE0aiIl0H1=l5PId3
+!s100 j[L?XhAkbP>MSO]IPAOIg2
+I?5=SI^UFme7^eB7ACb3>51
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 alu_sv_unit
 S1
 R0
-w1667865766
+w1667871015
 8C:/CPEN211/Labs/CPEN211/lab5/lab5-files/alu.sv
 FC:/CPEN211/Labs/CPEN211/lab5/lab5-files/alu.sv
 L0 1
@@ -26,7 +26,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1667870065.000000
+Z5 !s108 1667871451.000000
 !s107 C:/CPEN211/Labs/CPEN211/lab5/lab5-files/alu.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/CPEN211/Labs/CPEN211/lab5/lab5-files/alu.sv|
 !i113 1
@@ -37,13 +37,13 @@ vtb_ALU
 R1
 R2
 !i10b 1
-!s100 ?U9`l?OacEl:RF0W=<_NM0
-I8hF?m]YD>8WU19RKekRQ32
+!s100 8CV@[zlG]8GZF[I<Rh;?F0
+I5hJgg0k46Ef]<Y4MeaOl90
 R3
 !s105 tb_alu_sv_unit
 S1
 R0
-w1667869684
+w1667871031
 8C:/CPEN211/Labs/CPEN211/lab5/lab5-files/tb_alu.sv
 FC:/CPEN211/Labs/CPEN211/lab5/lab5-files/tb_alu.sv
 L0 1
