@@ -62,6 +62,8 @@ module tb_datapath(output err);
         en_A = 1'b0;
         en_B = 1'b0;
 
+        r_addr = 3'd2; // this should not update A or B
+
         shift_op = 2'b00; // don't shift
 
         sel_A = 1'b0;
@@ -85,7 +87,7 @@ module tb_datapath(output err);
             nerr = 1'b1;
         end
 
-        wb_sel = 1'b0; //write 13938 to r7
+        wb_sel = 1'b0; //write output to r7
         w_addr = 3'd7;
         w_en = 1'b1;
         #10;
@@ -144,10 +146,45 @@ module tb_datapath(output err);
 
         r_addr = 3'd7; // write r7 into register B
 
-        en_B = 1'b1;
+        en_B = 1'b1; 
         sel_B = 1'b0;
+        #10;
 
-        
+        assert (datapath_out === 16'd13938) $display("[PASS] datapath_out equals r7 value of 13938")
+        else begin
+            $error("[FAIL] datapath_out equals r7 value of 13938");
+            nerr = 1'b1;
+        end
+
+        shift_op = 2'b01;
+        r_addr = 3'd6;
+        #10;
+
+        assert (datapath_out === -16'd30) $display("[PASS] datapath_out equals r6 * 2 = -30 (left shift one bit)")
+        else begin
+            $error("[FAIL] datapath_out equals r6 * 2 = -30 (left shift one bit)");
+            nerr = 1'b1;
+        end
+
+        sel_B = 1'b1;
+        datapath_in[4:0] = 5'd10;
+        #10;
+
+        assert (datapath_out === 16'd10) $display("[PASS] datapath_out equals immediate value 10, should be unaffected by shifter")
+        else begin
+            $error("[FAIL] datapath_out equals immediate value 10, should be unaffected by shifter");
+            nerr = 1'b1;
+        end
+
+        sel_B = 1'b0;
+        shift_op = 2'b11;
+        #10;
+
+        assert (datapath_out === -16'd8) $display("[PASS] datapath_out equals r7 >>> 1 = (-8)")
+        else begin
+            $error("[FAIL]  datapath_out equals r7 >>> 1 = (-8)");
+            nerr = 1'b1;
+        end
 
         $stop;
     end
