@@ -32,7 +32,7 @@ module tb_ALU(output err);
     #5;
     assert(ALU_out === 16'd138) $display("[PASS] %d + %d = %d correct output", val_A, val_B, ALU_out); 
     else begin
-      $error("[FAIL] incorrect output");
+      $error("[FAIL] %d + %d = %d", val_A, val_B, ALU_out);
       nerr = 1'b1;
     end
     assert(Z === 1'b0) $display("[PASS] Z = 0"); 
@@ -46,7 +46,7 @@ module tb_ALU(output err);
     #5;
     assert(ALU_out === 16'd13938) $display("[PASS] %d + %d = %d correct output", val_A, val_B, ALU_out); 
     else begin
-      $error("[FAIL] incorrect output");
+      $error("[FAIL] %d + %d = %d", val_A, val_B, ALU_out);
       nerr = 1'b1;
     end
     assert(Z === 1'b0) $display("[PASS] Z = 0"); 
@@ -60,7 +60,7 @@ module tb_ALU(output err);
     #5;
     assert(ALU_out === 16'd313) $display("[PASS] %d + %d = %d correct output", val_A, val_B, ALU_out); 
     else begin
-      $error("[FAIL] incorrect output");
+      $error("[FAIL] %d + %d = %d", val_A, val_B, ALU_out);
       nerr = 1'b1;
     end
     assert(Z === 1'b0) $display("[PASS] Z = 0"); 
@@ -74,7 +74,7 @@ module tb_ALU(output err);
     #5;
     assert(ALU_out === 16'b1111111111111110) $display("[PASS] %d + %d = %d correct output", val_A, val_B, ALU_out); 
     else begin
-      $error("[FAIL] incorrect output");
+      $error("[FAIL] %d + %d = %d", val_A, val_B, ALU_out);
       nerr = 1'b1;
     end
     assert(Z === 1'b0) $display("[PASS] Z = 0"); 
@@ -88,7 +88,7 @@ module tb_ALU(output err);
     #5;
     assert(ALU_out === 16'b1111111101110110) $display("[PASS] %d + %d = %d correct output", val_A, val_B, ALU_out); 
     else begin
-      $error("[FAIL] incorrect output");
+      $error("[FAIL] %d + %d = %d", val_A, val_B, ALU_out);
       nerr = 1'b1;
     end
     assert(Z === 1'b0) $display("[PASS] Z = 0"); 
@@ -102,7 +102,7 @@ module tb_ALU(output err);
     #5;
     assert(ALU_out === 16'b1101100111000001) $display("[PASS] %d + %d = %d correct output", val_A, val_B, ALU_out); 
     else begin
-      $error("[FAIL] incorrect output");
+      $error("[FAIL] %d + %d = %d", val_A, val_B, ALU_out);
       nerr = 1'b1;
     end
     assert(Z === 1'b0) $display("[PASS] Z = 0"); 
