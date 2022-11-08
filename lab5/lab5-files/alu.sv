@@ -2,6 +2,9 @@ module ALU(input [15:0] val_A, input [15:0] val_B, input [1:0] ALU_op, output [1
     reg nZ;
     reg [15:0] nout;
 
+    assign Z = nZ;
+    assign ALU_out = nout;
+
     always_comb begin
         if (nout == 16'd0) begin
             nZ = 1'b1;
