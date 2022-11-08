@@ -9,7 +9,7 @@ module ALU(input [15:0] val_A, input [15:0] val_B, input [1:0] ALU_op, output [1
         if (nout == 16'd0) begin
             nZ = 1'b1;
         end else begin
-            nZ = 0'b1;
+            nZ = 1'b0;
         end
     end
 
