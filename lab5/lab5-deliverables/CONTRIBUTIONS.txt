@@ -1,3 +1,3 @@
-Partner 1: alu tb, datapath.sv, alu.sv, debugging
+Partner 1: alu tb, datapath.sv, alu.sv, alu.vo, shifter.vo, debugging
 
-Partner 2: regfile tb, shifter.sv, shifter tb, datapath tb, debugging
+Partner 2: regfile tb, shifter.sv, shifter tb, datapath tb, datapath.vo, debugging
