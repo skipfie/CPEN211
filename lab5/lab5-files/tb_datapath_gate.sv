@@ -1,4 +1,4 @@
-`timescale 1 ps / 1 ps
+`timescale 1 ps/ 1 ps
 module tb_datapath_gate(output err);
     reg nerr = 1'b0;
     assign err = nerr;
