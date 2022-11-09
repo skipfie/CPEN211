@@ -44,7 +44,7 @@ module datapath(input clk, input [15:0] datapath_in, input wb_sel,
       w_data = C;
   end
 
-  //three 16bit registers with enable
+  //registers with enable
   always_ff @(posedge clk) begin
     if (en_A) A <= r_data; //A
     if (en_B) shift_in <= r_data; //B
