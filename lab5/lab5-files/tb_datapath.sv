@@ -150,7 +150,7 @@ module tb_datapath(output err);
 
         en_B = 1'b1; 
         sel_B = 1'b0;
-        #10;
+        #20;
 
         assert (datapath_out === 16'd13938) $display("[PASS] datapath_out equals r7 value of 13938");
         else begin
@@ -160,7 +160,7 @@ module tb_datapath(output err);
 
         shift_op = 2'b01;
         r_addr = 3'd6;
-        #10;
+        #20;
 
         assert (datapath_out === -16'd30) $display("[PASS] datapath_out equals r6 * 2 = -30 (left shift one bit)");
         else begin
