@@ -1,3 +1,4 @@
+`timescale 1 ps/ 1 ps
 module tb_shifter(output err);
     reg nerr = 1'b0;
     assign err = nerr;
