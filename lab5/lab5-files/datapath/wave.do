@@ -15,14 +15,14 @@ add wave -noupdate /tb_datapath/dut/val_B
 add wave -noupdate /tb_datapath/ALU_op
 add wave -noupdate -divider regfile
 add wave -noupdate /tb_datapath/w_en
-add wave -noupdate -radix decimal -childformat {{{/tb_datapath/w_addr[2]} -radix decimal} {{/tb_datapath/w_addr[1]} -radix decimal} {{/tb_datapath/w_addr[0]} -radix decimal}} -subitemconfig {{/tb_datapath/w_addr[2]} {-height 15 -radix decimal} {/tb_datapath/w_addr[1]} {-height 15 -radix decimal} {/tb_datapath/w_addr[0]} {-height 15 -radix decimal}} /tb_datapath/w_addr
-add wave -noupdate -radix decimal /tb_datapath/r_addr
-add wave -noupdate /tb_datapath/dut/regfile/m
+add wave -noupdate -radix unsigned -childformat {{{/tb_datapath/w_addr[2]} -radix decimal} {{/tb_datapath/w_addr[1]} -radix decimal} {{/tb_datapath/w_addr[0]} -radix decimal}} -subitemconfig {{/tb_datapath/w_addr[2]} {-height 15 -radix decimal} {/tb_datapath/w_addr[1]} {-height 15 -radix decimal} {/tb_datapath/w_addr[0]} {-height 15 -radix decimal}} /tb_datapath/w_addr
+add wave -noupdate -radix unsigned /tb_datapath/r_addr
+add wave -noupdate -childformat {{{/tb_datapath/dut/regfile/m[0]} -radix decimal} {{/tb_datapath/dut/regfile/m[1]} -radix decimal} {{/tb_datapath/dut/regfile/m[2]} -radix decimal} {{/tb_datapath/dut/regfile/m[3]} -radix decimal} {{/tb_datapath/dut/regfile/m[4]} -radix decimal} {{/tb_datapath/dut/regfile/m[5]} -radix decimal} {{/tb_datapath/dut/regfile/m[6]} -radix decimal} {{/tb_datapath/dut/regfile/m[7]} -radix decimal}} -expand -subitemconfig {{/tb_datapath/dut/regfile/m[0]} {-height 15 -radix decimal} {/tb_datapath/dut/regfile/m[1]} {-height 15 -radix decimal} {/tb_datapath/dut/regfile/m[2]} {-height 15 -radix decimal} {/tb_datapath/dut/regfile/m[3]} {-height 15 -radix decimal} {/tb_datapath/dut/regfile/m[4]} {-height 15 -radix decimal} {/tb_datapath/dut/regfile/m[5]} {-height 15 -radix decimal} {/tb_datapath/dut/regfile/m[6]} {-height 15 -radix decimal} {/tb_datapath/dut/regfile/m[7]} {-height 15 -radix decimal}} /tb_datapath/dut/regfile/m
 add wave -noupdate -radix decimal /tb_datapath/datapath_in
 add wave -noupdate -radix decimal /tb_datapath/datapath_out
 add wave -noupdate /tb_datapath/Z_out
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {3 ps} 0}
+WaveRestoreCursors {{Cursor 1} {123 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
@@ -38,4 +38,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {37 ps} {177 ps}
+WaveRestoreZoom {197 ps} {337 ps}
