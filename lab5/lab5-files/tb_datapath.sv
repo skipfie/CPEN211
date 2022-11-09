@@ -30,25 +30,25 @@ module tb_datapath(output err);
 
         datapath_in = 16'd6969; 
         w_addr = 3'd0;
-        #10;
+        #20;
         datapath_in = -16'd6969;
         w_addr = 3'd1;
-        #10;
+        #20;
         datapath_in = 16'd1024;
         w_addr = 3'd2;
-        #10;
+        #20;
         datapath_in = -16'd1024;
         w_addr = 3'd3;
-        #10;
+        #20;
         datapath_in = 16'd0;
         w_addr = 3'd4;
-        #10;
+        #20;
         datapath_in = 16'd15;
         w_addr = 3'd5;
-        #10;
+        #20;
         datapath_in = -16'd15;
         w_addr = 3'd6;
-        #10;
+        #20;
 
         wb_sel = 1'b0;
         w_en = 1'b0; // prevent garbage data from being written
@@ -57,7 +57,7 @@ module tb_datapath(output err);
         r_addr = 3'd0;
         en_A = 1'b1;
         en_B = 1'b1;
-        #10;
+        #20;
 
         en_A = 1'b0;
         en_B = 1'b0;
@@ -73,7 +73,7 @@ module tb_datapath(output err);
 
         en_status = 1'b1;
         en_C = 1'b1;
-        #10;
+        #20; //add more time for netlist to update
         
         assert (datapath_out === 16'd13938) $display("[PASS] r0 + r0 = 13938; r0 = 6969; en_C true");
         else begin
@@ -90,7 +90,7 @@ module tb_datapath(output err);
         wb_sel = 1'b0; //write output to r7
         w_addr = 3'd7;
         w_en = 1'b1;
-        #10;
+        #20;
 
         w_en = 1'b0;
 
@@ -98,7 +98,7 @@ module tb_datapath(output err);
 
         en_status = 1'b0;
         en_C = 1'b0;
-        #10;
+        #20;
 
         assert (datapath_out === 16'd13938) $display("[PASS] en_C false, retaining last output");
         else begin
@@ -114,7 +114,7 @@ module tb_datapath(output err);
 
         en_status = 1'b1;
         en_C = 1'b1;
-        #10;
+        #20; //add more time for netlist to update
 
         assert (datapath_out === 16'd0) $display("[PASS] r0 - r0 = 0; r0 = 6969; en_C is true");
         else begin
@@ -131,14 +131,14 @@ module tb_datapath(output err);
         sel_A = 1'b1;
         sel_B = 1'b1;
 
-        ALU_op 2'b00;
+        ALU_op = 2'b00;
 
         datapath_in[4:0] = 5'd31;
 
         en_C = 1'b1;
-        #10;
+        #20;
 
-        assert (datapath_out === 16'd31) $display("[PASS] datapath_out equals immediate value of 31, sel_A and sel_B working")
+        assert (datapath_out === 16'd31) $display("[PASS] datapath_out equals immediate value of 31, sel_A and sel_B working");
         else begin
             $error("[FAIL] datapath_out equals immediate value of 31, sel_A and sel_B working");
             nerr = 1'b1;
@@ -148,9 +148,9 @@ module tb_datapath(output err);
 
         en_B = 1'b1; 
         sel_B = 1'b0;
-        #10;
+        #30;
 
-        assert (datapath_out === 16'd13938) $display("[PASS] datapath_out equals r7 value of 13938")
+        assert (datapath_out === 16'd13938) $display("[PASS] datapath_out equals r7 value of 13938");
         else begin
             $error("[FAIL] datapath_out equals r7 value of 13938");
             nerr = 1'b1;
@@ -158,9 +158,9 @@ module tb_datapath(output err);
 
         shift_op = 2'b01;
         r_addr = 3'd6;
-        #10;
+        #30;
 
-        assert (datapath_out === -16'd30) $display("[PASS] datapath_out equals r6 * 2 = -30 (left shift one bit)")
+        assert (datapath_out === -16'd30) $display("[PASS] datapath_out equals r6 * 2 = -30 (left shift one bit)");
         else begin
             $error("[FAIL] datapath_out equals r6 * 2 = -30 (left shift one bit)");
             nerr = 1'b1;
@@ -168,9 +168,9 @@ module tb_datapath(output err);
 
         sel_B = 1'b1;
         datapath_in[4:0] = 5'd10;
-        #10;
+        #20;
 
-        assert (datapath_out === 16'd10) $display("[PASS] datapath_out equals immediate value 10, should be unaffected by shifter")
+        assert (datapath_out === 16'd10) $display("[PASS] datapath_out equals immediate value 10, should be unaffected by shifter");
         else begin
             $error("[FAIL] datapath_out equals immediate value 10, should be unaffected by shifter");
             nerr = 1'b1;
@@ -178,9 +178,9 @@ module tb_datapath(output err);
 
         sel_B = 1'b0;
         shift_op = 2'b11;
-        #10;
+        #20;
 
-        assert (datapath_out === -16'd8) $display("[PASS] datapath_out equals r7 >>> 1 = (-8)")
+        assert (datapath_out === -16'd8) $display("[PASS] datapath_out equals r6 >>> 1 = (-8)");
         else begin
             $error("[FAIL]  datapath_out equals r7 >>> 1 = (-8)");
             nerr = 1'b1;
