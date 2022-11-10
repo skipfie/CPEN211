@@ -186,6 +186,9 @@ module tb_datapath(output err);
             nerr = 1'b1;
         end
 
+        #5;
+        $display("err is %b", err);
+        $display("Total number of tests failed is: %d", failed_count);
         $stop;
     end
 
