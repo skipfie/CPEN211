@@ -2,6 +2,9 @@ module tb_datapath(output err);
     reg nerr = 1'b0;
     assign err = nerr;
 
+    reg [7:0] failed = 8'd0;
+    reg [7:0] passed = 8'd0;
+
     reg clk, wb_sel, w_en, en_A, en_B, sel_A, sel_B, en_C, en_status;
     reg [1:0] shift_op, ALU_op;
     reg [2:0] w_addr, r_addr;
@@ -75,16 +78,24 @@ module tb_datapath(output err);
         en_C = 1'b1;
         #20; //add more time for netlist to update
         
-        assert (datapath_out === 16'd13938) $display("[PASS] r0 + r0 = 13938; r0 = 6969; en_C true");
+        assert (datapath_out === 16'd13938) begin
+            $display("[PASS] r0 + r0 = 13938; r0 = 6969; en_C true");
+            passed = passed + 1;
+        end
         else begin
             $error("[FAIL] r0 + r0 = 13938; r0 = 6969; en_C true");
             nerr = 1'b1;
+            failed = failed + 1;
         end
 
-        assert (Z_out === 1'b0) $display("[PASS] Z_out is zero when alu output is 13938 and en_status is true");
+        assert (Z_out === 1'b0) begin
+            $display("[PASS] Z_out is zero when alu output is 13938 and en_status is true");
+            passed = passed + 1;
+        end
         else begin
             $error("[FAIL] Z_out is zero when alu output is 13938 and en_status is true");
             nerr = 1'b1;
+            failed = failed + 1;
         end
 
         wb_sel = 1'b0; //write output to r7
@@ -100,9 +111,13 @@ module tb_datapath(output err);
         en_C = 1'b0;
         #20;
 
-        assert (datapath_out === 16'd13938) $display("[PASS] en_C false, retaining last output");
+        assert (datapath_out === 16'd13938) begin
+            $display("[PASS] en_C false, retaining last output");
+            passed = passed + 1;
+        end
         else begin
             $error("[FAIL] en_C false, retaining last output");
+            failed = failed + 1;
             nerr = 1'b1;
         end
 
@@ -110,22 +125,31 @@ module tb_datapath(output err);
         else begin
             $error("[FAIL] en_status false, retaining last output");
             nerr = 1'b1;
+            failed = failed + 1;
         end
 
         en_status = 1'b1;
         en_C = 1'b1;
         #20; //add more time for netlist to update
 
-        assert (datapath_out === 16'd0) $display("[PASS] r0 - r0 = 0; r0 = 6969; en_C is true");
+        assert (datapath_out === 16'd0) begin
+            $display("[PASS] r0 - r0 = 0; r0 = 6969; en_C is true");
+            passed = passed + 1;
+        end
         else begin
             $error("[FAIL] r0 - r0 = 0; r0 = 6969; en_C is true");
             nerr = 1'b1;
+            failed = failed + 1;
         end
 
-        assert (Z_out === 1'b1) $display("[PASS] Z_out is one when alu output is 0 and en_status is true");
+        assert (Z_out === 1'b1) begin
+            $display("[PASS] Z_out is one when alu output is 0 and en_status is true");
+            passed = passed + 1;
+        end
         else begin
             $error("[FAIL] Z_out is one when alu output is 0 and en_status is true");
             nerr = 1'b1;
+            failed = failed + 1;
         end
 
         sel_A = 1'b1;
@@ -138,10 +162,14 @@ module tb_datapath(output err);
         en_C = 1'b1;
         #20;
 
-        assert (datapath_out === 16'd31) $display("[PASS] datapath_out equals immediate value of 31, sel_A and sel_B working");
+        assert (datapath_out === 16'd31) begin
+            $display("[PASS] datapath_out equals immediate value of 31, sel_A and sel_B working");
+            passed = passed + 1;
+        end
         else begin
             $error("[FAIL] datapath_out equals immediate value of 31, sel_A and sel_B working");
             nerr = 1'b1;
+            failed = failed + 1;
         end
 
         r_addr = 3'd7; // write r7 into register B
@@ -150,45 +178,62 @@ module tb_datapath(output err);
         sel_B = 1'b0;
         #30;
 
-        assert (datapath_out === 16'd13938) $display("[PASS] datapath_out equals r7 value of 13938");
+        assert (datapath_out === 16'd13938) begin
+            $display("[PASS] datapath_out equals r7 value of 13938");
+            passed = passed + 1;
+        end
         else begin
             $error("[FAIL] datapath_out equals r7 value of 13938");
             nerr = 1'b1;
+            failed = failed + 1;
         end
 
         shift_op = 2'b01;
         r_addr = 3'd6;
         #30;
 
-        assert (datapath_out === -16'd30) $display("[PASS] datapath_out equals r6 * 2 = -30 (left shift one bit)");
+        assert (datapath_out === -16'd30) begin
+            $display("[PASS] datapath_out equals r6 * 2 = -30 (left shift one bit)");
+            passed = passed + 1;
+        end
         else begin
             $error("[FAIL] datapath_out equals r6 * 2 = -30 (left shift one bit)");
             nerr = 1'b1;
+            failed = failed + 1;
         end
 
         sel_B = 1'b1;
         datapath_in[4:0] = 5'd10;
         #20;
 
-        assert (datapath_out === 16'd10) $display("[PASS] datapath_out equals immediate value 10, should be unaffected by shifter");
+        assert (datapath_out === 16'd10) begin
+            $display("[PASS] datapath_out equals immediate value 10, should be unaffected by shifter");
+            passed = passed + 1;
+        end
         else begin
             $error("[FAIL] datapath_out equals immediate value 10, should be unaffected by shifter");
             nerr = 1'b1;
+            failed = failed + 1;
         end
 
         sel_B = 1'b0;
         shift_op = 2'b11;
         #20;
 
-        assert (datapath_out === -16'd8) $display("[PASS] datapath_out equals r6 >>> 1 = (-8)");
+        assert (datapath_out === -16'd8) begin
+            $display("[PASS] datapath_out equals r6 >>> 1 = (-8)");
+            passed = passed + 1;
+        end
         else begin
             $error("[FAIL]  datapath_out equals r7 >>> 1 = (-8)");
             nerr = 1'b1;
+            failed = failed + 1;
         end
 
         #5;
         $display("err is %b", err);
-        $display("Total number of tests failed is: %d", failed_count);
+        $display("Total number of tests failed is: %d", failed);
+        $display("Total number of tests passed is: %d", passed);
         $stop;
     end
 
