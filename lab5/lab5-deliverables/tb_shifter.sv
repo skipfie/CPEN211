@@ -1,7 +1,9 @@
+`timescale 1 ps/ 1 ps
 module tb_shifter(output err);
     reg nerr = 1'b0;
     assign err = nerr;
 
+    reg [7:0] failed_count = 8'd0;
     reg [15:0] shift_in;
     reg [1:0] shift_op;
 
@@ -17,6 +19,7 @@ module tb_shifter(output err);
         else begin
             $error("[FAIL] B unchanged operation 00");
             nerr = 1'b1;
+            failed_count = failed_count + 1;
         end
         
 
@@ -27,6 +30,7 @@ module tb_shifter(output err);
         else begin
             $error("[FAIL] B left shift one bit operation 01");
             nerr = 1'b1;
+            failed_count = failed_count + 1;
         end
         
 
@@ -37,6 +41,7 @@ module tb_shifter(output err);
         else begin
             $error("[FAIL] B logical right shift one bit where MSB was 1, operation 10");
             nerr = 1'b1;
+            failed_count = failed_count + 1;
         end
         
 
@@ -47,6 +52,7 @@ module tb_shifter(output err);
         else begin
             $error("[FAIL] B logical right shift one bit where MSB was 0, operation 10");
             nerr = 1'b1;
+            failed_count = failed_count + 1;
         end
         
 
@@ -57,6 +63,7 @@ module tb_shifter(output err);
         else begin
             $error("[FAIL] B arithmetic right shift one bit where MSB was 1, operation 11");
             nerr = 1'b1;
+            failed_count = failed_count + 1;
         end
         
 
@@ -67,8 +74,12 @@ module tb_shifter(output err);
         else begin
             $error("[FAIL] B arithmetic right shift one bit where MSB was 0, operation 11");
             nerr = 1'b1;
+            failed_count = failed_count + 1;
         end
-
+        
+        #5;
+        $display("err is %b", err);
+        $display("Total number of tests failed is: %d", failed_count);
         $stop;
     end
 endmodule: tb_shifter
