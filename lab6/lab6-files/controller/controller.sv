@@ -5,5 +5,15 @@ module controller(input clk, input rst_n, input start,
                   output [1:0] reg_sel, output [1:0] wb_sel, output w_en,
                   output en_A, output en_B, output en_C, output en_status,
                   output sel_A, output sel_B);
-  // your implementation here
+	// define the name of each state
+
+
+  // for state transition
+
+
+
+
+
+
+
 endmodule: controller

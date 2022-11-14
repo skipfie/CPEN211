@@ -35,16 +35,17 @@ module datapath(input clk, input [15:0] mdata, input [7:0] pc, input [1:0] wb_se
       val_A = A;
     
     if (sel_B == 1)
-      val_B = {11'b0, datapath_in[4:0]};
+      val_B = {sximm5};
     else 
       val_B = shift_out;
 
-    if (wb_sel == 1)
-      w_data = datapath_in;
-    else 
-      w_data = C;
+    case (wb_sel)
+      00: w_data = C;
+      01: w_data = {8'b0, pc};
+      10: w_data = sximm8;
+      11: w_data = mdata;
+    endcase
   end
-
   //registers with enable
   always_ff @(posedge clk) begin
     if (en_A) A <= r_data; //A
@@ -52,5 +53,4 @@ module datapath(input clk, input [15:0] mdata, input [7:0] pc, input [1:0] wb_se
     if (en_C) C <= ALU_out; //C
     if (en_status) nZ_out <= Z; //status 
   end
-
 endmodule: datapath
