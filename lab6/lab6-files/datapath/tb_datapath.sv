@@ -225,7 +225,7 @@ module tb_datapath(output err);
             passed = passed + 1;
         end
         else begin
-            $error("[FAIL]  datapath_out equals r7 >>> 1 = (-8)");
+            $error("[FAIL] datapath_out equals r6 >>> 1 = (-8)");
             nerr = 1'b1;
             failed = failed + 1;
         end
