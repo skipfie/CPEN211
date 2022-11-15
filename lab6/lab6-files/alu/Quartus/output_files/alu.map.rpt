@@ -1,5 +1,5 @@
 Analysis & Synthesis report for alu
-Tue Nov 15 02:17:21 2022
+Tue Nov 15 12:13:39 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Nov 15 02:17:21 2022       ;
+; Analysis & Synthesis Status     ; Successful - Tue Nov 15 12:13:39 2022       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; alu                                         ;
 ; Top-level Entity Name           ; ALU                                         ;
@@ -155,8 +155,8 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -272,10 +272,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov 15 02:17:13 2022
+    Info: Processing started: Tue Nov 15 12:13:29 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu -c alu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file /cpen211/labs/cpen211/lab6/lab6-files/alu/alu.sv
     Info (12023): Found entity 1: ALU File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/alu.sv Line: 1
 Info (12127): Elaborating entity "ALU" for the top level hierarchy
@@ -287,9 +287,9 @@ Info (21057): Implemented 106 device resources after synthesis - the final resou
     Info (21059): Implemented 19 output pins
     Info (21061): Implemented 53 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4837 megabytes
-    Info: Processing ended: Tue Nov 15 02:17:21 2022
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 4821 megabytes
+    Info: Processing ended: Tue Nov 15 12:13:39 2022
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:19
 
 

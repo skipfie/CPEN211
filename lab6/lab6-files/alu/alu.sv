@@ -1,16 +1,7 @@
 module ALU(input [15:0] val_A, input [15:0] val_B, input [1:0] ALU_op, 
            output reg [15:0] ALU_out, output reg Z, output reg N, output reg V);
     always_comb begin
-        //if (ALU_out == 16'd0)
-        //    Z = 1'b1;
-        //else Z = 1'b0;
-
         Z = (ALU_out == 16'd0);
-
-        //if (ALU_out[15] == 1'b1)
-        //    N = 1'b1;
-        //else N = 1'b0;
-
         N = (ALU_out[15] == 1'b1);
     end
 
