@@ -1,0 +1,8 @@
+C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/tb_alu.sv {1 {vlog -work work -sv -stats=none C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/tb_alu.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module tb_ALU
+
+Top level modules:
+	tb_ALU
+
+} {} {}}
