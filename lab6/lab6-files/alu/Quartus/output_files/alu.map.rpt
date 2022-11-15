@@ -1,5 +1,5 @@
 Analysis & Synthesis report for alu
-Tue Nov 15 01:22:08 2022
+Tue Nov 15 02:17:21 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Nov 15 01:22:08 2022       ;
+; Analysis & Synthesis Status     ; Successful - Tue Nov 15 02:17:21 2022       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; alu                                         ;
 ; Top-level Entity Name           ; ALU                                         ;
@@ -180,14 +180,14 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------------+
 ; Resource                                    ; Usage           ;
 +---------------------------------------------+-----------------+
-; Estimate of Logic utilization (ALMs needed) ; 31              ;
+; Estimate of Logic utilization (ALMs needed) ; 36              ;
 ;                                             ;                 ;
-; Combinational ALUT usage for logic          ; 57              ;
+; Combinational ALUT usage for logic          ; 53              ;
 ;     -- 7 input functions                    ; 0               ;
-;     -- 6 input functions                    ; 5               ;
-;     -- 5 input functions                    ; 6               ;
+;     -- 6 input functions                    ; 19              ;
+;     -- 5 input functions                    ; 1               ;
 ;     -- 4 input functions                    ; 0               ;
-;     -- <=3 input functions                  ; 46              ;
+;     -- <=3 input functions                  ; 33              ;
 ;                                             ;                 ;
 ; Dedicated logic registers                   ; 0               ;
 ;                                             ;                 ;
@@ -195,10 +195,10 @@ refer to the applicable agreement for further details.
 ;                                             ;                 ;
 ; Total DSP Blocks                            ; 0               ;
 ;                                             ;                 ;
-; Maximum fan-out node                        ; ALU_op[0]~input ;
-; Maximum fan-out                             ; 35              ;
-; Total fan-out                               ; 283             ;
-; Average fan-out                             ; 1.74            ;
+; Maximum fan-out node                        ; ALU_op[1]~input ;
+; Maximum fan-out                             ; 17              ;
+; Total fan-out                               ; 287             ;
+; Average fan-out                             ; 1.81            ;
 +---------------------------------------------+-----------------+
 
 
@@ -207,7 +207,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |ALU                       ; 57 (57)             ; 0 (0)                     ; 0                 ; 0          ; 53   ; 0            ; |ALU                ; ALU         ; work         ;
+; |ALU                       ; 53 (53)             ; 0 (0)                     ; 0                 ; 0          ; 53   ; 0            ; |ALU                ; ALU         ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -232,7 +232,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |ALU|Mux4                  ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |ALU|Mux15                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -241,18 +241,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 57                          ;
-;     arith             ; 18                          ;
-;         1 data inputs ; 2                           ;
-;         3 data inputs ; 16                          ;
-;     normal            ; 39                          ;
-;         3 data inputs ; 28                          ;
-;         5 data inputs ; 6                           ;
-;         6 data inputs ; 5                           ;
+; arriav_lcell_comb     ; 53                          ;
+;     arith             ; 16                          ;
+;         2 data inputs ; 16                          ;
+;     normal            ; 21                          ;
+;         2 data inputs ; 1                           ;
+;         5 data inputs ; 1                           ;
+;         6 data inputs ; 19                          ;
+;     shared            ; 16                          ;
+;         2 data inputs ; 16                          ;
 ; boundary_port         ; 53                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.60                        ;
-; Average LUT depth     ; 3.81                        ;
+; Max LUT depth         ; 5.10                        ;
+; Average LUT depth     ; 4.55                        ;
 +-----------------------+-----------------------------+
 
 
@@ -271,7 +272,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov 15 01:21:59 2022
+    Info: Processing started: Tue Nov 15 02:17:13 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu -c alu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -281,14 +282,14 @@ Info (12127): Elaborating entity "ALU" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 110 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 106 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 34 input pins
     Info (21059): Implemented 19 output pins
-    Info (21061): Implemented 57 logic cells
+    Info (21061): Implemented 53 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4837 megabytes
-    Info: Processing ended: Tue Nov 15 01:22:08 2022
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Processing ended: Tue Nov 15 02:17:21 2022
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:18
 
 

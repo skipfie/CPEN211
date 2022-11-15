@@ -1,5 +1,5 @@
 Fitter report for alu
-Tue Nov 15 01:22:42 2022
+Tue Nov 15 02:17:50 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -57,14 +57,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Tue Nov 15 01:22:42 2022       ;
+; Fitter Status                   ; Successful - Tue Nov 15 02:17:50 2022       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; alu                                         ;
 ; Top-level Entity Name           ; ALU                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 32 / 32,070 ( < 1 % )                       ;
+; Logic utilization (in ALMs)     ; 37 / 32,070 ( < 1 % )                       ;
 ; Total registers                 ; 0                                           ;
 ; Total pins                      ; 53 / 457 ( 12 % )                           ;
 ; Total virtual pins              ; 0                                           ;
@@ -166,8 +166,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 164 ) ; 0.00 % ( 0 / 164 )         ; 0.00 % ( 0 / 164 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 164 ) ; 0.00 % ( 0 / 164 )         ; 0.00 % ( 0 / 164 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 160 ) ; 0.00 % ( 0 / 160 )         ; 0.00 % ( 0 / 160 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 160 ) ; 0.00 % ( 0 / 160 )         ; 0.00 % ( 0 / 160 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -190,7 +190,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 164 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 160 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -206,11 +206,11 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/Qua
 +-------------------------------------------------------------+--------------------+-------+
 ; Resource                                                    ; Usage              ; %     ;
 +-------------------------------------------------------------+--------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 32 / 32,070        ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 32                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 32 / 32,070        ; < 1 % ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 37 / 32,070        ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 37                 ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 37 / 32,070        ; < 1 % ;
 ;         [a] ALMs used for LUT logic and registers           ; 0                  ;       ;
-;         [b] ALMs used for LUT logic                         ; 32                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 37                 ;       ;
 ;         [c] ALMs used for registers                         ; 0                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
 ;     [B] Estimate of ALMs recoverable by dense packing       ; 0 / 32,070         ; 0 %   ;
@@ -226,12 +226,12 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/Qua
 ;     -- Logic LABs                                           ; 5                  ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 58                 ;       ;
+; Combinational ALUT usage for logic                          ; 54                 ;       ;
 ;     -- 7 input functions                                    ; 0                  ;       ;
-;     -- 6 input functions                                    ; 5                  ;       ;
-;     -- 5 input functions                                    ; 6                  ;       ;
+;     -- 6 input functions                                    ; 19                 ;       ;
+;     -- 5 input functions                                    ; 1                  ;       ;
 ;     -- 4 input functions                                    ; 0                  ;       ;
-;     -- <=3 input functions                                  ; 47                 ;       ;
+;     -- <=3 input functions                                  ; 34                 ;       ;
 ; Combinational ALUT usage for route-throughs                 ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Dedicated logic registers                                   ; 0                  ;       ;
@@ -296,11 +296,11 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/Qua
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.0% / 0.0% / 0.0% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 1.1% / 1.0% / 1.4% ;       ;
-; Maximum fan-out                                             ; 35                 ;       ;
-; Highest non-global fan-out                                  ; 35                 ;       ;
-; Total fan-out                                               ; 283                ;       ;
-; Average fan-out                                             ; 1.73               ;       ;
+; Peak interconnect usage (total/H/V)                         ; 1.1% / 1.2% / 0.8% ;       ;
+; Maximum fan-out                                             ; 17                 ;       ;
+; Highest non-global fan-out                                  ; 17                 ;       ;
+; Total fan-out                                               ; 287                ;       ;
+; Average fan-out                                             ; 1.79               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -309,11 +309,11 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/Qua
 +-------------------------------------------------------------+----------------------+--------------------------------+
 ; Statistic                                                   ; Top                  ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 32 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 32                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 32 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 37 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 37                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 37 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
 ;         [a] ALMs used for LUT logic and registers           ; 0                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 32                   ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 37                   ; 0                              ;
 ;         [c] ALMs used for registers                         ; 0                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
 ;     [B] Estimate of ALMs recoverable by dense packing       ; 0 / 32070 ( 0 % )    ; 0 / 32070 ( 0 % )              ;
@@ -329,12 +329,12 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/Qua
 ;     -- Logic LABs                                           ; 5                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
-; Combinational ALUT usage for logic                          ; 58                   ; 0                              ;
+; Combinational ALUT usage for logic                          ; 54                   ; 0                              ;
 ;     -- 7 input functions                                    ; 0                    ; 0                              ;
-;     -- 6 input functions                                    ; 5                    ; 0                              ;
-;     -- 5 input functions                                    ; 6                    ; 0                              ;
+;     -- 6 input functions                                    ; 19                   ; 0                              ;
+;     -- 5 input functions                                    ; 1                    ; 0                              ;
 ;     -- 4 input functions                                    ; 0                    ; 0                              ;
-;     -- <=3 input functions                                  ; 47                   ; 0                              ;
+;     -- <=3 input functions                                  ; 34                   ; 0                              ;
 ; Combinational ALUT usage for route-throughs                 ; 0                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                    ; 0                              ;
 ;     -- 64-address deep                                      ; 0                    ; 0                              ;
@@ -362,7 +362,7 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/Qua
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 283                  ; 0                              ;
+;     -- Total Connections                                    ; 302                  ; 0                              ;
 ;     -- Registered Connections                               ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
@@ -395,40 +395,40 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/Qua
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name      ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; ALU_op[0] ; AG26  ; 4A       ; 84           ; 0            ; 34           ; 35                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; ALU_op[1] ; AK28  ; 4A       ; 82           ; 0            ; 74           ; 24                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_A[0]  ; Y21   ; 5A       ; 89           ; 6            ; 20           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_A[10] ; AC25  ; 5A       ; 89           ; 4            ; 60           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_A[11] ; AC20  ; 4A       ; 76           ; 0            ; 0            ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_A[12] ; AJ25  ; 4A       ; 74           ; 0            ; 91           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_A[13] ; AD21  ; 4A       ; 82           ; 0            ; 57           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_A[14] ; AJ24  ; 4A       ; 74           ; 0            ; 74           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_A[15] ; AB23  ; 5A       ; 89           ; 9            ; 20           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_A[1]  ; AH28  ; 5A       ; 89           ; 4            ; 94           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_A[2]  ; AA25  ; 5A       ; 89           ; 9            ; 37           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_A[3]  ; AB26  ; 5A       ; 89           ; 9            ; 54           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_A[4]  ; AD27  ; 5A       ; 89           ; 8            ; 54           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_A[5]  ; AJ29  ; 5A       ; 89           ; 6            ; 37           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_A[6]  ; AK29  ; 4A       ; 82           ; 0            ; 91           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_A[7]  ; AG25  ; 4A       ; 78           ; 0            ; 34           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_A[8]  ; AA24  ; 5A       ; 89           ; 11           ; 43           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_A[9]  ; AK24  ; 4A       ; 72           ; 0            ; 51           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_B[0]  ; V18   ; 4A       ; 80           ; 0            ; 0            ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_B[10] ; AJ26  ; 4A       ; 76           ; 0            ; 34           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_B[11] ; AC22  ; 4A       ; 86           ; 0            ; 0            ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_B[12] ; AD25  ; 5A       ; 89           ; 4            ; 43           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_B[13] ; AE24  ; 4A       ; 88           ; 0            ; 52           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_B[14] ; AF25  ; 4A       ; 86           ; 0            ; 34           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_B[15] ; AC23  ; 4A       ; 86           ; 0            ; 17           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_B[1]  ; AH27  ; 4A       ; 84           ; 0            ; 51           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_B[2]  ; W20   ; 5A       ; 89           ; 6            ; 3            ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_B[3]  ; AB22  ; 5A       ; 89           ; 9            ; 3            ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_B[4]  ; W21   ; 5A       ; 89           ; 8            ; 3            ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_B[5]  ; AH29  ; 5A       ; 89           ; 6            ; 54           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_B[6]  ; Y19   ; 4A       ; 84           ; 0            ; 0            ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_B[7]  ; AA20  ; 4A       ; 84           ; 0            ; 17           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_B[8]  ; AK27  ; 4A       ; 80           ; 0            ; 51           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; val_B[9]  ; AF23  ; 4A       ; 74           ; 0            ; 40           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; ALU_op[0] ; AG6   ; 3A       ; 12           ; 0            ; 51           ; 17                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; ALU_op[1] ; AH5   ; 3A       ; 14           ; 0            ; 51           ; 17                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_A[0]  ; AE13  ; 3B       ; 22           ; 0            ; 0            ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_A[10] ; AF11  ; 3B       ; 18           ; 0            ; 40           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_A[11] ; AG1   ; 3A       ; 10           ; 0            ; 40           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_A[12] ; AG7   ; 3A       ; 10           ; 0            ; 91           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_A[13] ; AJ1   ; 3A       ; 14           ; 0            ; 0            ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_A[14] ; AF6   ; 3A       ; 12           ; 0            ; 34           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_A[15] ; AJ2   ; 3A       ; 14           ; 0            ; 17           ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_A[1]  ; AC12  ; 3A       ; 16           ; 0            ; 0            ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_A[2]  ; AC9   ; 3A       ; 4            ; 0            ; 0            ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_A[3]  ; AF5   ; 3A       ; 8            ; 0            ; 17           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_A[4]  ; AE9   ; 3A       ; 2            ; 0            ; 91           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_A[5]  ; AD14  ; 3B       ; 24           ; 0            ; 0            ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_A[6]  ; AD12  ; 3A       ; 16           ; 0            ; 17           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_A[7]  ; AE14  ; 3B       ; 24           ; 0            ; 17           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_A[8]  ; AH9   ; 3B       ; 18           ; 0            ; 91           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_A[9]  ; AG5   ; 3A       ; 14           ; 0            ; 34           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_B[0]  ; AJ4   ; 3B       ; 22           ; 0            ; 34           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_B[10] ; AK2   ; 3B       ; 20           ; 0            ; 34           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_B[11] ; AF13  ; 3B       ; 22           ; 0            ; 17           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_B[12] ; AD10  ; 3A       ; 4            ; 0            ; 17           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_B[13] ; AK6   ; 3B       ; 24           ; 0            ; 51           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_B[14] ; AG10  ; 3B       ; 18           ; 0            ; 74           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_B[15] ; AF4   ; 3A       ; 8            ; 0            ; 0            ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_B[1]  ; AG2   ; 3A       ; 16           ; 0            ; 34           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_B[2]  ; AF8   ; 3A       ; 10           ; 0            ; 74           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_B[3]  ; AE12  ; 3A       ; 2            ; 0            ; 57           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_B[4]  ; AB12  ; 3A       ; 12           ; 0            ; 17           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_B[5]  ; AD11  ; 3A       ; 2            ; 0            ; 40           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_B[6]  ; AK4   ; 3B       ; 22           ; 0            ; 51           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_B[7]  ; AA12  ; 3A       ; 12           ; 0            ; 0            ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_B[8]  ; AH3   ; 3A       ; 16           ; 0            ; 51           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; val_B[9]  ; AG11  ; 3B       ; 18           ; 0            ; 57           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -437,48 +437,48 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/Qua
 +-------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Output Buffer Delay ; Output Buffer Delay Control ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +-------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
-; ALU_out[0]  ; AD19  ; 4A       ; 76           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ALU_out[10] ; AF24  ; 4A       ; 74           ; 0            ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ALU_out[11] ; AJ27  ; 4A       ; 80           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ALU_out[12] ; AE26  ; 5A       ; 89           ; 8            ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ALU_out[13] ; AF26  ; 4A       ; 86           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ALU_out[14] ; AD24  ; 4A       ; 88           ; 0            ; 35           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ALU_out[15] ; AE27  ; 5A       ; 89           ; 11           ; 77           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ALU_out[1]  ; AH25  ; 4A       ; 78           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ALU_out[2]  ; AB21  ; 4A       ; 88           ; 0            ; 18           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ALU_out[3]  ; AA21  ; 4A       ; 88           ; 0            ; 1            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ALU_out[4]  ; AG27  ; 5A       ; 89           ; 4            ; 77           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ALU_out[5]  ; W22   ; 5A       ; 89           ; 8            ; 20           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ALU_out[6]  ; AE22  ; 4A       ; 78           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ALU_out[7]  ; W19   ; 4A       ; 80           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ALU_out[8]  ; AE23  ; 4A       ; 78           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ALU_out[9]  ; AK26  ; 4A       ; 76           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; N           ; AE28  ; 5A       ; 89           ; 11           ; 94           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; V           ; AD20  ; 4A       ; 82           ; 0            ; 40           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; Z           ; AK23  ; 4A       ; 72           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ALU_out[0]  ; AJ5   ; 3B       ; 24           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ALU_out[10] ; AG13  ; 3B       ; 26           ; 0            ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ALU_out[11] ; AF9   ; 3A       ; 8            ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ALU_out[12] ; AD7   ; 3A       ; 6            ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ALU_out[13] ; AG3   ; 3A       ; 6            ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ALU_out[14] ; AF10  ; 3A       ; 4            ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ALU_out[15] ; AB15  ; 3B       ; 28           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ALU_out[1]  ; AA13  ; 3B       ; 20           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ALU_out[2]  ; AD9   ; 3A       ; 2            ; 0            ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ALU_out[3]  ; AE11  ; 3A       ; 4            ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ALU_out[4]  ; AE7   ; 3A       ; 6            ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ALU_out[5]  ; AH2   ; 3A       ; 10           ; 0            ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ALU_out[6]  ; AB13  ; 3B       ; 20           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ALU_out[7]  ; AJ7   ; 3B       ; 26           ; 0            ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ALU_out[8]  ; AJ6   ; 3B       ; 26           ; 0            ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ALU_out[9]  ; AK3   ; 3B       ; 20           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; N           ; AG12  ; 3B       ; 26           ; 0            ; 40           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; V           ; AH4   ; 3A       ; 6            ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; Z           ; AG8   ; 3A       ; 8            ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 +-------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
-+----------------------------------------------------------------------------+
-; I/O Bank Usage                                                             ;
-+----------+------------------+---------------+--------------+---------------+
-; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ; VCCPD Voltage ;
-+----------+------------------+---------------+--------------+---------------+
-; B2L      ; 0 / 0 ( -- )     ; --            ; --           ; --            ;
-; B1L      ; 0 / 0 ( -- )     ; --            ; --           ; --            ;
-; 3A       ; 0 / 32 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 3B       ; 0 / 48 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 4A       ; 34 / 80 ( 43 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 5A       ; 19 / 32 ( 59 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 5B       ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 6B       ; 0 / 44 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 6A       ; 0 / 56 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 7A       ; 0 / 19 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 7B       ; 0 / 22 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 7C       ; 0 / 12 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 7D       ; 0 / 14 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 8A       ; 0 / 80 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-+----------+------------------+---------------+--------------+---------------+
++-----------------------------------------------------------------------------+
+; I/O Bank Usage                                                              ;
++----------+-------------------+---------------+--------------+---------------+
+; I/O Bank ; Usage             ; VCCIO Voltage ; VREF Voltage ; VCCPD Voltage ;
++----------+-------------------+---------------+--------------+---------------+
+; B2L      ; 0 / 0 ( -- )      ; --            ; --           ; --            ;
+; B1L      ; 0 / 0 ( -- )      ; --            ; --           ; --            ;
+; 3A       ; 32 / 32 ( 100 % ) ; 2.5V          ; --           ; 2.5V          ;
+; 3B       ; 21 / 48 ( 44 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 4A       ; 0 / 80 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
+; 5A       ; 0 / 32 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
+; 5B       ; 0 / 16 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
+; 6B       ; 0 / 44 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
+; 6A       ; 0 / 56 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
+; 7A       ; 0 / 19 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
+; 7B       ; 0 / 22 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
+; 7C       ; 0 / 12 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
+; 7D       ; 0 / 14 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
+; 8A       ; 0 / 80 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
++----------+-------------------+---------------+--------------+---------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -525,20 +525,20 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/Qua
 ; AA9      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AA10     ;            ; 3A             ; VCCPD3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AA11     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AA12     ; 74         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AA13     ; 90         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AA12     ; 74         ; 3A             ; val_B[7]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AA13     ; 90         ; 3B             ; ALU_out[1]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AA14     ; 122        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA15     ; 120        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA16     ; 146        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA17     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AA18     ; 168        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA19     ; 176        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AA20     ; 200        ; 4A             ; val_B[7]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AA21     ; 210        ; 4A             ; ALU_out[3]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AA20     ; 200        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AA21     ; 210        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA22     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AA23     ;            ; --             ; VCCPGM                          ; power  ;              ; 1.8V/2.5V/3.0V/3.3V ; --           ;                 ; --       ; --           ;
-; AA24     ; 228        ; 5A             ; val_A[8]                        ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; AA25     ; 224        ; 5A             ; val_A[2]                        ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AA24     ; 228        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; AA25     ; 224        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AA26     ; 252        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AA27     ;            ; 5B             ; VCCIO5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AA28     ; 251        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -555,21 +555,21 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/Qua
 ; AB9      ; 42         ; 3A             ; #TDO                            ; output ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AB10     ;            ; --             ; VCCPGM                          ; power  ;              ; 1.8V/2.5V/3.0V/3.3V ; --           ;                 ; --       ; --           ;
 ; AB11     ;            ; --             ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AB12     ; 72         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AB13     ; 88         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AB12     ; 72         ; 3A             ; val_B[4]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AB13     ; 88         ; 3B             ; ALU_out[6]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AB14     ;            ; 3B             ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AB15     ; 106        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AB15     ; 106        ; 3B             ; ALU_out[15]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AB16     ;            ; --             ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AB17     ; 144        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB18     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AB19     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AB20     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AB21     ; 208        ; 4A             ; ALU_out[2]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AB22     ; 225        ; 5A             ; val_B[3]                        ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; AB23     ; 227        ; 5A             ; val_A[15]                       ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AB21     ; 208        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AB22     ; 225        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; AB23     ; 227        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AB24     ;            ; 5A             ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AB25     ; 230        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; AB26     ; 226        ; 5A             ; val_A[3]                        ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AB26     ; 226        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AB27     ; 254        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AB28     ; 249        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AB29     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -582,10 +582,10 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/Qua
 ; AC6      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AC7      ; 45         ; 3A             ; ^AS_DATA3, DATA3                ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
 ; AC8      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AC9      ; 58         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AC9      ; 58         ; 3A             ; val_A[2]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AC10     ;            ; 3A             ; VCCPD3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AC11     ;            ; 3A             ; VCCIO3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AC12     ; 82         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AC12     ; 82         ; 3A             ; val_A[1]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AC13     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AC14     ; 104        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AC15     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -593,12 +593,12 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/Qua
 ; AC17     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AC18     ; 162        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AC19     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AC20     ; 186        ; 4A             ; val_A[11]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AC20     ; 186        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AC21     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AC22     ; 207        ; 4A             ; val_B[11]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AC23     ; 205        ; 4A             ; val_B[15]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AC22     ; 207        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AC23     ; 205        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AC24     ;            ; 5A             ; VREFB5AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
-; AC25     ; 215        ; 5A             ; val_A[10]                       ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AC25     ; 215        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AC26     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AC27     ; 242        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AC28     ; 245        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -610,27 +610,27 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/Qua
 ; AD4      ;            ;                ; DNU                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AD5      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AD6      ;            ; 3A             ; VREFB3AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
-; AD7      ; 62         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AD7      ; 62         ; 3A             ; ALU_out[12]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AD8      ;            ; 3A             ; VCCIO3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AD9      ; 55         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AD10     ; 56         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AD11     ; 54         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AD12     ; 80         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AD9      ; 55         ; 3A             ; ALU_out[2]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AD10     ; 56         ; 3A             ; val_B[12]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AD11     ; 54         ; 3A             ; val_B[5]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AD12     ; 80         ; 3A             ; val_A[6]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AD13     ;            ; 3B             ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AD14     ; 98         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AD14     ; 98         ; 3B             ; val_A[5]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AD15     ;            ;                ; DNU                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AD16     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AD17     ; 160        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AD18     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AD19     ; 184        ; 4A             ; ALU_out[0]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AD20     ; 199        ; 4A             ; V                               ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AD21     ; 197        ; 4A             ; val_A[13]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AD19     ; 184        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AD20     ; 199        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AD21     ; 197        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AD22     ;            ; --             ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AD23     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AD24     ; 211        ; 4A             ; ALU_out[14]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AD25     ; 213        ; 5A             ; val_B[12]                       ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AD24     ; 211        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AD25     ; 213        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AD26     ; 240        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; AD27     ; 222        ; 5A             ; val_A[4]                        ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AD27     ; 222        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AD28     ;            ; 5A             ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AD29     ; 255        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AD30     ; 257        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -640,14 +640,14 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/Qua
 ; AE4      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AE5      ; 49         ; 3A             ; ^AS_DATA1, DATA1                ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
 ; AE6      ; 51         ; 3A             ; ^AS_DATA0, ASDO, DATA0          ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
-; AE7      ; 60         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AE7      ; 60         ; 3A             ; ALU_out[4]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AE8      ; 47         ; 3A             ; ^AS_DATA2, DATA2                ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
-; AE9      ; 53         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AE9      ; 53         ; 3A             ; val_A[4]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AE10     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AE11     ; 59         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AE12     ; 52         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AE13     ; 95         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AE14     ; 96         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AE11     ; 59         ; 3A             ; ALU_out[3]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AE12     ; 52         ; 3A             ; val_B[3]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AE13     ; 95         ; 3B             ; val_A[0]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AE14     ; 96         ; 3B             ; val_A[7]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AE15     ;            ; 3B             ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AE16     ; 139        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE17     ; 135        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -655,28 +655,28 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/Qua
 ; AE19     ; 165        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE20     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AE21     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AE22     ; 191        ; 4A             ; ALU_out[6]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AE23     ; 189        ; 4A             ; ALU_out[8]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AE24     ; 209        ; 4A             ; val_B[13]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AE22     ; 191        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AE23     ; 189        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AE24     ; 209        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE25     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AE26     ; 220        ; 5A             ; ALU_out[12]                     ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; AE27     ; 229        ; 5A             ; ALU_out[15]                     ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; AE28     ; 231        ; 5A             ; N                               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AE26     ; 220        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; AE27     ; 229        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; AE28     ; 231        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AE29     ; 253        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AE30     ;            ; 5B             ; VCCIO5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AF1      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AF2      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AF3      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AF4      ; 66         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AF5      ; 64         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AF6      ; 75         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AF4      ; 66         ; 3A             ; val_B[15]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AF5      ; 64         ; 3A             ; val_A[3]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AF6      ; 75         ; 3A             ; val_A[14]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AF7      ;            ; 3A             ; VCCIO3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AF8      ; 70         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AF9      ; 67         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AF10     ; 57         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AF11     ; 87         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AF8      ; 70         ; 3A             ; val_B[2]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AF9      ; 67         ; 3A             ; ALU_out[11]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AF10     ; 57         ; 3A             ; ALU_out[14]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AF11     ; 87         ; 3B             ; val_A[10]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AF12     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AF13     ; 93         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AF13     ; 93         ; 3B             ; val_B[11]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AF14     ; 114        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF15     ; 112        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF16     ; 137        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -686,27 +686,27 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/Qua
 ; AF20     ; 175        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF21     ; 173        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF22     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AF23     ; 183        ; 4A             ; val_B[9]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AF24     ; 181        ; 4A             ; ALU_out[10]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AF25     ; 206        ; 4A             ; val_B[14]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AF26     ; 204        ; 4A             ; ALU_out[13]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AF23     ; 183        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AF24     ; 181        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AF25     ; 206        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AF26     ; 204        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF27     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AF28     ; 235        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AF29     ; 237        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AF30     ; 239        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; AG1      ; 71         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AG2      ; 83         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AG3      ; 63         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AG1      ; 71         ; 3A             ; val_A[11]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AG2      ; 83         ; 3A             ; val_B[1]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AG3      ; 63         ; 3A             ; ALU_out[13]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AG4      ;            ; 3A             ; VCCIO3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AG5      ; 78         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AG6      ; 73         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AG7      ; 68         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AG8      ; 65         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AG5      ; 78         ; 3A             ; val_A[9]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AG6      ; 73         ; 3A             ; ALU_op[0]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AG7      ; 68         ; 3A             ; val_A[12]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AG8      ; 65         ; 3A             ; Z                               ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AG9      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AG10     ; 86         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AG11     ; 85         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AG12     ; 103        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AG13     ; 101        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AG10     ; 86         ; 3B             ; val_B[14]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AG11     ; 85         ; 3B             ; val_B[9]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AG12     ; 103        ; 3B             ; N                               ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AG13     ; 101        ; 3B             ; ALU_out[10]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AG14     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AG15     ; 127        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG16     ; 134        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -718,21 +718,21 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/Qua
 ; AG22     ; 166        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG23     ; 163        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG24     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AG25     ; 190        ; 4A             ; val_A[7]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AG26     ; 203        ; 4A             ; ALU_op[0]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AG27     ; 212        ; 5A             ; ALU_out[4]                      ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AG25     ; 190        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AG26     ; 203        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AG27     ; 212        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AG28     ; 233        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AG29     ;            ; 5A             ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AG30     ; 243        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AH1      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AH2      ; 69         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AH3      ; 81         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AH4      ; 61         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AH5      ; 76         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AH2      ; 69         ; 3A             ; ALU_out[5]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AH3      ; 81         ; 3A             ; val_B[8]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AH4      ; 61         ; 3A             ; V                               ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AH5      ; 76         ; 3A             ; ALU_op[1]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AH6      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AH7      ; 115        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH8      ; 113        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AH9      ; 84         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AH9      ; 84         ; 3B             ; val_A[8]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AH10     ; 118        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH11     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AH12     ; 126        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -748,19 +748,19 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/Qua
 ; AH22     ; 164        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH23     ; 174        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH24     ; 161        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AH25     ; 188        ; 4A             ; ALU_out[1]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AH25     ; 188        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH26     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AH27     ; 201        ; 4A             ; val_B[1]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AH28     ; 214        ; 5A             ; val_A[1]                        ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; AH29     ; 218        ; 5A             ; val_B[5]                        ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AH27     ; 201        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AH28     ; 214        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; AH29     ; 218        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AH30     ; 241        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; AJ1      ; 79         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AJ2      ; 77         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AJ1      ; 79         ; 3A             ; val_A[13]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AJ2      ; 77         ; 3A             ; val_A[15]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AJ3      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AJ4      ; 94         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AJ5      ; 99         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AJ6      ; 102        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AJ7      ; 100        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AJ4      ; 94         ; 3B             ; val_B[0]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AJ5      ; 99         ; 3B             ; ALU_out[0]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AJ6      ; 102        ; 3B             ; ALU_out[8]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AJ7      ; 100        ; 3B             ; ALU_out[7]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AJ8      ;            ; 3B             ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AJ9      ; 110        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ10     ; 116        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -777,18 +777,18 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/Qua
 ; AJ21     ; 156        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ22     ; 172        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ23     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AJ24     ; 182        ; 4A             ; val_A[14]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AJ25     ; 180        ; 4A             ; val_A[12]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AJ26     ; 187        ; 4A             ; val_B[10]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AJ27     ; 195        ; 4A             ; ALU_out[11]                     ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AJ24     ; 182        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AJ25     ; 180        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AJ26     ; 187        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AJ27     ; 195        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ28     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AJ29     ; 216        ; 5A             ; val_A[5]                        ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AJ29     ; 216        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AJ30     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AK2      ; 91         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AK3      ; 89         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AK4      ; 92         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AK2      ; 91         ; 3B             ; val_B[10]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AK3      ; 89         ; 3B             ; ALU_out[9]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AK4      ; 92         ; 3B             ; val_B[6]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AK5      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AK6      ; 97         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AK6      ; 97         ; 3B             ; val_B[13]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AK7      ; 107        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AK8      ; 105        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AK9      ; 108        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -805,13 +805,13 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/Qua
 ; AK20     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AK21     ; 171        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AK22     ; 169        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AK23     ; 179        ; 4A             ; Z                               ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AK24     ; 177        ; 4A             ; val_A[9]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AK23     ; 179        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AK24     ; 177        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AK25     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AK26     ; 185        ; 4A             ; ALU_out[9]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AK27     ; 193        ; 4A             ; val_B[8]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AK28     ; 198        ; 4A             ; ALU_op[1]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AK29     ; 196        ; 4A             ; val_A[6]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AK26     ; 185        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AK27     ; 193        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AK28     ; 198        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AK29     ; 196        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B1       ; 509        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B2       ; 507        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B3       ; 513        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -1309,7 +1309,7 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/Qua
 ; V15      ;            ; --             ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; V16      ; 138        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; V17      ; 154        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; V18      ; 194        ; 4A             ; val_B[0]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; V18      ; 194        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; V19      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; V20      ; 292        ; 6B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; V21      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -1340,10 +1340,10 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/Qua
 ; W16      ; 136        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; W17      ; 152        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; W18      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; W19      ; 192        ; 4A             ; ALU_out[7]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; W20      ; 217        ; 5A             ; val_B[2]                        ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; W21      ; 221        ; 5A             ; val_B[4]                        ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; W22      ; 223        ; 5A             ; ALU_out[5]                      ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; W19      ; 192        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; W20      ; 217        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; W21      ; 221        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; W22      ; 223        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; W23      ;            ; 5A             ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; W24      ; 238        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; W25      ; 244        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -1370,9 +1370,9 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/Qua
 ; Y16      ; 128        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y17      ; 170        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y18      ; 178        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; Y19      ; 202        ; 4A             ; val_B[6]                        ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; Y19      ; 202        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y20      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; Y21      ; 219        ; 5A             ; val_A[0]                        ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; Y21      ; 219        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; Y22      ;            ; --             ; VCCA_FPLL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; Y23      ; 232        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; Y24      ; 234        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -1410,40 +1410,40 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; Z           ; Incomplete set of assignments ;
 ; N           ; Incomplete set of assignments ;
 ; V           ; Incomplete set of assignments ;
+; val_A[0]    ; Incomplete set of assignments ;
 ; ALU_op[1]   ; Incomplete set of assignments ;
 ; ALU_op[0]   ; Incomplete set of assignments ;
 ; val_B[0]    ; Incomplete set of assignments ;
-; val_A[0]    ; Incomplete set of assignments ;
-; val_B[1]    ; Incomplete set of assignments ;
 ; val_A[1]    ; Incomplete set of assignments ;
-; val_B[2]    ; Incomplete set of assignments ;
+; val_B[1]    ; Incomplete set of assignments ;
 ; val_A[2]    ; Incomplete set of assignments ;
-; val_B[3]    ; Incomplete set of assignments ;
+; val_B[2]    ; Incomplete set of assignments ;
 ; val_A[3]    ; Incomplete set of assignments ;
-; val_B[4]    ; Incomplete set of assignments ;
+; val_B[3]    ; Incomplete set of assignments ;
 ; val_A[4]    ; Incomplete set of assignments ;
-; val_B[5]    ; Incomplete set of assignments ;
+; val_B[4]    ; Incomplete set of assignments ;
 ; val_A[5]    ; Incomplete set of assignments ;
-; val_B[6]    ; Incomplete set of assignments ;
+; val_B[5]    ; Incomplete set of assignments ;
 ; val_A[6]    ; Incomplete set of assignments ;
-; val_B[7]    ; Incomplete set of assignments ;
+; val_B[6]    ; Incomplete set of assignments ;
 ; val_A[7]    ; Incomplete set of assignments ;
-; val_B[8]    ; Incomplete set of assignments ;
+; val_B[7]    ; Incomplete set of assignments ;
 ; val_A[8]    ; Incomplete set of assignments ;
-; val_B[9]    ; Incomplete set of assignments ;
+; val_B[8]    ; Incomplete set of assignments ;
 ; val_A[9]    ; Incomplete set of assignments ;
-; val_B[10]   ; Incomplete set of assignments ;
+; val_B[9]    ; Incomplete set of assignments ;
 ; val_A[10]   ; Incomplete set of assignments ;
-; val_B[11]   ; Incomplete set of assignments ;
+; val_B[10]   ; Incomplete set of assignments ;
 ; val_A[11]   ; Incomplete set of assignments ;
-; val_B[12]   ; Incomplete set of assignments ;
+; val_B[11]   ; Incomplete set of assignments ;
 ; val_A[12]   ; Incomplete set of assignments ;
-; val_B[13]   ; Incomplete set of assignments ;
+; val_B[12]   ; Incomplete set of assignments ;
 ; val_A[13]   ; Incomplete set of assignments ;
-; val_B[14]   ; Incomplete set of assignments ;
+; val_B[13]   ; Incomplete set of assignments ;
 ; val_A[14]   ; Incomplete set of assignments ;
-; val_B[15]   ; Incomplete set of assignments ;
+; val_B[14]   ; Incomplete set of assignments ;
 ; val_A[15]   ; Incomplete set of assignments ;
+; val_B[15]   ; Incomplete set of assignments ;
 ; ALU_out[0]  ; Missing location assignment   ;
 ; ALU_out[1]  ; Missing location assignment   ;
 ; ALU_out[2]  ; Missing location assignment   ;
@@ -1463,40 +1463,40 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; Z           ; Missing location assignment   ;
 ; N           ; Missing location assignment   ;
 ; V           ; Missing location assignment   ;
+; val_A[0]    ; Missing location assignment   ;
 ; ALU_op[1]   ; Missing location assignment   ;
 ; ALU_op[0]   ; Missing location assignment   ;
 ; val_B[0]    ; Missing location assignment   ;
-; val_A[0]    ; Missing location assignment   ;
-; val_B[1]    ; Missing location assignment   ;
 ; val_A[1]    ; Missing location assignment   ;
-; val_B[2]    ; Missing location assignment   ;
+; val_B[1]    ; Missing location assignment   ;
 ; val_A[2]    ; Missing location assignment   ;
-; val_B[3]    ; Missing location assignment   ;
+; val_B[2]    ; Missing location assignment   ;
 ; val_A[3]    ; Missing location assignment   ;
-; val_B[4]    ; Missing location assignment   ;
+; val_B[3]    ; Missing location assignment   ;
 ; val_A[4]    ; Missing location assignment   ;
-; val_B[5]    ; Missing location assignment   ;
+; val_B[4]    ; Missing location assignment   ;
 ; val_A[5]    ; Missing location assignment   ;
-; val_B[6]    ; Missing location assignment   ;
+; val_B[5]    ; Missing location assignment   ;
 ; val_A[6]    ; Missing location assignment   ;
-; val_B[7]    ; Missing location assignment   ;
+; val_B[6]    ; Missing location assignment   ;
 ; val_A[7]    ; Missing location assignment   ;
-; val_B[8]    ; Missing location assignment   ;
+; val_B[7]    ; Missing location assignment   ;
 ; val_A[8]    ; Missing location assignment   ;
-; val_B[9]    ; Missing location assignment   ;
+; val_B[8]    ; Missing location assignment   ;
 ; val_A[9]    ; Missing location assignment   ;
-; val_B[10]   ; Missing location assignment   ;
+; val_B[9]    ; Missing location assignment   ;
 ; val_A[10]   ; Missing location assignment   ;
-; val_B[11]   ; Missing location assignment   ;
+; val_B[10]   ; Missing location assignment   ;
 ; val_A[11]   ; Missing location assignment   ;
-; val_B[12]   ; Missing location assignment   ;
+; val_B[11]   ; Missing location assignment   ;
 ; val_A[12]   ; Missing location assignment   ;
-; val_B[13]   ; Missing location assignment   ;
+; val_B[12]   ; Missing location assignment   ;
 ; val_A[13]   ; Missing location assignment   ;
-; val_B[14]   ; Missing location assignment   ;
+; val_B[13]   ; Missing location assignment   ;
 ; val_A[14]   ; Missing location assignment   ;
-; val_B[15]   ; Missing location assignment   ;
+; val_B[14]   ; Missing location assignment   ;
 ; val_A[15]   ; Missing location assignment   ;
+; val_B[15]   ; Missing location assignment   ;
 +-------------+-------------------------------+
 
 
@@ -1505,7 +1505,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------+-------------+--------------+
-; |ALU                       ; 31.5 (31.5)          ; 32.0 (32.0)                      ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 58 (58)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 53   ; 0            ; |ALU                ; ALU         ; work         ;
+; |ALU                       ; 36.5 (36.5)          ; 37.0 (37.0)                      ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 54 (54)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 53   ; 0            ; |ALU                ; ALU         ; work         ;
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1534,40 +1534,40 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Z           ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; N           ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; V           ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; val_A[0]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; ALU_op[1]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; ALU_op[0]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; val_B[0]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; val_A[0]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; val_B[1]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; val_B[0]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; val_A[1]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; val_B[1]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; val_A[2]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; val_B[2]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; val_A[2]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; val_B[3]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; val_A[3]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; val_B[3]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; val_A[4]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; val_B[4]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; val_A[4]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; val_B[5]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; val_A[5]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; val_B[5]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; val_A[6]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; val_B[6]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; val_A[6]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; val_B[7]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; val_A[7]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; val_B[8]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; val_B[7]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; val_A[8]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; val_B[9]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; val_A[9]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; val_B[10]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; val_B[8]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; val_A[9]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; val_B[9]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; val_A[10]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; val_B[10]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; val_A[11]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; val_B[11]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; val_A[11]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; val_B[12]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; val_A[12]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; val_B[13]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; val_A[12]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; val_B[12]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; val_A[13]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; val_B[14]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; val_B[13]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; val_A[14]   ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; val_B[15]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; val_B[14]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; val_A[15]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; val_B[15]   ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +-------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
@@ -1576,51 +1576,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------+-------------------+---------+
 ; Source Pin / Fanout ; Pad To Core Index ; Setting ;
 +---------------------+-------------------+---------+
-; ALU_op[1]           ;                   ;         ;
-;      - Mux16~1      ; 1                 ; 0       ;
-;      - Mux15~1      ; 1                 ; 0       ;
-;      - Mux14~1      ; 1                 ; 0       ;
-;      - Mux13~1      ; 1                 ; 0       ;
-;      - Mux12~0      ; 1                 ; 0       ;
-;      - Mux11~1      ; 1                 ; 0       ;
-;      - Mux10~1      ; 1                 ; 0       ;
-;      - Mux9~1       ; 1                 ; 0       ;
-;      - Mux8~1       ; 1                 ; 0       ;
-;      - Mux7~1       ; 1                 ; 0       ;
-;      - Mux6~1       ; 1                 ; 0       ;
-;      - Mux5~1       ; 1                 ; 0       ;
-;      - Mux4~1       ; 1                 ; 0       ;
-;      - Mux3~1       ; 1                 ; 0       ;
-;      - Mux2~1       ; 1                 ; 0       ;
-;      - Mux1~0       ; 1                 ; 0       ;
-;      - Equal0~0     ; 1                 ; 0       ;
-;      - Equal0~1     ; 1                 ; 0       ;
-;      - Equal0~2     ; 1                 ; 0       ;
-;      - Equal0~3     ; 1                 ; 0       ;
-;      - Equal0~4     ; 1                 ; 0       ;
-;      - Equal0~5     ; 1                 ; 0       ;
-;      - Equal0~6     ; 1                 ; 0       ;
-;      - always0~0    ; 1                 ; 0       ;
-; ALU_op[0]           ;                   ;         ;
-;      - Add0~70      ; 0                 ; 0       ;
+; val_A[0]            ;                   ;         ;
+;      - Add1~1       ; 0                 ; 0       ;
 ;      - Add0~1       ; 0                 ; 0       ;
-;      - Add0~5       ; 0                 ; 0       ;
-;      - Add0~9       ; 0                 ; 0       ;
-;      - Add0~13      ; 0                 ; 0       ;
-;      - Add0~17      ; 0                 ; 0       ;
-;      - Add0~21      ; 0                 ; 0       ;
-;      - Add0~25      ; 0                 ; 0       ;
-;      - Add0~29      ; 0                 ; 0       ;
-;      - Add0~33      ; 0                 ; 0       ;
-;      - Add0~37      ; 0                 ; 0       ;
-;      - Add0~41      ; 0                 ; 0       ;
-;      - Add0~45      ; 0                 ; 0       ;
-;      - Add0~49      ; 0                 ; 0       ;
-;      - Add0~53      ; 0                 ; 0       ;
-;      - Add0~57      ; 0                 ; 0       ;
-;      - Add0~61      ; 0                 ; 0       ;
-;      - Add0~65      ; 0                 ; 0       ;
-;      - Mux16~0      ; 0                 ; 0       ;
+;      - Mux15~0      ; 0                 ; 0       ;
+; ALU_op[1]           ;                   ;         ;
+;      - Mux15~0      ; 1                 ; 0       ;
+;      - Mux14~0      ; 1                 ; 0       ;
+;      - Mux13~0      ; 1                 ; 0       ;
+;      - Mux12~0      ; 1                 ; 0       ;
+;      - Mux11~0      ; 1                 ; 0       ;
+;      - Mux10~0      ; 1                 ; 0       ;
+;      - Mux9~0       ; 1                 ; 0       ;
+;      - Mux8~0       ; 1                 ; 0       ;
+;      - Mux7~0       ; 1                 ; 0       ;
+;      - Mux6~0       ; 1                 ; 0       ;
+;      - Mux5~0       ; 1                 ; 0       ;
+;      - Mux4~0       ; 1                 ; 0       ;
+;      - Mux3~0       ; 1                 ; 0       ;
+;      - Mux2~0       ; 1                 ; 0       ;
+;      - Mux1~0       ; 1                 ; 0       ;
+;      - Mux0~0       ; 1                 ; 0       ;
+;      - Mux16~0      ; 1                 ; 0       ;
+; ALU_op[0]           ;                   ;         ;
 ;      - Mux15~0      ; 0                 ; 0       ;
 ;      - Mux14~0      ; 0                 ; 0       ;
 ;      - Mux13~0      ; 0                 ; 0       ;
@@ -1636,105 +1614,134 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Mux3~0       ; 0                 ; 0       ;
 ;      - Mux2~0       ; 0                 ; 0       ;
 ;      - Mux1~0       ; 0                 ; 0       ;
-;      - always0~0    ; 0                 ; 0       ;
-; val_B[0]            ;                   ;         ;
-;      - Add0~1       ; 1                 ; 0       ;
-;      - Mux16~0      ; 1                 ; 0       ;
-; val_A[0]            ;                   ;         ;
-;      - Add0~1       ; 0                 ; 0       ;
+;      - Mux0~0       ; 0                 ; 0       ;
 ;      - Mux16~0      ; 0                 ; 0       ;
-; val_B[1]            ;                   ;         ;
-;      - Add0~5       ; 0                 ; 0       ;
+; val_B[0]            ;                   ;         ;
+;      - Add1~1       ; 0                 ; 0       ;
+;      - Add0~1       ; 0                 ; 0       ;
 ;      - Mux15~0      ; 0                 ; 0       ;
 ; val_A[1]            ;                   ;         ;
+;      - Add1~5       ; 1                 ; 0       ;
 ;      - Add0~5       ; 1                 ; 0       ;
-;      - Mux15~0      ; 1                 ; 0       ;
-; val_B[2]            ;                   ;         ;
-;      - Add0~9       ; 0                 ; 0       ;
-;      - Mux14~0      ; 0                 ; 0       ;
-; val_A[2]            ;                   ;         ;
-;      - Add0~9       ; 1                 ; 0       ;
 ;      - Mux14~0      ; 1                 ; 0       ;
-; val_B[3]            ;                   ;         ;
-;      - Add0~13      ; 0                 ; 0       ;
+; val_B[1]            ;                   ;         ;
+;      - Add1~5       ; 1                 ; 0       ;
+;      - Add0~5       ; 1                 ; 0       ;
+;      - Mux14~0      ; 1                 ; 0       ;
+; val_A[2]            ;                   ;         ;
+;      - Add1~9       ; 0                 ; 0       ;
+;      - Add0~9       ; 0                 ; 0       ;
+;      - Mux13~0      ; 0                 ; 0       ;
+; val_B[2]            ;                   ;         ;
+;      - Add1~9       ; 0                 ; 0       ;
+;      - Add0~9       ; 0                 ; 0       ;
 ;      - Mux13~0      ; 0                 ; 0       ;
 ; val_A[3]            ;                   ;         ;
+;      - Add1~13      ; 1                 ; 0       ;
 ;      - Add0~13      ; 1                 ; 0       ;
-;      - Mux13~0      ; 1                 ; 0       ;
-; val_B[4]            ;                   ;         ;
-;      - Add0~17      ; 0                 ; 0       ;
+;      - Mux12~0      ; 1                 ; 0       ;
+; val_B[3]            ;                   ;         ;
+;      - Add1~13      ; 0                 ; 0       ;
+;      - Add0~13      ; 0                 ; 0       ;
 ;      - Mux12~0      ; 0                 ; 0       ;
 ; val_A[4]            ;                   ;         ;
-;      - Add0~17      ; 1                 ; 0       ;
-;      - Mux12~0      ; 1                 ; 0       ;
-; val_B[5]            ;                   ;         ;
-;      - Add0~21      ; 1                 ; 0       ;
-;      - Mux11~0      ; 1                 ; 0       ;
+;      - Add1~17      ; 0                 ; 0       ;
+;      - Add0~17      ; 0                 ; 0       ;
+;      - Mux11~0      ; 0                 ; 0       ;
+; val_B[4]            ;                   ;         ;
+;      - Add1~17      ; 0                 ; 0       ;
+;      - Add0~17      ; 0                 ; 0       ;
+;      - Mux11~0      ; 0                 ; 0       ;
 ; val_A[5]            ;                   ;         ;
+;      - Add1~21      ; 1                 ; 0       ;
 ;      - Add0~21      ; 1                 ; 0       ;
-;      - Mux11~0      ; 1                 ; 0       ;
-; val_B[6]            ;                   ;         ;
-;      - Add0~25      ; 0                 ; 0       ;
+;      - Mux10~0      ; 1                 ; 0       ;
+; val_B[5]            ;                   ;         ;
+;      - Add1~21      ; 0                 ; 0       ;
+;      - Add0~21      ; 0                 ; 0       ;
 ;      - Mux10~0      ; 0                 ; 0       ;
 ; val_A[6]            ;                   ;         ;
-;      - Add0~25      ; 0                 ; 0       ;
-;      - Mux10~0      ; 0                 ; 0       ;
-; val_B[7]            ;                   ;         ;
-;      - Add0~29      ; 1                 ; 0       ;
+;      - Add1~25      ; 1                 ; 0       ;
+;      - Add0~25      ; 1                 ; 0       ;
 ;      - Mux9~0       ; 1                 ; 0       ;
-; val_A[7]            ;                   ;         ;
-;      - Add0~29      ; 0                 ; 0       ;
+; val_B[6]            ;                   ;         ;
+;      - Add1~25      ; 0                 ; 0       ;
+;      - Add0~25      ; 0                 ; 0       ;
 ;      - Mux9~0       ; 0                 ; 0       ;
-; val_B[8]            ;                   ;         ;
-;      - Add0~33      ; 1                 ; 0       ;
-;      - Mux8~0       ; 1                 ; 0       ;
+; val_A[7]            ;                   ;         ;
+;      - Add1~29      ; 0                 ; 0       ;
+;      - Add0~29      ; 0                 ; 0       ;
+;      - Mux8~0       ; 0                 ; 0       ;
+; val_B[7]            ;                   ;         ;
+;      - Add1~29      ; 0                 ; 0       ;
+;      - Add0~29      ; 0                 ; 0       ;
+;      - Mux8~0       ; 0                 ; 0       ;
 ; val_A[8]            ;                   ;         ;
+;      - Add1~33      ; 1                 ; 0       ;
 ;      - Add0~33      ; 1                 ; 0       ;
-;      - Mux8~0       ; 1                 ; 0       ;
-; val_B[9]            ;                   ;         ;
-;      - Add0~37      ; 0                 ; 0       ;
+;      - Mux7~0       ; 1                 ; 0       ;
+; val_B[8]            ;                   ;         ;
+;      - Add1~33      ; 0                 ; 0       ;
+;      - Add0~33      ; 0                 ; 0       ;
 ;      - Mux7~0       ; 0                 ; 0       ;
 ; val_A[9]            ;                   ;         ;
+;      - Add1~37      ; 0                 ; 0       ;
+;      - Add0~37      ; 0                 ; 0       ;
+;      - Mux6~0       ; 0                 ; 0       ;
+; val_B[9]            ;                   ;         ;
+;      - Add1~37      ; 1                 ; 0       ;
 ;      - Add0~37      ; 1                 ; 0       ;
-;      - Mux7~0       ; 1                 ; 0       ;
-; val_B[10]           ;                   ;         ;
-;      - Add0~41      ; 1                 ; 0       ;
 ;      - Mux6~0       ; 1                 ; 0       ;
 ; val_A[10]           ;                   ;         ;
+;      - Add1~41      ; 1                 ; 0       ;
 ;      - Add0~41      ; 1                 ; 0       ;
-;      - Mux6~0       ; 1                 ; 0       ;
-; val_B[11]           ;                   ;         ;
-;      - Add0~45      ; 0                 ; 0       ;
+;      - Mux5~0       ; 1                 ; 0       ;
+; val_B[10]           ;                   ;         ;
+;      - Add1~41      ; 0                 ; 0       ;
+;      - Add0~41      ; 0                 ; 0       ;
 ;      - Mux5~0       ; 0                 ; 0       ;
 ; val_A[11]           ;                   ;         ;
+;      - Add1~45      ; 1                 ; 0       ;
+;      - Add0~45      ; 1                 ; 0       ;
+;      - Mux4~0       ; 1                 ; 0       ;
+; val_B[11]           ;                   ;         ;
+;      - Add1~45      ; 0                 ; 0       ;
 ;      - Add0~45      ; 0                 ; 0       ;
-;      - Mux5~0       ; 0                 ; 0       ;
-; val_B[12]           ;                   ;         ;
-;      - Add0~49      ; 0                 ; 0       ;
 ;      - Mux4~0       ; 0                 ; 0       ;
 ; val_A[12]           ;                   ;         ;
-;      - Add0~49      ; 0                 ; 0       ;
-;      - Mux4~0       ; 0                 ; 0       ;
-; val_B[13]           ;                   ;         ;
-;      - Add0~53      ; 0                 ; 0       ;
-;      - Mux3~0       ; 0                 ; 0       ;
-; val_A[13]           ;                   ;         ;
-;      - Add0~53      ; 1                 ; 0       ;
+;      - Add1~49      ; 1                 ; 0       ;
+;      - Add0~49      ; 1                 ; 0       ;
 ;      - Mux3~0       ; 1                 ; 0       ;
-; val_B[14]           ;                   ;         ;
-;      - Add0~57      ; 1                 ; 0       ;
+; val_B[12]           ;                   ;         ;
+;      - Add1~49      ; 1                 ; 0       ;
+;      - Add0~49      ; 1                 ; 0       ;
+;      - Mux3~0       ; 1                 ; 0       ;
+; val_A[13]           ;                   ;         ;
+;      - Add1~53      ; 1                 ; 0       ;
+;      - Add0~53      ; 1                 ; 0       ;
+;      - Mux2~0       ; 1                 ; 0       ;
+; val_B[13]           ;                   ;         ;
+;      - Add1~53      ; 1                 ; 0       ;
+;      - Add0~53      ; 1                 ; 0       ;
 ;      - Mux2~0       ; 1                 ; 0       ;
 ; val_A[14]           ;                   ;         ;
+;      - Add1~57      ; 1                 ; 0       ;
 ;      - Add0~57      ; 1                 ; 0       ;
-;      - Mux2~0       ; 1                 ; 0       ;
-; val_B[15]           ;                   ;         ;
-;      - Add0~61      ; 0                 ; 0       ;
+;      - Mux1~0       ; 1                 ; 0       ;
+; val_B[14]           ;                   ;         ;
+;      - Add1~57      ; 0                 ; 0       ;
+;      - Add0~57      ; 0                 ; 0       ;
 ;      - Mux1~0       ; 0                 ; 0       ;
-;      - always0~0    ; 0                 ; 0       ;
 ; val_A[15]           ;                   ;         ;
+;      - Add1~61      ; 0                 ; 0       ;
 ;      - Add0~61      ; 0                 ; 0       ;
-;      - Mux1~0       ; 0                 ; 0       ;
-;      - always0~0    ; 0                 ; 0       ;
+;      - Mux0~0       ; 0                 ; 0       ;
+;      - Mux16~0      ; 0                 ; 0       ;
+; val_B[15]           ;                   ;         ;
+;      - Add1~61      ; 0                 ; 0       ;
+;      - Add0~61      ; 0                 ; 0       ;
+;      - Mux0~0       ; 0                 ; 0       ;
+;      - Mux16~0      ; 0                 ; 0       ;
 +---------------------+-------------------+---------+
 
 
@@ -1743,14 +1750,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+-------------------------+
 ; Routing Resource Type                       ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Block interconnects                         ; 114 / 289,320 ( < 1 % ) ;
+; Block interconnects                         ; 151 / 289,320 ( < 1 % ) ;
 ; C12 interconnects                           ; 1 / 13,420 ( < 1 % )    ;
-; C2 interconnects                            ; 38 / 119,108 ( < 1 % )  ;
-; C4 interconnects                            ; 36 / 56,300 ( < 1 % )   ;
+; C2 interconnects                            ; 11 / 119,108 ( < 1 % )  ;
+; C4 interconnects                            ; 56 / 56,300 ( < 1 % )   ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )          ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )          ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )          ;
-; Direct links                                ; 14 / 289,320 ( < 1 % )  ;
+; Direct links                                ; 9 / 289,320 ( < 1 % )   ;
 ; Global clocks                               ; 0 / 16 ( 0 % )          ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
@@ -1806,12 +1813,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )          ;
-; Local interconnects                         ; 15 / 84,580 ( < 1 % )   ;
+; Local interconnects                         ; 16 / 84,580 ( < 1 % )   ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )          ;
-; R14 interconnects                           ; 9 / 12,676 ( < 1 % )    ;
-; R14/C12 interconnect drivers                ; 5 / 20,720 ( < 1 % )    ;
-; R3 interconnects                            ; 44 / 130,992 ( < 1 % )  ;
-; R6 interconnects                            ; 49 / 266,960 ( < 1 % )  ;
+; R14 interconnects                           ; 8 / 12,676 ( < 1 % )    ;
+; R14/C12 interconnect drivers                ; 8 / 20,720 ( < 1 % )    ;
+; R3 interconnects                            ; 63 / 130,992 ( < 1 % )  ;
+; R6 interconnects                            ; 68 / 266,960 ( < 1 % )  ;
 ; Spine clocks                                ; 0 / 360 ( 0 % )         ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )      ;
 +---------------------------------------------+-------------------------+
@@ -1895,40 +1902,40 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Z                  ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; N                  ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; V                  ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; val_A[0]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; ALU_op[1]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; ALU_op[0]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; val_B[0]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; val_A[0]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; val_B[1]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; val_A[1]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; val_B[2]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; val_B[1]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; val_A[2]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; val_B[3]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; val_B[2]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; val_A[3]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; val_B[4]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; val_B[3]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; val_A[4]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; val_B[5]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; val_B[4]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; val_A[5]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; val_B[6]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; val_B[5]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; val_A[6]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; val_B[7]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; val_B[6]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; val_A[7]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; val_B[8]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; val_B[7]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; val_A[8]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; val_B[9]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; val_B[8]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; val_A[9]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; val_B[10]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; val_B[9]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; val_A[10]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; val_B[11]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; val_B[10]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; val_A[11]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; val_B[12]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; val_B[11]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; val_A[12]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; val_B[13]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; val_B[12]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; val_A[13]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; val_B[14]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; val_B[13]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; val_A[14]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; val_B[15]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; val_B[14]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; val_A[15]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; val_B[15]          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
 
 
@@ -2002,29 +2009,29 @@ Info (332154): The derive_clock_uncertainty command did not apply clock uncertai
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:05
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:04
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X78_Y0 to location X89_Y10
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X11_Y0 to location X21_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.15 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.14 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info (144001): Generated suppressed messages file C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/Quartus/output_files/alu.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 7794 megabytes
-    Info: Processing ended: Tue Nov 15 01:22:42 2022
-    Info: Elapsed time: 00:00:33
-    Info: Total CPU time (on all processors): 00:02:31
+    Info: Peak virtual memory: 7793 megabytes
+    Info: Processing ended: Tue Nov 15 02:17:50 2022
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:02:03
 
 
 +----------------------------+

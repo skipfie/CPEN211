@@ -417,7 +417,7 @@ module tb_ALU(output err);
     end
     assert(Z === 1'b0 & N === 1'b1 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = %b, N = %b", Z, N);
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
