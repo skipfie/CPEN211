@@ -14,16 +14,18 @@ module datapath(input clk, input [15:0] mdata, input [7:0] pc, input [1:0] wb_se
 
   //for ALU
   reg signed [15:0] val_A, val_B, ALU_out;
-  wire Z;
+  wire Z, V, N;
 
   //for the rest of the connections
   reg [15:0] A, C;
   assign datapath_out = C;
-  reg nZ_out;
-  assign Z_out = nZ_out;
+  reg [2:0] status;
+  assign Z_out = status[2];
+  assign N_out = status[1];
+  assign V_out = status[0];
 
   //instaniation of ALU, shifter, and regfile
-  ALU alu(.val_A(val_A), .val_B(val_B), .ALU_op(ALU_op), .ALU_out(ALU_out), .Z(Z));
+  ALU alu(.val_A(val_A), .val_B(val_B), .ALU_op(ALU_op), .ALU_out(ALU_out), .Z(Z), .N(N), .V(V));
   shifter shifter(.shift_in(shift_in), .shift_op(shift_op), .shift_out(shift_out));
   regfile regfile(.w_data(w_data), .w_addr(w_addr), .w_en(w_en), .r_addr(r_addr), .clk(clk), .r_data(r_data));
 
@@ -51,6 +53,8 @@ module datapath(input clk, input [15:0] mdata, input [7:0] pc, input [1:0] wb_se
     if (en_A) A <= r_data; //A
     if (en_B) shift_in <= r_data; //B
     if (en_C) C <= ALU_out; //C
-    if (en_status) nZ_out <= Z; //status 
+    if (en_status) begin //status
+        status <= {Z,N,V};
+    end
   end
 endmodule: datapath
