@@ -1,6 +1,7 @@
 `timescale 1 ps/ 1 ps
-module tb_ALU(output reg err);
-  nerr = 1'b0;
+module tb_ALU(output err);
+  reg nerr = 1'b0;
+  assign err = nerr;
   reg [7:0] failed_count = 8'd0;
   reg [1:0] ALU_op;
   reg signed [15:0] val_A, val_B, ALU_out;
@@ -21,9 +22,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b0) $display("[PASS] Z = 0 | correct Z"); 
+    assert(Z === 1'b0 & N === 1'b0 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 1 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -37,9 +38,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b0) $display("[PASS] Z = 0 | correct Z"); 
+    assert(Z === 1'b0 & N === 1'b0 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 1 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -53,9 +54,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b0) $display("[PASS] Z = 0 | correct Z"); 
+    assert(Z === 1'b0 & N === 1'b0 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 1 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -69,9 +70,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b0) $display("[PASS] Z = 0 | correct Z"); 
+    assert(Z === 1'b0 & N === 1'b0 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 1 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -85,9 +86,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b0) $display("[PASS] Z = 0 | correct Z"); 
+    assert(Z === 1'b0 & N === 1'b1 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 1 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -101,9 +102,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b0) $display("[PASS] Z = 0 | correct Z"); 
+    assert(Z === 1'b0 & N === 1'b1 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 1 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -117,9 +118,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b0) $display("[PASS] Z = 0 | correct Z"); 
+    assert(Z === 1'b0 & N === 1'b1 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 1 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -135,9 +136,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b1) $display("[PASS] Z = 1 | correct Z"); 
+    assert(Z === 1'b1 & N === 1'b0 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 0 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -151,9 +152,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b1) $display("[PASS] Z = 1 | correct Z"); 
+    assert(Z === 1'b1 & N === 1'b0 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 0 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -167,9 +168,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b1) $display("[PASS] Z = 1 | correct Z"); 
+    assert(Z === 1'b1 & N === 1'b0 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 0 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -186,9 +187,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b0) $display("[PASS] Z = 0 | correct Z"); 
+    assert(Z === 1'b0 & N === 1'b0 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 1 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -202,9 +203,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b0) $display("[PASS] Z = 0 | correct Z"); 
+    assert(Z === 1'b0 & N === 1'b0 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 1 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -218,9 +219,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b0) $display("[PASS] Z = 0 | correct Z"); 
+    assert(Z === 1'b0 & N === 1'b0 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 1 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -234,9 +235,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b0) $display("[PASS] Z = 0 | correct Z"); 
+    assert(Z === 1'b0 & N === 1'b0 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 1 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -250,9 +251,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b0) $display("[PASS] Z = 0 | correct Z"); 
+    assert(Z === 1'b0 & N === 1'b1 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 1 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -266,9 +267,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b0) $display("[PASS] Z = 0 | correct Z"); 
+    assert(Z === 1'b0 & N === 1'b1 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 1 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -282,9 +283,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b0) $display("[PASS] Z = 0 | correct Z"); 
+    assert(Z === 1'b0 & N === 1'b1 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 1 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -299,9 +300,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b1) $display("[PASS] Z = 1 | correct Z"); 
+    assert(Z === 1'b1 & N === 1'b0 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 0 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -315,9 +316,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b1) $display("[PASS] Z = 1 | correct Z"); 
+    assert(Z === 1'b1 & N === 1'b0 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 0 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -331,15 +332,15 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b1) $display("[PASS] Z = 1 | correct Z"); 
+    assert(Z === 1'b1 & N === 1'b0 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 0 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
 
-    val_A = -16'd43; //A = 43
-    val_B = -16'd43; //B = 43
+    val_A = -16'd43; //A = -43
+    val_B = -16'd43; //B = -43
     #5;
     assert(ALU_out === 16'd0) $display("[PASS] %d - %d > %d | correct output", val_A, val_B, ALU_out); 
     else begin
@@ -347,9 +348,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b1) $display("[PASS] Z = 1 | correct Z"); 
+    assert(Z === 1'b1 & N === 1'b0 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 0 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -363,9 +364,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b1) $display("[PASS] Z = 1 | correct Z"); 
+    assert(Z === 1'b1 & N === 1'b0 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 0 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -382,9 +383,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b0) $display("[PASS] Z = 0 | correct Z"); 
+    assert(Z === 1'b0 & N === 1'b0 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 1 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -398,9 +399,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b0) $display("[PASS] Z = 0 | correct Z"); 
+    assert(Z === 1'b0 & N === 1'b0 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 1 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -414,9 +415,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b0) $display("[PASS] Z = 0 | correct Z"); 
+    assert(Z === 1'b0 & N === 1'b1 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 1 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -430,9 +431,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b0) $display("[PASS] Z = 0 | correct Z"); 
+    assert(Z === 1'b0 & N === 1'b0 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 1 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -448,9 +449,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b1) $display("[PASS] Z = 1 | correct Z"); 
+    assert(Z === 1'b1 & N === 1'b0 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 0 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -464,9 +465,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b1) $display("[PASS] Z = 1 | correct Z"); 
+    assert(Z === 1'b1 & N === 1'b0 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 0 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -482,9 +483,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b0) $display("[PASS] Z = 0 | correct Z"); 
+    assert(Z === 1'b0 & N === 1'b1 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 1 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -497,9 +498,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b0) $display("[PASS] Z = 0 | correct Z"); 
+    assert(Z === 1'b0 & N === 1'b1 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 1 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -512,9 +513,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b0) $display("[PASS] Z = 0 | correct Z"); 
+    assert(Z === 1'b0 & N === 1'b0 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin  
-      $error("[FAIL] Z = 1 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -527,9 +528,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b0) $display("[PASS] Z = 0 | correct Z"); 
+    assert(Z === 1'b0 & N === 1'b1 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 1 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -542,9 +543,9 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b0) $display("[PASS] Z = 0 | correct Z"); 
+    assert(Z === 1'b0 & N === 1'b1 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 1 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
@@ -559,13 +560,36 @@ module tb_ALU(output reg err);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
-    assert(Z === 1'b1) $display("[PASS] Z = 1 | correct Z"); 
+    assert(Z === 1'b1 & N === 1'b0 & V === 1'b0) $display("[PASS] Z, N & V are correct"); 
     else begin
-      $error("[FAIL] Z = 0 | incorrect Z");
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
       nerr = 1'b1;
       failed_count = failed_count + 1;
     end
     
+
+    $display("*testing overflow/underflow arithmetic*");
+    ALU_op = 2'b00;
+    $display("testing underflow");
+    val_A = 16'd65000; //A = 65000
+    val_B = 16'd5000; //B = 5000
+    #5;
+    assert(ALU_out === 16'd1) $display("[PASS] %d + %d > %d | correct output", val_A, val_B, ALU_out); 
+    else begin
+      $error("[FAIL] %d + %d > %d", val_A, val_B, ALU_out);
+      nerr = 1'b1;
+      failed_count = failed_count + 1;
+    end
+    assert(Z === 1'b0 & N === 1'b0 & V === 1'b1) $display("[PASS] Z, N & V are correct"); 
+    else begin
+      $error("[FAIL] Z = %b, N = %b, V = %b", Z, N, V);
+      nerr = 1'b1;
+      failed_count = failed_count + 1;
+    end
+
+
+    $display("testing overflow");
+
     #5;
     $display("err is %b", err);
     $display("Total number of tests failed is: %d", failed_count);
