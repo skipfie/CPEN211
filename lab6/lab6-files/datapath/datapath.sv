@@ -42,10 +42,10 @@ module datapath(input clk, input [15:0] mdata, input [7:0] pc, input [1:0] wb_se
       val_B = shift_out;
 
     case (wb_sel)
-      00: w_data = C;
-      01: w_data = {8'b0, pc};
-      10: w_data = sximm8;
-      11: w_data = mdata;
+      2'b00: w_data = C;
+      2'b01: w_data = {8'b0, pc};
+      2'b10: w_data = sximm8;
+      2'b11: w_data = mdata;
     endcase
   end
   //registers with enable

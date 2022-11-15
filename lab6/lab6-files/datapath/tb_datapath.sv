@@ -5,19 +5,21 @@ module tb_datapath(output err);
     reg [7:0] failed = 8'd0;
     reg [7:0] passed = 8'd0;
 
-    reg clk, wb_sel, w_en, en_A, en_B, sel_A, sel_B, en_C, en_status;
-    reg [1:0] shift_op, ALU_op;
+    reg clk, w_en, en_A, en_B, sel_A, sel_B, en_C, en_status;
+    reg [1:0] shift_op, ALU_op, wb_sel;
     reg [2:0] w_addr, r_addr;
-    reg [15:0] datapath_in;
+    reg [7:0] pc;
+    reg [15:0] mdata, sximm5, sximm8;
 
-    wire Z_out;
+    wire Z_out, N_out, V_out;
     wire [15:0] datapath_out;
 
-    datapath dut(.clk(clk), .datapath_in(datapath_in), .wb_sel(wb_sel), 
+    datapath dut(.clk(clk), .mdata(mdata), .pc(pc), .wb_sel(wb_sel), 
                  .w_addr(w_addr), .w_en(w_en), .r_addr(r_addr), .en_A(en_A),
                  .en_B(en_B), .shift_op(shift_op), .sel_A(sel_A), .sel_B(sel_B),
                  .ALU_op(ALU_op), .en_C(en_C), .en_status(en_status),
-                 .datapath_out(datapath_out), .Z_out(Z_out));
+                 .sximm8(sximm8), .sximm5(sximm5),
+                 .datapath_out(datapath_out), .Z_out(Z_out), .N_out(N_out), .V_out(V_out));
 
     initial begin
         clk <= 1'b1;
@@ -25,42 +27,46 @@ module tb_datapath(output err);
     end
 
     initial begin
+        #3;
+        pc = 8'd0;
+        mdata = 16'd0;
+
         // fill regfile with numbers
-        // r0 = 6969, r1 = -6969, r2 = 1024, r3 = -1024, 
+        // r0 = 6969, r1 = -6969, r2 = big number, r3 = negative big number, 
         // r4 = 0, r5 = 15, r6 = -15, r7 = X
-        wb_sel = 1'b1;
+        wb_sel = 2'b10;
         w_en = 1'b1;
 
-        datapath_in = 16'd6969; 
+        sximm8 = 16'd6969; 
         w_addr = 3'd0;
-        #20;
-        datapath_in = -16'd6969;
+        #10;
+        sximm8 = -16'd6969;
         w_addr = 3'd1;
-        #20;
-        datapath_in = 16'd1024;
+        #10;
+        sximm8 = 16'b0111111111111111;
         w_addr = 3'd2;
-        #20;
-        datapath_in = -16'd1024;
+        #10;
+        sximm8 = 16'b1111111111111100;
         w_addr = 3'd3;
-        #20;
-        datapath_in = 16'd0;
+        #10;
+        sximm8 = 16'd0;
         w_addr = 3'd4;
-        #20;
-        datapath_in = 16'd15;
+        #10;
+        sximm8 = 16'd15;
         w_addr = 3'd5;
-        #20;
-        datapath_in = -16'd15;
+        #10;
+        sximm8 = -16'd15;
         w_addr = 3'd6;
-        #20;
+        #10;
 
-        wb_sel = 1'b0;
+        wb_sel = 2'b00;
         w_en = 1'b0; // prevent garbage data from being written
 
         // write 6969 to A and B
         r_addr = 3'd0;
         en_A = 1'b1;
         en_B = 1'b1;
-        #20;
+        #10;
 
         en_A = 1'b0;
         en_B = 1'b0;
@@ -76,7 +82,7 @@ module tb_datapath(output err);
 
         en_status = 1'b1;
         en_C = 1'b1;
-        #20; //add more time for netlist to update
+        #10; //add more time for netlist to update
         
         assert (datapath_out === 16'd13938) begin
             $display("[PASS] r0 + r0 = 13938; r0 = 6969; en_C true");
@@ -98,10 +104,30 @@ module tb_datapath(output err);
             failed = failed + 1;
         end
 
-        wb_sel = 1'b0; //write output to r7
+        assert (N_out === 1'b0) begin
+            $display("[PASS] N_out is zero when alu output is 13938 and en_status is true");
+            passed = passed + 1;
+        end
+        else begin
+            $error("[FAIL] N_out is zero when alu output is 13938 and en_status is true");
+            nerr = 1'b1;
+            failed = failed + 1;
+        end
+
+        assert (V_out === 1'b0) begin
+            $display("[PASS] V_out is zero when alu output is 13938 and en_status is true");
+            passed = passed + 1;
+        end
+        else begin
+            $error("[FAIL] V_out is zero when alu output is 13938 and en_status is true");
+            nerr = 1'b1;
+            failed = failed + 1;
+        end
+
+        wb_sel = 2'b00; //write output to r7
         w_addr = 3'd7;
         w_en = 1'b1;
-        #20;
+        #10;
 
         w_en = 1'b0;
 
@@ -109,7 +135,7 @@ module tb_datapath(output err);
 
         en_status = 1'b0;
         en_C = 1'b0;
-        #20;
+        #10;
 
         assert (datapath_out === 16'd13938) begin
             $display("[PASS] en_C false, retaining last output");
@@ -130,7 +156,7 @@ module tb_datapath(output err);
 
         en_status = 1'b1;
         en_C = 1'b1;
-        #20; //add more time for netlist to update
+        #10; //add more time for netlist to update
 
         assert (datapath_out === 16'd0) begin
             $display("[PASS] r0 - r0 = 0; r0 = 6969; en_C is true");
@@ -157,10 +183,10 @@ module tb_datapath(output err);
 
         ALU_op = 2'b00;
 
-        datapath_in[4:0] = 5'd31;
+        sximm5 = 5'd31;
 
         en_C = 1'b1;
-        #20;
+        #10;
 
         assert (datapath_out === 16'd31) begin
             $display("[PASS] datapath_out equals immediate value of 31, sel_A and sel_B working");
@@ -203,8 +229,8 @@ module tb_datapath(output err);
         end
 
         sel_B = 1'b1;
-        datapath_in[4:0] = 5'd10;
-        #20;
+        sximm5 = 5'd10;
+        #10;
 
         assert (datapath_out === 16'd10) begin
             $display("[PASS] datapath_out equals immediate value 10, should be unaffected by shifter");
@@ -218,7 +244,7 @@ module tb_datapath(output err);
 
         sel_B = 1'b0;
         shift_op = 2'b11;
-        #20;
+        #10;
 
         assert (datapath_out === -16'd8) begin
             $display("[PASS] datapath_out equals r6 >>> 1 = (-8)");
@@ -230,7 +256,50 @@ module tb_datapath(output err);
             failed = failed + 1;
         end
 
-        #5;
+        assert (N_out === 1'b1) begin
+            $display("[PASS] N_out is one when alu output is -8 and en_status is true");
+            passed = passed + 1;
+        end
+        else begin
+            $error("[FAIL] N_out is one when alu output is -8 and en_status is true");
+            nerr = 1'b1;
+            failed = failed + 1;
+        end
+
+        sel_B = 1'b1;
+        sximm5 = 16'd10;
+
+        sel_A = 1'b0;
+        en_A = 1'b1;
+
+        r_addr = 3'd2;
+        ALU_op = 2'b00;
+        #30;
+        
+        assert (V_out === 1'b1) begin
+            $display("[PASS] V_out is one when alu output overflowed and en_status is true");
+            passed = passed + 1;
+        end
+        else begin
+            $error("[FAIL] V_out is one when alu output overflowed and en_status is true");
+            nerr = 1'b1;
+            failed = failed + 1;
+        end
+
+        r_addr = 3'd3;
+        ALU_op = 2'b01;
+        #30;
+
+        assert (V_out === 1'b1) begin
+            $display("[PASS] V_out is one when alu output underflowed and en_status is true");
+            passed = passed + 1;
+        end
+        else begin
+            $error("[FAIL] V_out is one when alu output underflowed and en_status is true");
+            nerr = 1'b1;
+            failed = failed + 1;
+        end
+
         $display("err is %b", err);
         $display("Total number of tests failed is: %d", failed);
         $display("Total number of tests passed is: %d", passed);
