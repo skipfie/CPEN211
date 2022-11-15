@@ -9,11 +9,24 @@ module controller(input clk, input rst_n, input start,
 
 
   // for state transition
+  always_ff @(posedge clk) begin
+        if (~rst_n) state <= `one; //active low reset
+        else begin
+            case (state)
 
 
 
+            endcase
+        end
 
+  end 
 
+  // for output logic
+    always_comb begin
+        case (state)
 
+        
+        endcase
+    end
 
 endmodule: controller

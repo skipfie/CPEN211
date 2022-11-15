@@ -1,16 +1,15 @@
 `timescale 1 ps/ 1 ps
-module tb_ALU(output err);
-  reg nerr = 1'b0;
-  assign err = nerr;
+module tb_ALU(output reg err);
+  nerr = 1'b0;
   reg [7:0] failed_count = 8'd0;
   reg [1:0] ALU_op;
   reg signed [15:0] val_A, val_B, ALU_out;
-  wire Z;
+  wire Z, N, V;
 
-  ALU dut(.val_A(val_A), .val_B(val_B), .ALU_op(ALU_op), .ALU_out(ALU_out), .Z(Z));
+  ALU dut(.val_A(val_A), .val_B(val_B), .ALU_op(ALU_op), .ALU_out(ALU_out), .Z(Z), .N(N), .V(V));
 
   initial begin
-
+    $display("*testing non-overflow/underflow arithmetic*");
     $display("testing addition & output isn't 0");
     ALU_op = 2'b00;
     val_A = 16'd1; //A = 1
