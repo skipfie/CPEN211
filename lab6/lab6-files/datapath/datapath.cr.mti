@@ -5,4 +5,24 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	tb_datapath
 
+} {} {}} C:/CPEN211/Labs/CPEN211/lab6/lab6-files/regfile/regfile.sv {1 {vlog -work work -sv -stats=none C:/CPEN211/Labs/CPEN211/lab6/lab6-files/regfile/regfile.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module regfile
+
+Top level modules:
+	regfile
+
+} {} {}} C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/alu.sv {0 {vlog -work work -sv -stats=none C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/alu.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ALU
+** Error: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/alu.sv(4): (vlog-2730) Undefined variable: 'out'.
+** Error: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/alu/alu.sv(17): (vlog-2730) Undefined variable: 'out'.
+
+} {4.0 6.0} {}} C:/CPEN211/Labs/CPEN211/lab6/lab6-files/datapath/datapath.sv {1 {vlog -work work -sv -stats=none C:/CPEN211/Labs/CPEN211/lab6/lab6-files/datapath/datapath.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module datapath
+
+Top level modules:
+	datapath
+
 } {} {}}
