@@ -2,7 +2,6 @@ module idecoder(input [15:0] ir, input [1:0] reg_sel,
                 output [2:0] opcode, output [1:0] ALU_op, output [1:0] shift_op,
 		        output [15:0] sximm5, output [15:0] sximm8,
                 output [2:0] r_addr, output [2:0] w_addr);
-
     reg [2:0] nr_addr, nw_addr;
     assign r_addr = nr_addr;
     assign w_addr = nw_addr;
@@ -36,5 +35,4 @@ module idecoder(input [15:0] ir, input [1:0] reg_sel,
             end // 11 is unused
         endcase
     end
-
 endmodule: idecoder
