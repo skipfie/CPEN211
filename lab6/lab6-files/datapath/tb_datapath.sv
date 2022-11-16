@@ -2,8 +2,8 @@ module tb_datapath(output err);
     reg nerr = 1'b0;
     assign err = nerr;
 
-    reg [7:0] failed = 8'd0;
-    reg [7:0] passed = 8'd0;
+    integer failed = 0;
+    integer passed = 0;
 
     reg clk, w_en, en_A, en_B, sel_A, sel_B, en_C, en_status;
     reg [1:0] shift_op, ALU_op, wb_sel;
