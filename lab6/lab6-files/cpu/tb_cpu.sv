@@ -164,13 +164,55 @@ module tb_cpu(output err);
         MOVimm(3'd0, 8'd69); // r0 = 69
         MOVimm(3'd1, -8'd69); // r1 = -69
 
-        MOV(3'd2, 3'd0, 2'b00); // r2 = r0 = 69
-        check_output(69, "r2=r0 (r0 = 69)");
+        MOV(3'd7, 3'd0, 2'b00); // r7 = r0 = 69
+        check_output(69, "r7=r0 (r0 = 69)");
 
         MOV(3'd2, 3'd0, 2'b01); // r2 = r0*2 = 138
         check_output(138, "r2=r0<<1 (r0 = 69)");
         
-        
+        ADD(3'd7, 3'd0, 3'd1, 2'b00); // r7 = 0
+        check_output(0, "r7=r0+r1 (r0 = 69, r1 = -69)");
+
+        MOV(3'd0, 3'd0, 2'b01); // r0 = r0*2 = 138
+        check_output(138, "r0=r0<<1 (r0 = 69)");
+
+        CMP(3'd0, 3'd2, 2'b00);
+        check_output(138, "CMP 138 with 138 (output discarded)");
+        check_flags(0, 0, 1, "CMP 138 with 138");
+
+        // test waiting flag in middle of execution
+        instr = {5'b101_00, 3'd0, 3'd0, 2'b01, 3'd2}; // ADD r0, r0, r2, LSL#1
+        load = 1'b1;
+        #10;
+        load = 1'b0; // cycle 2
+        start = 1'b1;
+        #10;
+        start = 1'b0; // cycle 3-5
+        assert (waiting === 1'b0) begin
+            $display("[PASS] ADD r0, r0, r2, LSL#1: is not waiting for next instruction in middle of exec");
+            passed = passed + 1;
+        end
+        else begin
+            $error("[FAIL] ADD r0, r0, r2, LSL#1: is waiting for next instruction in middle of exec");
+            nerr = 1'b1;
+            failed = failed + 1;
+        end
+        #30;
+        check_output(414, "ADD r0, r0, r2, LSL#1");
+        check_flags(0, 0, 1, "ADD r0, r0, r2, LSL#1 (status only for CMP so should retain previous status)");
+
+        CMP(3'd2, 3'd0, 2'b00);
+        check_output(414, "CMP 138 with 414 (output discarded)");
+        check_flags(1, 0, 0, "CMP 138 with 414") // NVZ
+
+        MOVimm(3'd6, 8'b1111_1111); // r6 = 255
+        check_output(414, "MOVimm shouldn't update output (output discarded)");
+
+        ADD(3'd0, 3'd0, 3'd6, 2'b01);
+        check_output(924, "414 + 255 * 2");
+
+        MVN(3'd6, 3'd0, 2'b01);;
+        check_output(924, "414 + 255 * 2");
 
         $stop;
     end
