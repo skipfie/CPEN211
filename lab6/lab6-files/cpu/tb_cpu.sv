@@ -211,8 +211,39 @@ module tb_cpu(output err);
         ADD(3'd0, 3'd0, 3'd6, 2'b01);
         check_output(924, "414 + 255 * 2");
 
-        MVN(3'd6, 3'd0, 2'b01);;
-        check_output(924, "414 + 255 * 2");
+        MOV(3'd6, 3'd0, 2'b01);
+        check_output(1848, "r6 = 924 * 2");
+
+        MOV(3'd0, 3'd6, 2'b01);
+        check_output(3696, "r0 = 1848 * 2");
+
+        MOV(3'd6, 3'd0, 2'b01);
+        check_output(7392, "r6 = 3696 * 2");
+
+        MOV(3'd0, 3'd6, 2'b01);
+        check_output(14784, "r0 = 7392 * 2");
+
+        MOV(3'd6, 3'd0, 2'b01);
+        check_output(29568, "r6 = 14784 * 2");
+
+        MOV(3'd0, 3'd6, 2'b00);
+        check_output(29568, "r0 = 29568");
+
+        MVN(3'd5, 3'd6, 2'b00);
+        check_output(16'b1000110001111111, "r5=~r6");
+
+        MOVimm(3'd7, 8'd1);
+        ADD(3'd5, 3'd5, 3'd7, 2'b00);
+        check_output(-29568, "perform two's compliment");
+
+        // d6 = 29568
+        // d5 = -29568
+
+        CMP(3'd6, 3'd5, 2'b00);
+        check_flags(1, 1, 0, "overflow case, CMP 29568, -29568");
+
+        CMP(3'd5, 3'd6, 2'b00);
+        check_flags(0, 1, 0, "underflow case, CMP -29568, 29568");
 
         $stop;
     end
