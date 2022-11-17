@@ -11,7 +11,7 @@ module tb_controller(output err);
 
     //controller output
     wire waiting, en_A, en_B, en_C, en_status, sel_A, sel_B, w_en;
-    wire [1:0] reg_sel, wb_sel;
+    wire [1:0] reg_sel, wb_sel; 
 
     controller dut(.clk(clk), .rst_n(rst_n), .start(start),
                    .opcode(opcode), .ALU_op(ALU_op), .shift_op(shift_op), 
@@ -25,7 +25,7 @@ module tb_controller(output err);
     task start; start = 1'b1; #10; start = 1'b0; endtask
     task MOVimm; opcode = 3'b110, ALU_op = 2'b10; start = 1'b1; #10; start = 1'b0; endtask
     task MOV; opcode = 3'b110; ALU_op = 2'b00; start = 1'b1; #10; start = 1'b0; endtask
-    
+
 
     initial begin
         #7;
