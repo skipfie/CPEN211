@@ -11,7 +11,7 @@ module tb_cpu(output err);
     reg [15:0] instr;
 
     wire waiting, N, V, Z;
-    wire [15:0] out
+    wire [15:0] out;
 
     cpu dut(.clk(clk), .rst_n(rst_n), .load(load), .start(start), .instr(instr),
             .waiting(waiting), .out(out), .N(N), .V(V), .Z(Z));
@@ -98,7 +98,7 @@ module tb_cpu(output err);
     endtask
 
     task MOV(input [2:0] Rd, input [2:0] Rm, input [1:0] sh_op);
-        instr = {8'b110_00_000, Rd, sh, Rm};
+        instr = {8'b110_00_000, Rd, sh_op, Rm};
         load = 1'b1;
         #10;
         load = 1'b0; // cycle 2
@@ -123,7 +123,7 @@ module tb_cpu(output err);
         instr = {5'b101_01, Rn, 3'b000, sh_op, Rm};
         load = 1'b1;
         #10;
-        load - 1'b0;
+        load = 1'b0;
         start = 1'b1;
         #10;
         start = 1'b0;
@@ -134,7 +134,7 @@ module tb_cpu(output err);
         instr = {5'b101_10, Rn, Rd, sh_op, Rm};
         load = 1'b1;
         #10;
-        load - 1'b0;
+        load = 1'b0;
         start = 1'b1;
         #10;
         start = 1'b0;
@@ -142,10 +142,10 @@ module tb_cpu(output err);
     endtask
 
     task MVN(input [2:0] Rd, input [2:0] Rm, input [1:0] sh_op);
-        instr = {8'b101_11_000, Rd, sh, Rm};
+        instr = {8'b101_11_000, Rd, sh_op, Rm};
         load = 1'b1;
         #10;
-        load - 1'b0;
+        load = 1'b0;
         start = 1'b1;
         #10;
         start = 1'b0;
@@ -203,7 +203,7 @@ module tb_cpu(output err);
 
         CMP(3'd2, 3'd0, 2'b00);
         check_output(414, "CMP 138 with 414 (output discarded)");
-        check_flags(1, 0, 0, "CMP 138 with 414") // NVZ
+        check_flags(1, 0, 0, "CMP 138 with 414"); // NVZ
 
         MOVimm(3'd6, 8'b1111_1111); // r6 = 255
         check_output(414, "MOVimm shouldn't update output (output discarded)");
@@ -244,6 +244,11 @@ module tb_cpu(output err);
 
         CMP(3'd5, 3'd6, 2'b00);
         check_flags(0, 1, 0, "underflow case, CMP -29568, 29568");
+
+        $display("err is %b", err);
+        $display("Total number of tests failed is: %d", failed);
+        $display("Total number of tests passed is: %d", passed);
+        $stop;
 
         $stop;
     end
