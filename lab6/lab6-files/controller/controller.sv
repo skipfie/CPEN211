@@ -21,16 +21,16 @@ module controller(input clk, input rst_n, input start,
     
     // define the name of each state
     `define Wait 5'd0
-    `define start 5'd1
+    //`define start 5'd1
 
-    `define move 5'd2
+    //`define move 5'd2
     `define mov1 5'd3
 
     `define mov_1 5'd4
     `define mov_2 5'd5
     `define mov_3 5'd6
 
-    `define alu 5'd7
+    //`define alu 5'd7
     `define add1 5'd8
     `define add2 5'd9
     `define add3 5'd10
@@ -55,16 +55,25 @@ module controller(input clk, input rst_n, input start,
         if (~rst_n) state <= `Wait; //active low reset
         else begin
             case (state)
-            `Wait: begin
+            /*`Wait: begin
                 if (start) state <= `start;
                 else state <= `Wait;
-            end
-            `start: begin
-                if (opcode == 3'b101) state <= `alu;
-                else if (opcode == 3'b110) state <= `move;
-                else state <=`start;
+            end*/
+            `Wait: begin
+                if (start && opcode == 3'b101 && ALU_op == 00) state <= `add1;
+                else if (start && opcode == 3'b110 && ALU_op == 01) state <= `cmp1;
+                else if (start && opcode == 3'b101 && ALU_op == 10) state <= `And1;
+                else if (start && opcode == 3'b101 && ALU_op == 11) state <= `mov1;
+
+                else if (ALU_op == 2'b01) state <= `cmp1;
+                else if (ALU_op == 2'b10) state <= `And1;
+                else if (ALU_op == 2'b11) state <= `mvn1;
+                if (shift_op == 2'b10) state <= `mov1;
+                else if (shift_op == 2'b00) state <= `mov_1;
+                else state <= `move;
+                else state <=`Wait;
             end 
-            `alu: begin
+            /*`alu: begin
                 if (ALU_op == 2'b00) state <= `add1;
                 else if (ALU_op == 2'b01) state <= `cmp1;
                 else if (ALU_op == 2'b10) state <= `And1;
@@ -74,7 +83,7 @@ module controller(input clk, input rst_n, input start,
                 if (shift_op == 2'b10) state <= `mov1;
                 else if (shift_op == 2'b00) state <= `mov_1;
                 else state <= `move;
-            end
+            end*/
             `mov1: state <= `Wait;
             `mov_1: state <= `mov_2;
             `mov_2: state <= `mov_3;
@@ -118,7 +127,7 @@ module controller(input clk, input rst_n, input start,
                 _reg_sel = 2'b00;
                 _wb_sel = 2'b00;
             end
-            `start: begin 
+            /*`start: begin 
                 _waiting = 1'b0;
                 _en_A = 1'b0;
                 _en_B = 1'b0;
@@ -129,7 +138,7 @@ module controller(input clk, input rst_n, input start,
                 _w_en = 1'b0;
                 _reg_sel = 2'b00;
                 _wb_sel = 2'b00;
-            end
+            end*/
             `alu: begin
                 _waiting = 1'b0;
                 _en_A = 1'b0;
