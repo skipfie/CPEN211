@@ -105,7 +105,7 @@ module controller(input clk, input rst_n, input start,
 
     // for output logic
     always_comb begin
-        casex (state)
+        case (state)
             `Wait: begin 
                 _waiting = 1'b1;
                 _en_A = 1'b0;
