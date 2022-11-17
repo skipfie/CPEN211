@@ -37,10 +37,9 @@ module datapath(input clk, input [15:0] mdata, input [7:0] pc, input [1:0] wb_se
       val_A = A;
     
     if (sel_B == 1)
-      val_B = {sximm5};
+      val_B = sximm5;
     else 
       val_B = shift_out;
-
     case (wb_sel)
       2'b00: w_data = C;
       2'b01: w_data = {8'b0, pc};
