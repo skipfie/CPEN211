@@ -60,17 +60,13 @@ module controller(input clk, input rst_n, input start,
                 else state <= `Wait;
             end*/
             `Wait: begin
-                if (start && opcode == 3'b101 && ALU_op == 00) state <= `add1;
-                else if (start && opcode == 3'b110 && ALU_op == 01) state <= `cmp1;
-                else if (start && opcode == 3'b101 && ALU_op == 10) state <= `And1;
-                else if (start && opcode == 3'b101 && ALU_op == 11) state <= `mov1;
+                if (start && opcode == 3'b101 && ALU_op == 2'b00) state <= `add1;
+                else if (start && opcode == 3'b101 && ALU_op == 2'b01) state <= `cmp1;
+                else if (start && opcode == 3'b101 && ALU_op == 2'b10) state <= `And1;
+                else if (start && opcode == 3'b101 && ALU_op == 2'b11) state <= `mov1;
 
-                else if (ALU_op == 2'b01) state <= `cmp1;
-                else if (ALU_op == 2'b10) state <= `And1;
-                else if (ALU_op == 2'b11) state <= `mvn1;
-                if (shift_op == 2'b10) state <= `mov1;
-                else if (shift_op == 2'b00) state <= `mov_1;
-                else state <= `move;
+                else if (start && opcode == 3'b110 && shift_op == 2'b10) state <= `mov1;
+                else if (start && opcode == 3'b110 && shift_op == 2'b00) state <= `mov_1;
                 else state <=`Wait;
             end 
             /*`alu: begin
