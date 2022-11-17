@@ -245,6 +245,11 @@ module tb_cpu(output err);
         CMP(3'd5, 3'd6, 2'b00);
         check_flags(0, 1, 0, "underflow case, CMP -29568, 29568");
 
+        $display("err is %b", err);
+        $display("Total number of tests failed is: %d", failed);
+        $display("Total number of tests passed is: %d", passed);
+        $stop;
+
         $stop;
     end
 

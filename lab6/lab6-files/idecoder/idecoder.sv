@@ -32,6 +32,8 @@ module idecoder(input [15:0] ir, input [1:0] reg_sel,
                 nw_addr = Rn;
             end
             default: begin
+                nr_addr = 3'b000;
+                nw_addr = 3'b000;
             end // 11 is unused
         endcase
     end
