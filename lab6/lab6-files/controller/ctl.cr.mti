@@ -1,48 +1,11 @@
-C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv {0 {vlog -work work -sv -stats=none C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv
+C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv {1 {vlog -work work -sv -stats=none C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module controller
-** Error: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(63): (vlog-2730) Undefined variable: 'mov1'.
-** Error: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(65): (vlog-2730) Undefined variable: 'mov2'.
-** Error: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(84): (vlog-2730) Undefined variable: 'x'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(87): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(88): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(89): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(90): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(91): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(92): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(96): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(97): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(98): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(99): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(100): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(101): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(102): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(103): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(104): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(108): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(109): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(110): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(111): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(112): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(113): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(114): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(115): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(116): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13053) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(118): near "'m": Illegal base specifier in numeric constant.
-** Error: (vlog-13057) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(118): Expecting numeric digits.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(118): near "ove": syntax error, unexpected IDENTIFIER, expecting ':'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(120): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(121): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(122): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(123): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(124): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(125): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(126): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(127): near ";": syntax error, unexpected ';'.
-** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(128): near ";": syntax error, unexpected ';'.
-** Error: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(132): (vlog-13205) Syntax error found in the scope following '_en_A'. Is there a missing '::'?
 
-} {4.0 44.0} {}} C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv {1 {vlog -work work -sv -stats=none C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv
+Top level modules:
+	controller
+
+} {} {}} C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv {1 {vlog -work work -sv -stats=none C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module tb_controller
 
