@@ -1,4 +1,12 @@
-C:/CPEN211/Labs/CPEN211/lab6/lab6-files/regfile/regfile.sv {1 {vlog -work work -sv -stats=none C:/CPEN211/Labs/CPEN211/lab6/lab6-files/regfile/regfile.sv
+C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv {0 {vlog -work work -sv -stats=none C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module controller
+** Error: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(138): (vlog-2163) Macro `alu is undefined.
+** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(138): near "begin": syntax error, unexpected begin, expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER.
+** Error: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(150): (vlog-2163) Macro `move is undefined.
+** Error: (vlog-13069) C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv(150): near "begin": syntax error, unexpected begin, expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER.
+
+} {4.0 8.0} {}} C:/CPEN211/Labs/CPEN211/lab6/lab6-files/regfile/regfile.sv {1 {vlog -work work -sv -stats=none C:/CPEN211/Labs/CPEN211/lab6/lab6-files/regfile/regfile.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module regfile
 
@@ -18,13 +26,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	cpu
-
-} {} {}} C:/CPEN211/Labs/CPEN211/lab6/lab6-files/cpu/tb_cpu.sv {1 {vlog -work work -sv -stats=none C:/CPEN211/Labs/CPEN211/lab6/lab6-files/cpu/tb_cpu.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module tb_cpu
-
-Top level modules:
-	tb_cpu
 
 } {} {}} C:/CPEN211/Labs/CPEN211/lab6/lab6-files/idecoder/idecoder.sv {1 {vlog -work work -sv -stats=none C:/CPEN211/Labs/CPEN211/lab6/lab6-files/idecoder/idecoder.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016

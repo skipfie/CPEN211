@@ -249,8 +249,6 @@ module tb_cpu(output err);
         $display("Total number of tests failed is: %d", failed);
         $display("Total number of tests passed is: %d", passed);
         $stop;
-
-        $stop;
     end
 
 endmodule: tb_cpu
