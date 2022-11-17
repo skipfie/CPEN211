@@ -135,7 +135,7 @@ module controller(input clk, input rst_n, input start,
                 _reg_sel = 2'b00;
                 _wb_sel = 2'b00;
             end*/
-            `alu: begin
+            /*`alu: begin
                 _waiting = 1'b0;
                 _en_A = 1'b0;
                 _en_B = 1'b0;
@@ -158,7 +158,7 @@ module controller(input clk, input rst_n, input start,
                 _w_en = 1'b0;
                 _reg_sel = 2'b00;
                 _wb_sel = 2'b00;
-            end
+            end*/
 
             `add1: begin
                 _waiting = 1'b0;
