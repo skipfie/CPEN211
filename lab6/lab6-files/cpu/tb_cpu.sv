@@ -205,36 +205,36 @@ module tb_cpu(output err);
         check_output(414, "CMP 138 with 414 (output discarded)");
         check_flags(1, 0, 0, "CMP 138 with 414"); // NVZ
 
-        MOVimm(3'd6, 8'b1111_1111); // r6 = 255
+        MOVimm(3'd6, 8'b0111_1111); // r6 = 127
         check_output(414, "MOVimm shouldn't update output (output discarded)");
 
         ADD(3'd0, 3'd0, 3'd6, 2'b01);
-        check_output(924, "414 + 255 * 2");
+        check_output(668, "414 + 127 * 2");
 
         MOV(3'd6, 3'd0, 2'b01);
-        check_output(1848, "r6 = 924 * 2");
+        check_output(1336, "r6 = 668 * 2");
 
         MOV(3'd0, 3'd6, 2'b01);
-        check_output(3696, "r0 = 1848 * 2");
+        check_output(2672, "r0 = 1336 * 2");
 
         MOV(3'd6, 3'd0, 2'b01);
-        check_output(7392, "r6 = 3696 * 2");
+        check_output(5344, "r6 = 2672 * 2");
 
         MOV(3'd0, 3'd6, 2'b01);
-        check_output(14784, "r0 = 7392 * 2");
+        check_output(10688, "r0 = 5344 * 2");
 
         MOV(3'd6, 3'd0, 2'b01);
-        check_output(29568, "r6 = 14784 * 2");
+        check_output(21376, "r6 = 10688 * 2");
 
         MOV(3'd0, 3'd6, 2'b00);
-        check_output(29568, "r0 = 29568");
+        check_output(21376, "r0 = 21376");
 
         MVN(3'd5, 3'd6, 2'b00);
-        check_output(16'b1000110001111111, "r5=~r6");
+        check_output(16'b1010110001111111, "r5=~r6");
 
         MOVimm(3'd7, 8'd1);
         ADD(3'd5, 3'd5, 3'd7, 2'b00);
-        check_output(-29568, "perform two's compliment");
+        check_output(16'b1010110010000000, "perform two's compliment");
 
         // d6 = 29568
         // d5 = -29568
@@ -244,6 +244,9 @@ module tb_cpu(output err);
 
         CMP(3'd5, 3'd6, 2'b00);
         check_flags(0, 1, 0, "underflow case, CMP -29568, 29568");
+
+        AND(3'd7, 3'd6, 3'd5, 2'b00);
+        check_output(16'b0000000010000000, "r7=r6 & r5");
 
         $display("err is %b", err);
         $display("Total number of tests failed is: %d", failed);
