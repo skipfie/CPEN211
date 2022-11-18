@@ -22,11 +22,15 @@ module controller(input clk, input rst_n, input start,
     // define the name of each state
     `define Wait 5'd0
 
-    `define mov1 5'd3
+    `define mov1 5'd1
 
-    `define mov_1 5'd4
-    `define mov_2 5'd5
-    `define mov_3 5'd6
+    `define mov_1 5'd2
+    `define mov_2 5'd3
+    `define mov_3 5'd4
+
+    `define mvn1 5'd5
+    `define mvn2 5'd6
+    `define mvn3 5'd7
 
     `define add1 5'd8
     `define add2 5'd9
@@ -43,10 +47,6 @@ module controller(input clk, input rst_n, input start,
     `define And3 5'd18
     `define And4 5'd19
 
-    `define mvn1 5'd20
-    `define mvn2 5'd21
-    `define mvn3 5'd22
-
     // for state transition
     always_ff @(posedge clk) begin
         if (~rst_n) state <= `Wait; //active low reset
@@ -56,7 +56,7 @@ module controller(input clk, input rst_n, input start,
                 if (start && opcode == 3'b101 && ALU_op == 2'b00) state <= `add1;
                 else if (start && opcode == 3'b101 && ALU_op == 2'b01) state <= `cmp1;
                 else if (start && opcode == 3'b101 && ALU_op == 2'b10) state <= `And1;
-                else if (start && opcode == 3'b101 && ALU_op == 2'b11) state <= `mov1;
+                else if (start && opcode == 3'b101 && ALU_op == 2'b11) state <= `mvn1;
 
                 else if (start && opcode == 3'b110 && ALU_op == 2'b10) state <= `mov1;
                 else if (start && opcode == 3'b110 && ALU_op == 2'b00) state <= `mov_1;
