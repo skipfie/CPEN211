@@ -31,12 +31,12 @@ module datapath(input clk, input [15:0] mdata, input [7:0] pc, input [1:0] wb_se
 
   //mux #6,7,9
   always_comb begin 
-    if (sel_A == 1)
+    if (sel_A == 1'b1)
       val_A = 16'b0;
     else 
       val_A = A;
     
-    if (sel_B == 1)
+    if (sel_B == 1'b1)
       val_B = sximm5;
     else 
       val_B = shift_out;
