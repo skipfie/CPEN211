@@ -1,0 +1,15 @@
+C:/CPEN211/Labs/CPEN211/lab6/lab6-files/datapath/tb_datapath.sv {1 {vlog -work work -sv -stats=none C:/CPEN211/Labs/CPEN211/lab6/lab6-files/datapath/tb_datapath.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module tb_datapath
+
+Top level modules:
+	tb_datapath
+
+} {} {}} C:/CPEN211/Labs/CPEN211/lab6/lab6-files/datapath/datapath.vo {1 {vlog -work work -stats=none C:/CPEN211/Labs/CPEN211/lab6/lab6-files/datapath/datapath.vo
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module datapath
+
+Top level modules:
+	datapath
+
+} {} {}}
