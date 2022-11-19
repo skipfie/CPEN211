@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-// DATE "11/19/2022 13:55:00"
+// DATE "11/19/2022 14:09:17"
 
 // 
 // Device: Altera 5CSEMA5F31C6 Package FBGA896
@@ -177,11 +177,11 @@ wire \state~28_combout ;
 wire \state~30_combout ;
 wire \state.Wait~q ;
 wire \state~27_combout ;
-wire \_reg_sel~0_combout ;
-wire \_en_A~0_combout ;
-wire \_en_B~0_combout ;
-wire \_en_C~0_combout ;
-wire \_en_C~1_combout ;
+wire \reg_sel~0_combout ;
+wire \en_A~0_combout ;
+wire \en_B~0_combout ;
+wire \en_C~0_combout ;
+wire \en_C~1_combout ;
 
 
 // Location: IOOBUF_X89_Y16_N22
@@ -218,7 +218,7 @@ defparam \reg_sel[0]~output .shift_series_termination_control = "false";
 
 // Location: IOOBUF_X89_Y15_N5
 cyclonev_io_obuf \reg_sel[1]~output (
-	.i(\_reg_sel~0_combout ),
+	.i(\reg_sel~0_combout ),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
@@ -282,7 +282,7 @@ defparam \w_en~output .shift_series_termination_control = "false";
 
 // Location: IOOBUF_X89_Y20_N96
 cyclonev_io_obuf \en_A~output (
-	.i(!\_en_A~0_combout ),
+	.i(!\en_A~0_combout ),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
@@ -298,7 +298,7 @@ defparam \en_A~output .shift_series_termination_control = "false";
 
 // Location: IOOBUF_X89_Y21_N56
 cyclonev_io_obuf \en_B~output (
-	.i(\_en_B~0_combout ),
+	.i(\en_B~0_combout ),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
@@ -314,7 +314,7 @@ defparam \en_B~output .shift_series_termination_control = "false";
 
 // Location: IOOBUF_X89_Y20_N45
 cyclonev_io_obuf \en_C~output (
-	.i(\_en_C~0_combout ),
+	.i(\en_C~0_combout ),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
@@ -346,7 +346,7 @@ defparam \en_status~output .shift_series_termination_control = "false";
 
 // Location: IOOBUF_X89_Y20_N62
 cyclonev_io_obuf \sel_A~output (
-	.i(\_en_C~1_combout ),
+	.i(\en_C~1_combout ),
 	.oe(vcc),
 	.dynamicterminationcontrol(gnd),
 	.seriesterminationcontrol(16'b0000000000000000),
@@ -1547,9 +1547,9 @@ defparam \state~27 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: LABCELL_X88_Y17_N45
-cyclonev_lcell_comb \_reg_sel~0 (
+cyclonev_lcell_comb \reg_sel~0 (
 // Equation(s):
-// \_reg_sel~0_combout  = (((\state.mov1~q ) # (\state.cmp1~q )) # (\state.and1~q )) # (\state.add1~q )
+// \reg_sel~0_combout  = (((\state.mov1~q ) # (\state.cmp1~q )) # (\state.and1~q )) # (\state.add1~q )
 
 	.dataa(!\state.add1~q ),
 	.datab(!\state.and1~q ),
@@ -1560,20 +1560,20 @@ cyclonev_lcell_comb \_reg_sel~0 (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\_reg_sel~0_combout ),
+	.combout(\reg_sel~0_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \_reg_sel~0 .extended_lut = "off";
-defparam \_reg_sel~0 .lut_mask = 64'h7FFF7FFF7FFF7FFF;
-defparam \_reg_sel~0 .shared_arith = "off";
+defparam \reg_sel~0 .extended_lut = "off";
+defparam \reg_sel~0 .lut_mask = 64'h7FFF7FFF7FFF7FFF;
+defparam \reg_sel~0 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: MLABCELL_X87_Y17_N0
-cyclonev_lcell_comb \_en_A~0 (
+cyclonev_lcell_comb \en_A~0 (
 // Equation(s):
-// \_en_A~0_combout  = ( !\state.and1~q  & ( (!\state.add1~q  & !\state.cmp1~q ) ) )
+// \en_A~0_combout  = ( !\state.and1~q  & ( (!\state.add1~q  & !\state.cmp1~q ) ) )
 
 	.dataa(!\state.add1~q ),
 	.datab(gnd),
@@ -1584,20 +1584,20 @@ cyclonev_lcell_comb \_en_A~0 (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\_en_A~0_combout ),
+	.combout(\en_A~0_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \_en_A~0 .extended_lut = "off";
-defparam \_en_A~0 .lut_mask = 64'hA0A0A0A000000000;
-defparam \_en_A~0 .shared_arith = "off";
+defparam \en_A~0 .extended_lut = "off";
+defparam \en_A~0 .lut_mask = 64'hA0A0A0A000000000;
+defparam \en_A~0 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: MLABCELL_X87_Y17_N12
-cyclonev_lcell_comb \_en_B~0 (
+cyclonev_lcell_comb \en_B~0 (
 // Equation(s):
-// \_en_B~0_combout  = ( \state.and2~q  ) # ( !\state.and2~q  & ( (((\state.cmp2~q ) # (\state.add2~q )) # (\state.mvn1~q )) # (\state.mov_1~q ) ) )
+// \en_B~0_combout  = ( \state.and2~q  ) # ( !\state.and2~q  & ( (((\state.cmp2~q ) # (\state.add2~q )) # (\state.mvn1~q )) # (\state.mov_1~q ) ) )
 
 	.dataa(!\state.mov_1~q ),
 	.datab(!\state.mvn1~q ),
@@ -1608,20 +1608,20 @@ cyclonev_lcell_comb \_en_B~0 (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\_en_B~0_combout ),
+	.combout(\en_B~0_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \_en_B~0 .extended_lut = "off";
-defparam \_en_B~0 .lut_mask = 64'h7FFF7FFFFFFFFFFF;
-defparam \_en_B~0 .shared_arith = "off";
+defparam \en_B~0 .extended_lut = "off";
+defparam \en_B~0 .lut_mask = 64'h7FFF7FFFFFFFFFFF;
+defparam \en_B~0 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: LABCELL_X88_Y17_N27
-cyclonev_lcell_comb \_en_C~0 (
+cyclonev_lcell_comb \en_C~0 (
 // Equation(s):
-// \_en_C~0_combout  = ( \state.add3~q  ) # ( !\state.add3~q  & ( ((\state.mov_2~q ) # (\state.and3~q )) # (\state.mvn2~q ) ) )
+// \en_C~0_combout  = ( \state.add3~q  ) # ( !\state.add3~q  & ( ((\state.mov_2~q ) # (\state.and3~q )) # (\state.mvn2~q ) ) )
 
 	.dataa(!\state.mvn2~q ),
 	.datab(!\state.and3~q ),
@@ -1632,20 +1632,20 @@ cyclonev_lcell_comb \_en_C~0 (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\_en_C~0_combout ),
+	.combout(\en_C~0_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \_en_C~0 .extended_lut = "off";
-defparam \_en_C~0 .lut_mask = 64'h7F7F7F7FFFFFFFFF;
-defparam \_en_C~0 .shared_arith = "off";
+defparam \en_C~0 .extended_lut = "off";
+defparam \en_C~0 .lut_mask = 64'h7F7F7F7FFFFFFFFF;
+defparam \en_C~0 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: LABCELL_X88_Y17_N30
-cyclonev_lcell_comb \_en_C~1 (
+cyclonev_lcell_comb \en_C~1 (
 // Equation(s):
-// \_en_C~1_combout  = ( \state.mov_2~q  ) # ( !\state.mov_2~q  & ( \state.mvn2~q  ) )
+// \en_C~1_combout  = ( \state.mov_2~q  ) # ( !\state.mov_2~q  & ( \state.mvn2~q  ) )
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -1656,14 +1656,14 @@ cyclonev_lcell_comb \_en_C~1 (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\_en_C~1_combout ),
+	.combout(\en_C~1_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \_en_C~1 .extended_lut = "off";
-defparam \_en_C~1 .lut_mask = 64'h0F0F0F0FFFFFFFFF;
-defparam \_en_C~1 .shared_arith = "off";
+defparam \en_C~1 .extended_lut = "off";
+defparam \en_C~1 .lut_mask = 64'h0F0F0F0FFFFFFFFF;
+defparam \en_C~1 .shared_arith = "off";
 // synopsys translate_on
 
 // Location: IOIBUF_X66_Y0_N58
