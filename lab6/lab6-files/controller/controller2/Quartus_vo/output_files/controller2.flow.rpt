@@ -1,5 +1,5 @@
 Flow report for controller2
-Fri Nov 18 22:47:45 2022
+Sat Nov 19 13:55:00 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,14 +40,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri Nov 18 22:47:45 2022       ;
+; Flow Status                     ; Successful - Sat Nov 19 13:55:00 2022       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; controller2                                 ;
 ; Top-level Entity Name           ; controller2                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 17 / 32,070 ( < 1 % )                       ;
+; Logic utilization (in ALMs)     ; 16 / 32,070 ( < 1 % )                       ;
 ; Total registers                 ; 20                                          ;
 ; Total pins                      ; 32 / 457 ( 7 % )                            ;
 ; Total virtual pins              ; 0                                           ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/18/2022 22:46:59 ;
+; Start date & time ; 11/19/2022 13:54:15 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; controller2         ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589190.166884041901900         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 10995770589191.166889485506136         ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -98,12 +98,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4827 MB             ; 00:00:17                           ;
-; Fitter               ; 00:00:24     ; 1.0                     ; 6544 MB             ; 00:00:46                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4833 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.0                     ; 5132 MB             ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4732 MB             ; 00:00:01                           ;
-; Total                ; 00:00:41     ; --                      ; --                  ; 00:01:13                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4829 MB             ; 00:00:18                           ;
+; Fitter               ; 00:00:24     ; 1.0                     ; 6544 MB             ; 00:00:49                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4829 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.0                     ; 5130 MB             ; 00:00:04                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4736 MB             ; 00:00:01                           ;
+; Total                ; 00:00:43     ; --                      ; --                  ; 00:01:16                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
