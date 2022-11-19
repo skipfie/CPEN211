@@ -245,6 +245,11 @@ module tb_cpu(output err);
         CMP(3'd5, 3'd6, 2'b00);
         check_flags(0, 1, 0, "underflow case, CMP -29568, 29568");
 
+        MOVimm(3'd3, 8'b01101111);
+        MOVimm(3'd4, 8'b10101010);
+        AND(3'd7, 3'd3, 3'd4, 2'b00);
+        check_output(16'b0000000000101010, "r7=r3 & r4");
+
         AND(3'd7, 3'd6, 3'd5, 2'b00);
         check_output(16'b0000000010000000, "r7=r6 & r5");
 
