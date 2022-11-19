@@ -1,5 +1,5 @@
 Analysis & Synthesis report for controller
-Fri Nov 18 13:45:52 2022
+Fri Nov 18 19:19:27 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Nov 18 13:45:52 2022       ;
+; Analysis & Synthesis Status     ; Successful - Fri Nov 18 19:19:27 2022       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; controller                                  ;
 ; Top-level Entity Name           ; controller                                  ;
@@ -188,8 +188,8 @@ refer to the applicable agreement for further details.
 ;     -- 7 input functions                    ; 0           ;
 ;     -- 6 input functions                    ; 1           ;
 ;     -- 5 input functions                    ; 7           ;
-;     -- 4 input functions                    ; 5           ;
-;     -- <=3 input functions                  ; 16          ;
+;     -- 4 input functions                    ; 6           ;
+;     -- <=3 input functions                  ; 15          ;
 ;                                             ;             ;
 ; Dedicated logic registers                   ; 20          ;
 ;                                             ;             ;
@@ -199,8 +199,8 @@ refer to the applicable agreement for further details.
 ;                                             ;             ;
 ; Maximum fan-out node                        ; rst_n~input ;
 ; Maximum fan-out                             ; 20          ;
-; Total fan-out                               ; 170         ;
-; Average fan-out                             ; 1.72        ;
+; Total fan-out                               ; 171         ;
+; Average fan-out                             ; 1.73        ;
 +---------------------------------------------+-------------+
 
 
@@ -279,19 +279,19 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 20                          ;
 ;     plain             ; 20                          ;
-; arriav_lcell_comb     ; 34                          ;
-;     normal            ; 34                          ;
+; arriav_lcell_comb     ; 35                          ;
+;     normal            ; 35                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 4                           ;
+;         1 data inputs ; 5                           ;
 ;         2 data inputs ; 14                          ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 5                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 6                           ;
 ;         5 data inputs ; 7                           ;
 ;         6 data inputs ; 1                           ;
 ; boundary_port         ; 25                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.65                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.48                        ;
 +-----------------------+-----------------------------+
 
 
@@ -310,7 +310,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Nov 18 13:45:43 2022
+    Info: Processing started: Fri Nov 18 19:19:17 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off controller -c controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -336,8 +336,8 @@ Info (21057): Implemented 54 device resources after synthesis - the final resour
     Info (21061): Implemented 29 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
     Info: Peak virtual memory: 4828 megabytes
-    Info: Processing ended: Fri Nov 18 13:45:52 2022
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Processing ended: Fri Nov 18 19:19:27 2022
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:22
 
 

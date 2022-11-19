@@ -8,27 +8,27 @@ Top level modules:
 } {} {}} C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv {2 {vlog -work work -sv -stats=none C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module tb_controller
-** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(52): (vlog-2643) Unterminated string literal continues onto next line.
-** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(62): (vlog-2643) Unterminated string literal continues onto next line.
-** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(72): (vlog-2643) Unterminated string literal continues onto next line.
-** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(82): (vlog-2643) Unterminated string literal continues onto next line.
-** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(95): (vlog-2643) Unterminated string literal continues onto next line.
-** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(105): (vlog-2643) Unterminated string literal continues onto next line.
-** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(115): (vlog-2643) Unterminated string literal continues onto next line.
-** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(125): (vlog-2643) Unterminated string literal continues onto next line.
-** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(138): (vlog-2643) Unterminated string literal continues onto next line.
-** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(148): (vlog-2643) Unterminated string literal continues onto next line.
-** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(158): (vlog-2643) Unterminated string literal continues onto next line.
-** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(168): (vlog-2643) Unterminated string literal continues onto next line.
-** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(181): (vlog-2643) Unterminated string literal continues onto next line.
-** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(191): (vlog-2643) Unterminated string literal continues onto next line.
-** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(201): (vlog-2643) Unterminated string literal continues onto next line.
-** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(214): (vlog-2643) Unterminated string literal continues onto next line.
-** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(227): (vlog-2643) Unterminated string literal continues onto next line.
-** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(237): (vlog-2643) Unterminated string literal continues onto next line.
-** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(247): (vlog-2643) Unterminated string literal continues onto next line.
-** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(261): (vlog-2643) Unterminated string literal continues onto next line.
-** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(271): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(53): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(63): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(73): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(83): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(96): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(106): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(116): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(126): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(139): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(149): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(159): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(169): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(182): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(192): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(202): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(215): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(228): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(238): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(248): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(262): (vlog-2643) Unterminated string literal continues onto next line.
+** Warning: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/tb_controller.sv(272): (vlog-2643) Unterminated string literal continues onto next line.
 
 Top level modules:
 	tb_controller
