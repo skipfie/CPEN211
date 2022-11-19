@@ -166,6 +166,8 @@ module tb_idecoder(output err);
             failed = failed + 1;
         end
 
+        #10;
+
         $display("err is %b", err);
         $display("Total number of tests failed is: %d", failed);
         $display("Total number of tests passed is: %d", passed);
