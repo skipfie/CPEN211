@@ -38,7 +38,8 @@ module tb_controller(output err);
         #7;
         $display("Testing reset");
         reset;
-        assert (waiting === 1'b1) $display("[PASS] The ctl is waiting");
+        assert (waiting === 1'b1) 
+                $display("[PASS] The ctl is waiting");
         else begin
           $error("[FAIL] The ctl is waiting but waiting is not 1");
           nerr = 1'b1;

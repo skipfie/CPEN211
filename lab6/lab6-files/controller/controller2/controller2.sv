@@ -69,7 +69,7 @@ module controller2(input clk, input rst_n, input start,
     end
 
     // for output logic
-    assign _waiting = (state == Wait) ? 1'b1 : 1'b0 ;
+    assign _waiting = (state == Wait) ? 1 : 0 ;
 
     assign _en_A = (state == add1) ? 1'b1 :
                    (state == cmp1) ? 1'b1 :
@@ -109,6 +109,9 @@ module controller2(input clk, input rst_n, input start,
                       (state == mov_3) ? 2'b01 : 2'b00 ;
     
     assign _wb_sel = (state == mov1) ? 2'b10 : 2'b00 ;
+
+    assign test_port1 = (state == Wait) ? 2'b11: 
+                        (state == mvn1) ? 2'b10: 2'b00 ;
 
    /*always_comb begin
         case (state)

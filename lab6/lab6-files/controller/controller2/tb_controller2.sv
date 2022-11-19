@@ -38,10 +38,12 @@ module tb_controller2(output err);
     task mvn; opcode = 3'b101; ALU_op = 2'b11; start = 1'b1; #10; start = 1'b0; endtask
     
     initial begin
-        #70;
+        #7;
         $display("Testing reset");
         reset;
-        assert (waiting === 1'b1) $display("[PASS] The ctl is waiting");
+        assert (waiting === 1'b1  && en_A === 1'b0 && en_B === 1'b0 && en_C === 1'b0 && en_status === 1'b0 && 
+                sel_A === 1'b0 && sel_B === 1'b0 && w_en === 1'b0 && reg_sel === 2'b00 && wb_sel === 2'b00) 
+                $display("[PASS] The ctl is waiting");
         else begin
           $error("[FAIL] The ctl is waiting but waiting is not 1");
           nerr = 1'b1;
