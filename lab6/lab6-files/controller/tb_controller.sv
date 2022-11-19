@@ -152,7 +152,7 @@ module tb_controller(output err);
           failed = failed + 1;
         end
         #10; //c3
-        assert (waiting === 1'b0 && en_A === 1'b0 && en_B === 1'b0 && en_C === 1'b0 && en_status === 1'b0 && 
+        assert (waiting === 1'b0 && en_A === 1'b0 && en_B === 1'b0 && en_C === 1'b1 && en_status === 1'b0 && 
                 sel_A === 1'b0 && sel_B === 1'b0 && w_en === 1'b0 && reg_sel === 2'b00 && wb_sel === 2'b00) 
           $display("[PASS] All the control signals are correct");
         else begin $error("[FAIL] waiting = %b, en_A = %b, en_B = %b, en_C = %b, en_status = %b, 
