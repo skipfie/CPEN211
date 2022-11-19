@@ -186,7 +186,7 @@ module tb_controller(output err);
         end
         #10; //c2
         assert (waiting === 1'b0 && en_A === 1'b0 && en_B === 1'b0 && en_C === 1'b1 && en_status === 1'b0 && 
-                sel_A === 1'b0 && sel_B === 1'b0 && w_en === 1'b0 && reg_sel === 2'b00 && wb_sel === 2'b00) 
+                sel_A === 1'b1 && sel_B === 1'b0 && w_en === 1'b0 && reg_sel === 2'b00 && wb_sel === 2'b00) 
           $display("[PASS] All the control signals are correct");
         else begin $error("[FAIL] waiting = %b, en_A = %b, en_B = %b, en_C = %b, en_status = %b, 
                            sel_A = %b, sel_B = %b, w_en = %b, reg_sel = %b, wb_sel = %b", waiting, en_A
@@ -209,7 +209,7 @@ module tb_controller(output err);
         $display("Testing MOVimm");
         MOVimm; //c1
         assert (waiting === 1'b0 && en_A === 1'b0 && en_B === 1'b0 && en_C === 1'b0 && en_status === 1'b0 && 
-                sel_A === 1'b0 && sel_B === 1'b0 && w_en === 1'b0 && reg_sel === 2'b10 && wb_sel === 2'b10) 
+                sel_A === 1'b0 && sel_B === 1'b0 && w_en === 1'b1 && reg_sel === 2'b10 && wb_sel === 2'b10) 
           $display("[PASS] All the control signals are correct");
         else begin $error("[FAIL] waiting = %b, en_A = %b, en_B = %b, en_C = %b, en_status = %b, 
                            sel_A = %b, sel_B = %b, w_en = %b, reg_sel = %b, wb_sel = %b", waiting, en_A
@@ -232,7 +232,7 @@ module tb_controller(output err);
         end
         #10; //c2
         assert (waiting === 1'b0 && en_A === 1'b0 && en_B === 1'b0 && en_C === 1'b1 && en_status === 1'b0 && 
-                sel_A === 1'b0 && sel_B === 1'b0 && w_en === 1'b0 && reg_sel === 2'b00 && wb_sel === 2'b00) 
+                sel_A === 1'b1 && sel_B === 1'b0 && w_en === 1'b0 && reg_sel === 2'b00 && wb_sel === 2'b00) 
           $display("[PASS] All the control signals are correct");
         else begin $error("[FAIL] waiting = %b, en_A = %b, en_B = %b, en_C = %b, en_status = %b, 
                            sel_A = %b, sel_B = %b, w_en = %b, reg_sel = %b, wb_sel = %b", waiting, en_A
@@ -266,7 +266,7 @@ module tb_controller(output err);
         end
         #10; //c2
         assert (waiting === 1'b0 && en_A === 1'b0 && en_B === 1'b0 && en_C === 1'b1 && en_status === 1'b0 && 
-                sel_A === 1'b0 && sel_B === 1'b0 && w_en === 1'b0 && reg_sel === 2'b00 && wb_sel === 2'b00) 
+                sel_A === 1'b1 && sel_B === 1'b0 && w_en === 1'b0 && reg_sel === 2'b00 && wb_sel === 2'b00) 
           $display("[PASS] All the control signals are correct");
         else begin $error("[FAIL] waiting = %b, en_A = %b, en_B = %b, en_C = %b, en_status = %b, 
                            sel_A = %b, sel_B = %b, w_en = %b, reg_sel = %b, wb_sel = %b", waiting, en_A
