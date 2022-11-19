@@ -8,7 +8,7 @@ module controller2(input clk, input rst_n, input start,
     //assign test_port1 = 2'b10;
     assign test_port2 = 4'b0110;
 
-    reg waiting, en_A, en_B, en_C, en_status, sel_A, sel_B, w_en;
+    reg _waiting, _en_A, _en_B, _en_C, _en_status, _sel_A, _sel_B, _w_en;
     reg [1:0] reg_sel, wb_sel; 
     assign waiting = _waiting; //if the ctl is busy computing, waiting is 0, otherwise waiting is 1
     assign en_A = _en_A;
