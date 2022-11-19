@@ -1,3 +1,4 @@
+`timescale 1 ps/ 1 ps
 module tb_cpu(output err);
     // tb vars
     reg nerr = 1'b0;
@@ -258,5 +259,4 @@ module tb_cpu(output err);
         $display("Total number of tests passed is: %d", passed);
         $stop;
     end
-
 endmodule: tb_cpu
