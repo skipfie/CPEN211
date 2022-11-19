@@ -1,11 +1,11 @@
-Fitter Status : Successful - Fri Nov 18 22:27:41 2022
+Fitter Status : Successful - Fri Nov 18 22:47:32 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : controller2
 Top-level Entity Name : controller2
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 16 / 32,070 ( < 1 % )
+Logic utilization (in ALMs) : 17 / 32,070 ( < 1 % )
 Total registers : 20
 Total pins : 32 / 457 ( 7 % )
 Total virtual pins : 0

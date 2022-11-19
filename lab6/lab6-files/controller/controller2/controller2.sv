@@ -5,7 +5,7 @@ module controller2(input clk, input rst_n, input start,
                   output [1:0] reg_sel, output [1:0] wb_sel, output w_en,
                   output en_A, output en_B, output en_C, output en_status,
                   output sel_A, output sel_B, output reg [1:0] test_port1, output reg [4:0] test_port2);
-    assign test_port1 = 2'b10;
+    //assign test_port1 = 2'b10;
     assign test_port2 = 4'b0110;
 
     reg _waiting, _en_A, _en_B, _en_C, _en_status, _sel_A, _sel_B, _w_en;
@@ -107,6 +107,7 @@ module controller2(input clk, input rst_n, input start,
                 _w_en = 1'b0;
                 _reg_sel = 2'b00;
                 _wb_sel = 2'b00;
+                test_port1 = 2'b11;
             end
             
             `add1: begin
@@ -120,6 +121,7 @@ module controller2(input clk, input rst_n, input start,
                 _w_en = 1'b0;
                 _reg_sel = 2'b10;
                 _wb_sel = 2'b00;
+                test_port1 = 2'b00;
             end 
             `add2: begin
                 _waiting = 1'b0;
@@ -132,6 +134,7 @@ module controller2(input clk, input rst_n, input start,
                 _w_en = 1'b0;
                 _reg_sel = 2'b00;
                 _wb_sel = 2'b00;
+                test_port1 = 2'b11;
             end 
             `add3: begin
                 _waiting = 1'b0;
@@ -144,6 +147,7 @@ module controller2(input clk, input rst_n, input start,
                 _w_en = 1'b0;
                 _reg_sel = 2'b00;
                 _wb_sel = 2'b00;
+                test_port1 = 2'b00;
             end 
             `add4: begin
                 _waiting = 1'b0;
@@ -156,6 +160,7 @@ module controller2(input clk, input rst_n, input start,
                 _w_en = 1'b1;
                 _reg_sel = 2'b01;
                 _wb_sel = 2'b00;
+                test_port1 = 2'b11;
             end 
 
             `cmp1: begin
@@ -169,6 +174,7 @@ module controller2(input clk, input rst_n, input start,
                 _w_en = 1'b0;
                 _reg_sel = 2'b10;
                 _wb_sel = 2'b00;
+                test_port1 = 2'b00;
             end
             `cmp2: begin
                 _waiting = 1'b0;
@@ -181,6 +187,7 @@ module controller2(input clk, input rst_n, input start,
                 _w_en = 1'b0;
                 _reg_sel = 2'b00;
                 _wb_sel = 2'b00;
+                test_port1 = 2'b11;
             end
             `cmp3: begin
                 _waiting = 1'b0;
@@ -193,6 +200,7 @@ module controller2(input clk, input rst_n, input start,
                 _w_en = 1'b0;
                 _reg_sel = 2'b00;
                 _wb_sel = 2'b00;
+                test_port1 = 2'b00;
             end
             `cmp4: begin
                 _waiting = 1'b0;
@@ -205,6 +213,7 @@ module controller2(input clk, input rst_n, input start,
                 _w_en = 1'b0;
                 _reg_sel = 2'b00;
                 _wb_sel = 2'b00;
+                test_port1 = 2'b11;
             end
 
             `And1: begin
@@ -218,6 +227,7 @@ module controller2(input clk, input rst_n, input start,
                 _w_en = 1'b0;
                 _reg_sel = 2'b10;
                 _wb_sel = 2'b00;
+                test_port1 = 2'b00;
             end 
             `And2: begin
                 _waiting = 1'b0;
@@ -230,6 +240,7 @@ module controller2(input clk, input rst_n, input start,
                 _w_en = 1'b0;
                 _reg_sel = 2'b00;
                 _wb_sel = 2'b00;
+                test_port1 = 2'b11;
             end 
             `And3: begin
                 _waiting = 1'b0;
@@ -242,6 +253,7 @@ module controller2(input clk, input rst_n, input start,
                 _w_en = 1'b0;
                 _reg_sel = 2'b00;
                 _wb_sel = 2'b00;
+                test_port1 = 2'b00;
             end 
             `And4: begin
                 _waiting = 1'b0;
@@ -254,6 +266,7 @@ module controller2(input clk, input rst_n, input start,
                 _w_en = 1'b1;
                 _reg_sel = 2'b01;
                 _wb_sel = 2'b00;
+                test_port1 = 2'b11;
             end 
 
             `mvn1: begin
@@ -267,6 +280,7 @@ module controller2(input clk, input rst_n, input start,
                 _w_en = 1'b0;
                 _reg_sel = 2'b00;
                 _wb_sel = 2'b00;
+                test_port1 = 2'b00;
             end
             `mvn2: begin
                 _waiting = 1'b0;
@@ -279,6 +293,7 @@ module controller2(input clk, input rst_n, input start,
                 _w_en = 1'b0;
                 _reg_sel = 2'b00;
                 _wb_sel = 2'b00;
+                test_port1 = 2'b11;
             end
             `mvn3: begin
                 _waiting = 1'b0;
@@ -291,6 +306,7 @@ module controller2(input clk, input rst_n, input start,
                 _w_en = 1'b1;
                 _reg_sel = 2'b01;
                 _wb_sel = 2'b00;
+                test_port1 = 2'b100;
             end
 
             `mov1: begin
@@ -304,6 +320,7 @@ module controller2(input clk, input rst_n, input start,
                 _w_en = 1'b1;
                 _reg_sel = 2'b10;
                 _wb_sel = 2'b10; // select sximm8
+                test_port1 = 2'b11;
             end
 
             `mov_1: begin
@@ -317,6 +334,7 @@ module controller2(input clk, input rst_n, input start,
                 _w_en = 1'b0;
                 _reg_sel = 2'b00;
                 _wb_sel = 2'b00;
+                test_port1 = 2'b00;
             end
             `mov_2: begin
                 _waiting = 1'b0;
@@ -329,6 +347,7 @@ module controller2(input clk, input rst_n, input start,
                 _w_en = 1'b0;
                 _reg_sel = 2'b00;
                 _wb_sel = 2'b00;
+                test_port1 = 2'b11;
             end
             `mov_3: begin
                 _waiting = 1'b0;
@@ -341,6 +360,7 @@ module controller2(input clk, input rst_n, input start,
                 _w_en = 1'b1;
                 _reg_sel = 2'b01;
                 _wb_sel = 2'b00;
+                test_port1 = 2'b00;
             end
             default: begin
                 _waiting = 1'b1;
@@ -353,6 +373,7 @@ module controller2(input clk, input rst_n, input start,
                 _w_en = 1'b0;
                 _reg_sel = 2'b00;
                 _wb_sel = 2'b00;
+                test_port1 = 2'b11;
             end
         endcase
     end

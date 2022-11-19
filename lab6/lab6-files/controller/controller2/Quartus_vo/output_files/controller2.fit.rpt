@@ -1,5 +1,5 @@
 Fitter report for controller2
-Fri Nov 18 22:27:41 2022
+Fri Nov 18 22:47:32 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -62,14 +62,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Fri Nov 18 22:27:41 2022       ;
+; Fitter Status                   ; Successful - Fri Nov 18 22:47:32 2022       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; controller2                                 ;
 ; Top-level Entity Name           ; controller2                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 16 / 32,070 ( < 1 % )                       ;
+; Logic utilization (in ALMs)     ; 17 / 32,070 ( < 1 % )                       ;
 ; Total registers                 ; 20                                          ;
 ; Total pins                      ; 32 / 457 ( 7 % )                            ;
 ; Total virtual pins              ; 0                                           ;
@@ -178,8 +178,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 115 ) ; 0.00 % ( 0 / 115 )         ; 0.00 % ( 0 / 115 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 115 ) ; 0.00 % ( 0 / 115 )         ; 0.00 % ( 0 / 115 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 117 ) ; 0.00 % ( 0 / 117 )         ; 0.00 % ( 0 / 117 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 117 ) ; 0.00 % ( 0 / 117 )         ; 0.00 % ( 0 / 117 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -202,7 +202,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 115 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 117 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -218,14 +218,14 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 +-------------------------------------------------------------+--------------------+-------+
 ; Resource                                                    ; Usage              ; %     ;
 +-------------------------------------------------------------+--------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 16 / 32,070        ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 16                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 16 / 32,070        ; < 1 % ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 17 / 32,070        ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 17                 ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 18 / 32,070        ; < 1 % ;
 ;         [a] ALMs used for LUT logic and registers           ; 10                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 6                  ;       ;
+;         [b] ALMs used for LUT logic                         ; 8                  ;       ;
 ;         [c] ALMs used for registers                         ; 0                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 0 / 32,070         ; 0 %   ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 1 / 32,070         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32,070         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -238,10 +238,10 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ;     -- Logic LABs                                           ; 3                  ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 30                 ;       ;
+; Combinational ALUT usage for logic                          ; 32                 ;       ;
 ;     -- 7 input functions                                    ; 0                  ;       ;
 ;     -- 6 input functions                                    ; 1                  ;       ;
-;     -- 5 input functions                                    ; 7                  ;       ;
+;     -- 5 input functions                                    ; 9                  ;       ;
 ;     -- 4 input functions                                    ; 6                  ;       ;
 ;     -- <=3 input functions                                  ; 16                 ;       ;
 ; Combinational ALUT usage for route-throughs                 ; 0                  ;       ;
@@ -256,7 +256,7 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 32 / 457           ; 7 %   ;
-;     -- Clock pins                                           ; 3 / 8              ; 38 %  ;
+;     -- Clock pins                                           ; 2 / 8              ; 25 %  ;
 ;     -- Dedicated input pins                                 ; 0 / 21             ; 0 %   ;
 ;                                                             ;                    ;       ;
 ; Hard processor system peripheral utilization                ;                    ;       ;
@@ -311,8 +311,8 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; Peak interconnect usage (total/H/V)                         ; 0.3% / 0.3% / 0.2% ;       ;
 ; Maximum fan-out                                             ; 20                 ;       ;
 ; Highest non-global fan-out                                  ; 20                 ;       ;
-; Total fan-out                                               ; 179                ;       ;
-; Average fan-out                                             ; 1.56               ;       ;
+; Total fan-out                                               ; 191                ;       ;
+; Average fan-out                                             ; 1.63               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -321,14 +321,14 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 +-------------------------------------------------------------+----------------------+--------------------------------+
 ; Statistic                                                   ; Top                  ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 16 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 16                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 16 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 17 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 17                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 18 / 32070 ( < 1 % ) ; 0 / 32070 ( 0 % )              ;
 ;         [a] ALMs used for LUT logic and registers           ; 10                   ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 6                    ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 8                    ; 0                              ;
 ;         [c] ALMs used for registers                         ; 0                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 0 / 32070 ( 0 % )    ; 0 / 32070 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 1 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 32070 ( 0 % )    ; 0 / 32070 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                    ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                    ; 0                              ;
@@ -341,10 +341,10 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ;     -- Logic LABs                                           ; 3                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
-; Combinational ALUT usage for logic                          ; 30                   ; 0                              ;
+; Combinational ALUT usage for logic                          ; 32                   ; 0                              ;
 ;     -- 7 input functions                                    ; 0                    ; 0                              ;
 ;     -- 6 input functions                                    ; 1                    ; 0                              ;
-;     -- 5 input functions                                    ; 7                    ; 0                              ;
+;     -- 5 input functions                                    ; 9                    ; 0                              ;
 ;     -- 4 input functions                                    ; 6                    ; 0                              ;
 ;     -- <=3 input functions                                  ; 16                   ; 0                              ;
 ; Combinational ALUT usage for route-throughs                 ; 0                    ; 0                              ;
@@ -375,8 +375,8 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 179                  ; 0                              ;
-;     -- Registered Connections                               ; 51                   ; 0                              ;
+;     -- Total Connections                                    ; 191                  ; 0                              ;
+;     -- Registered Connections                               ; 59                   ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
 ;     -- Top                                                  ; 0                    ; 0                              ;
@@ -408,19 +408,19 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 +-------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +-------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; ALU_op[0]   ; AJ11  ; 3B       ; 34           ; 0            ; 40           ; 5                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; ALU_op[1]   ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 6                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; N           ; D6    ; 8A       ; 22           ; 81           ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; V           ; AF29  ; 5A       ; 89           ; 15           ; 37           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; ALU_op[0]   ; AH27  ; 4A       ; 84           ; 0            ; 51           ; 5                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; ALU_op[1]   ; AD20  ; 4A       ; 82           ; 0            ; 40           ; 6                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; N           ; AG11  ; 3B       ; 18           ; 0            ; 57           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; V           ; C4    ; 8A       ; 20           ; 81           ; 51           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
 ; Z           ; G15   ; 8A       ; 40           ; 81           ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
 ; clk         ; Y27   ; 5B       ; 89           ; 25           ; 20           ; 20                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; opcode[0]   ; AJ7   ; 3B       ; 26           ; 0            ; 91           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; opcode[1]   ; AG13  ; 3B       ; 26           ; 0            ; 57           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; opcode[2]   ; AG12  ; 3B       ; 26           ; 0            ; 40           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; rst_n       ; AK9   ; 3B       ; 30           ; 0            ; 51           ; 20                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; shift_op[0] ; V23   ; 5A       ; 89           ; 15           ; 3            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; shift_op[1] ; AE12  ; 3A       ; 2            ; 0            ; 57           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; start       ; AH7   ; 3B       ; 32           ; 0            ; 34           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; opcode[0]   ; AD21  ; 4A       ; 82           ; 0            ; 57           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; opcode[1]   ; AG26  ; 4A       ; 84           ; 0            ; 34           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; opcode[2]   ; Y19   ; 4A       ; 84           ; 0            ; 0            ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; rst_n       ; AJ27  ; 4A       ; 80           ; 0            ; 34           ; 20                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; shift_op[0] ; AF16  ; 4A       ; 52           ; 0            ; 51           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; shift_op[1] ; AE7   ; 3A       ; 6            ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; start       ; AK29  ; 4A       ; 82           ; 0            ; 91           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
 +-------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -429,25 +429,25 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 +---------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name          ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Output Buffer Delay ; Output Buffer Delay Control ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +---------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
-; en_A          ; AH13  ; 3B       ; 30           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; en_B          ; AH14  ; 3B       ; 30           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; en_C          ; AJ9   ; 3B       ; 30           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; en_status     ; AF15  ; 3B       ; 32           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; reg_sel[0]    ; AC14  ; 3B       ; 28           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; reg_sel[1]    ; AB15  ; 3B       ; 28           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; sel_A         ; AK7   ; 3B       ; 28           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; sel_B         ; J9    ; 8A       ; 4            ; 81           ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; test_port1[0] ; AK14  ; 3B       ; 40           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; test_port1[1] ; AC25  ; 5A       ; 89           ; 4            ; 60           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; test_port2[0] ; AH12  ; 3B       ; 38           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; test_port2[1] ; H12   ; 8A       ; 20           ; 81           ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; en_A          ; AF25  ; 4A       ; 86           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; en_B          ; AE23  ; 4A       ; 78           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; en_C          ; W19   ; 4A       ; 80           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; en_status     ; AG25  ; 4A       ; 78           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; reg_sel[0]    ; AE22  ; 4A       ; 78           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; reg_sel[1]    ; AA20  ; 4A       ; 84           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; sel_A         ; AH25  ; 4A       ; 78           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; sel_B         ; A6    ; 8A       ; 26           ; 81           ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; test_port1[0] ; AD19  ; 4A       ; 76           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; test_port1[1] ; AJ26  ; 4A       ; 76           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; test_port2[0] ; E1    ; 8A       ; 6            ; 81           ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; test_port2[1] ; AK8   ; 3B       ; 28           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 ; test_port2[2] ; AK18  ; 4A       ; 58           ; 0            ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 ; test_port2[3] ; AC22  ; 4A       ; 86           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; test_port2[4] ; AG23  ; 4A       ; 64           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; w_en          ; AK8   ; 3B       ; 28           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; waiting       ; AJ6   ; 3B       ; 26           ; 0            ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; test_port2[4] ; G7    ; 8A       ; 2            ; 81           ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; w_en          ; AK27  ; 4A       ; 80           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; waiting       ; V18   ; 4A       ; 80           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 ; wb_sel[0]     ; A10   ; 8A       ; 38           ; 81           ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; wb_sel[1]     ; AH8   ; 3B       ; 32           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; wb_sel[1]     ; AK28  ; 4A       ; 82           ; 0            ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 +---------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -459,9 +459,9 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; B2L      ; 0 / 0 ( -- )     ; --            ; --           ; --            ;
 ; B1L      ; 0 / 0 ( -- )     ; --            ; --           ; --            ;
 ; 3A       ; 1 / 32 ( 3 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 3B       ; 19 / 48 ( 40 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 4A       ; 3 / 80 ( 4 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 5A       ; 3 / 32 ( 9 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 3B       ; 2 / 48 ( 4 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 4A       ; 22 / 80 ( 28 % ) ; 2.5V          ; --           ; 2.5V          ;
+; 5A       ; 0 / 32 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 5B       ; 1 / 16 ( 6 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 6B       ; 0 / 44 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 6A       ; 0 / 56 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
@@ -469,7 +469,7 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; 7B       ; 0 / 22 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 7C       ; 0 / 12 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 7D       ; 0 / 14 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 8A       ; 5 / 80 ( 6 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 8A       ; 6 / 80 ( 8 % )   ; 2.5V          ; --           ; 2.5V          ;
 +----------+------------------+---------------+--------------+---------------+
 
 
@@ -482,7 +482,7 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; A3       ; 493        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A4       ; 491        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A5       ; 489        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; A6       ; 487        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; A6       ; 487        ; 8A             ; sel_B                           ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; A7       ;            ; 8A             ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; A8       ; 473        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A9       ; 471        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -525,7 +525,7 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; AA17     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AA18     ; 168        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA19     ; 176        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AA20     ; 200        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AA20     ; 200        ; 4A             ; reg_sel[1]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AA21     ; 210        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA22     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AA23     ;            ; --             ; VCCPGM                          ; power  ;              ; 1.8V/2.5V/3.0V/3.3V ; --           ;                 ; --       ; --           ;
@@ -550,7 +550,7 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; AB12     ; 72         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB13     ; 88         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB14     ;            ; 3B             ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AB15     ; 106        ; 3B             ; reg_sel[1]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AB15     ; 106        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB16     ;            ; --             ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AB17     ; 144        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB18     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -579,7 +579,7 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; AC11     ;            ; 3A             ; VCCIO3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AC12     ; 82         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AC13     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AC14     ; 104        ; 3B             ; reg_sel[0]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AC14     ; 104        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AC15     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AC16     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AC17     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -590,7 +590,7 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; AC22     ; 207        ; 4A             ; test_port2[3]                   ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AC23     ; 205        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AC24     ;            ; 5A             ; VREFB5AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
-; AC25     ; 215        ; 5A             ; test_port1[1]                   ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AC25     ; 215        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AC26     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AC27     ; 242        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AC28     ; 245        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -614,9 +614,9 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; AD16     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AD17     ; 160        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AD18     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AD19     ; 184        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AD20     ; 199        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AD21     ; 197        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AD19     ; 184        ; 4A             ; test_port1[0]                   ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AD20     ; 199        ; 4A             ; ALU_op[1]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AD21     ; 197        ; 4A             ; opcode[0]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AD22     ;            ; --             ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AD23     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AD24     ; 211        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -632,12 +632,12 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; AE4      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AE5      ; 49         ; 3A             ; ^AS_DATA1, DATA1                ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
 ; AE6      ; 51         ; 3A             ; ^AS_DATA0, ASDO, DATA0          ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
-; AE7      ; 60         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AE7      ; 60         ; 3A             ; shift_op[1]                     ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AE8      ; 47         ; 3A             ; ^AS_DATA2, DATA2                ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
 ; AE9      ; 53         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE10     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AE11     ; 59         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AE12     ; 52         ; 3A             ; shift_op[1]                     ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AE12     ; 52         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE13     ; 95         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE14     ; 96         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE15     ;            ; 3B             ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -647,8 +647,8 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; AE19     ; 165        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE20     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AE21     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AE22     ; 191        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AE23     ; 189        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AE22     ; 191        ; 4A             ; reg_sel[0]                      ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AE23     ; 189        ; 4A             ; en_B                            ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AE24     ; 209        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE25     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AE26     ; 220        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -669,9 +669,9 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; AF11     ; 87         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF12     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AF13     ; 93         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AF14     ; 114        ; 3B             ; ALU_op[1]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AF15     ; 112        ; 3B             ; en_status                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AF16     ; 137        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AF14     ; 114        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AF15     ; 112        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AF16     ; 137        ; 4A             ; shift_op[0]                     ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AF17     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AF18     ; 133        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF19     ; 159        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -680,11 +680,11 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; AF22     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AF23     ; 183        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF24     ; 181        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AF25     ; 206        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AF25     ; 206        ; 4A             ; en_A                            ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AF26     ; 204        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF27     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AF28     ; 235        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; AF29     ; 237        ; 5A             ; V                               ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AF29     ; 237        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AF30     ; 239        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AG1      ; 71         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG2      ; 83         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -696,9 +696,9 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; AG8      ; 65         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG9      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AG10     ; 86         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AG11     ; 85         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AG12     ; 103        ; 3B             ; opcode[2]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AG13     ; 101        ; 3B             ; opcode[1]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AG11     ; 85         ; 3B             ; N                               ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AG12     ; 103        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AG13     ; 101        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG14     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AG15     ; 127        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG16     ; 134        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -708,10 +708,10 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; AG20     ; 157        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG21     ; 143        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG22     ; 166        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AG23     ; 163        ; 4A             ; test_port2[4]                   ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AG23     ; 163        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG24     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AG25     ; 190        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AG26     ; 203        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AG25     ; 190        ; 4A             ; en_status                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AG26     ; 203        ; 4A             ; opcode[1]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AG27     ; 212        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AG28     ; 233        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AG29     ;            ; 5A             ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -722,14 +722,14 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; AH4      ; 61         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH5      ; 76         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH6      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AH7      ; 115        ; 3B             ; start                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AH8      ; 113        ; 3B             ; wb_sel[1]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AH7      ; 115        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AH8      ; 113        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH9      ; 84         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH10     ; 118        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH11     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AH12     ; 126        ; 3B             ; test_port2[0]                   ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AH13     ; 111        ; 3B             ; en_A                            ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AH14     ; 109        ; 3B             ; en_B                            ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AH12     ; 126        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AH13     ; 111        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AH14     ; 109        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH15     ; 125        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH16     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AH17     ; 147        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -740,9 +740,9 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; AH22     ; 164        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH23     ; 174        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH24     ; 161        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AH25     ; 188        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AH25     ; 188        ; 4A             ; sel_A                           ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AH26     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AH27     ; 201        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AH27     ; 201        ; 4A             ; ALU_op[0]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AH28     ; 214        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AH29     ; 218        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AH30     ; 241        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -751,12 +751,12 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; AJ3      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AJ4      ; 94         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ5      ; 99         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AJ6      ; 102        ; 3B             ; waiting                         ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AJ7      ; 100        ; 3B             ; opcode[0]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AJ6      ; 102        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AJ7      ; 100        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ8      ;            ; 3B             ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AJ9      ; 110        ; 3B             ; en_C                            ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AJ9      ; 110        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ10     ; 116        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AJ11     ; 119        ; 3B             ; ALU_op[0]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AJ11     ; 119        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ12     ; 124        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ13     ;            ; 3B             ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AJ14     ; 131        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -771,8 +771,8 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; AJ23     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AJ24     ; 182        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ25     ; 180        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AJ26     ; 187        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AJ27     ; 195        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AJ26     ; 187        ; 4A             ; test_port1[1]                   ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AJ27     ; 195        ; 4A             ; rst_n                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AJ28     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AJ29     ; 216        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AJ30     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -781,14 +781,14 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; AK4      ; 92         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AK5      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AK6      ; 97         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AK7      ; 107        ; 3B             ; sel_A                           ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AK8      ; 105        ; 3B             ; w_en                            ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AK9      ; 108        ; 3B             ; rst_n                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AK7      ; 107        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AK8      ; 105        ; 3B             ; test_port2[1]                   ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AK9      ; 108        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AK10     ;            ; 3B             ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AK11     ; 117        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AK12     ; 123        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AK13     ; 121        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AK14     ; 129        ; 3B             ; test_port1[0]                   ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AK14     ; 129        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AK15     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AK16     ; 140        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AK17     ;            ; 4A             ; VREFB4AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -801,9 +801,9 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; AK24     ; 177        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AK25     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AK26     ; 185        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AK27     ; 193        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AK28     ; 198        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AK29     ; 196        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AK27     ; 193        ; 4A             ; w_en                            ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AK28     ; 198        ; 4A             ; wb_sel[1]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AK29     ; 196        ; 4A             ; start                           ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; B1       ; 509        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B2       ; 507        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B3       ; 513        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -837,7 +837,7 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; C1       ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; C2       ; 517        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C3       ; 511        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; C4       ; 501        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; C4       ; 501        ; 8A             ; V                               ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; C5       ; 497        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C6       ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; C7       ; 475        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -869,7 +869,7 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; D3       ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; D4       ; 521        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; D5       ; 499        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; D6       ; 495        ; 8A             ; N                               ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; D6       ; 495        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; D7       ; 505        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; D8       ;            ; 8A             ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; D9       ; 480        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -894,7 +894,7 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; D28      ;            ; 6A             ; VCCIO6A_HPS                     ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; D29      ; 361        ; 6A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; D30      ; 359        ; 6A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; E1       ; 527        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; E1       ; 527        ; 8A             ; test_port2[0]                   ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; E2       ; 525        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E3       ; 523        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E4       ; 519        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -960,7 +960,7 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; G4       ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; G5       ; 542        ; 9A             ; ^nCE                            ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; G6       ; 543        ; 9A             ; ^MSEL2                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
-; G7       ; 535        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; G7       ; 535        ; 8A             ; test_port2[4]                   ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; G8       ; 492        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; G9       ;            ; 8A             ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; G10      ; 526        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -995,7 +995,7 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; H9       ;            ; --             ; VCCBAT                          ; power  ;              ; 1.2V                ; --           ;                 ; --       ; --           ;
 ; H10      ;            ; --             ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; H11      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; H12      ; 500        ; 8A             ; test_port2[1]                   ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; H12      ; 500        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; H13      ; 498        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; H14      ; 482        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; H15      ; 458        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -1022,7 +1022,7 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; J6       ; 547        ; 9A             ; ^GND                            ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; J7       ; 506        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; J8       ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; J9       ; 532        ; 8A             ; sel_B                           ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; J9       ; 532        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; J10      ; 530        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; J11      ;            ; --             ; VCCPGM                          ; power  ;              ; 1.8V/2.5V/3.0V/3.3V ; --           ;                 ; --       ; --           ;
 ; J12      ; 516        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -1301,12 +1301,12 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; V15      ;            ; --             ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; V16      ; 138        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; V17      ; 154        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; V18      ; 194        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; V18      ; 194        ; 4A             ; waiting                         ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; V19      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; V20      ; 292        ; 6B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; V21      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; V22      ;            ; 5A             ; VCCPD5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; V23      ; 236        ; 5A             ; shift_op[0]                     ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; V23      ; 236        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; V24      ;            ; 5A             ; VCCPD5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; V25      ; 246        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; V26      ;            ; 6B             ; VCCIO6B_HPS                     ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -1332,7 +1332,7 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; W16      ; 136        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; W17      ; 152        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; W18      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; W19      ; 192        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; W19      ; 192        ; 4A             ; en_C                            ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; W20      ; 217        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; W21      ; 221        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; W22      ; 223        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -1362,7 +1362,7 @@ The pin-out file can be found in C:/CPEN211/Labs/CPEN211/lab6/lab6-files/control
 ; Y16      ; 128        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y17      ; 170        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y18      ; 178        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; Y19      ; 202        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; Y19      ; 202        ; 4A             ; opcode[2]                       ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; Y20      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; Y21      ; 219        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; Y22      ;            ; --             ; VCCA_FPLL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -1455,7 +1455,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------+-------------+--------------+
-; |controller2               ; 15.5 (15.5)          ; 15.5 (15.5)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 30 (30)             ; 20 (20)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 32   ; 0            ; |controller2        ; controller2 ; work         ;
+; |controller2               ; 16.5 (16.5)          ; 18.0 (18.0)                      ; 1.5 (1.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 32 (32)             ; 20 (20)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 32   ; 0            ; |controller2        ; controller2 ; work         ;
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1489,11 +1489,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; test_port2[2] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; test_port2[3] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; test_port2[4] ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; rst_n         ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; rst_n         ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; opcode[0]     ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; opcode[1]     ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; start         ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; opcode[2]     ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; opcode[2]     ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; ALU_op[0]     ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; clk           ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; ALU_op[1]     ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
@@ -1511,26 +1511,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; N                   ;                   ;         ;
 ; V                   ;                   ;         ;
 ; rst_n               ;                   ;         ;
-;      - state~28     ; 1                 ; 0       ;
-;      - state~29     ; 1                 ; 0       ;
-;      - state~30     ; 1                 ; 0       ;
-;      - state~31     ; 1                 ; 0       ;
-;      - state~32     ; 1                 ; 0       ;
-;      - state~33     ; 1                 ; 0       ;
-;      - state~34     ; 1                 ; 0       ;
-;      - state~35     ; 1                 ; 0       ;
-;      - state~36     ; 1                 ; 0       ;
-;      - state~37     ; 1                 ; 0       ;
-;      - state~38     ; 1                 ; 0       ;
-;      - state~39     ; 1                 ; 0       ;
-;      - state~40     ; 1                 ; 0       ;
-;      - state~41     ; 1                 ; 0       ;
-;      - state~42     ; 1                 ; 0       ;
-;      - state~43     ; 1                 ; 0       ;
-;      - state~44     ; 1                 ; 0       ;
-;      - state~45     ; 1                 ; 0       ;
-;      - state~46     ; 1                 ; 0       ;
-;      - state~47     ; 1                 ; 0       ;
+;      - state~28     ; 0                 ; 0       ;
+;      - state~29     ; 0                 ; 0       ;
+;      - state~30     ; 0                 ; 0       ;
+;      - state~31     ; 0                 ; 0       ;
+;      - state~32     ; 0                 ; 0       ;
+;      - state~33     ; 0                 ; 0       ;
+;      - state~34     ; 0                 ; 0       ;
+;      - state~35     ; 0                 ; 0       ;
+;      - state~36     ; 0                 ; 0       ;
+;      - state~37     ; 0                 ; 0       ;
+;      - state~38     ; 0                 ; 0       ;
+;      - state~39     ; 0                 ; 0       ;
+;      - state~40     ; 0                 ; 0       ;
+;      - state~41     ; 0                 ; 0       ;
+;      - state~42     ; 0                 ; 0       ;
+;      - state~43     ; 0                 ; 0       ;
+;      - state~44     ; 0                 ; 0       ;
+;      - state~45     ; 0                 ; 0       ;
+;      - state~46     ; 0                 ; 0       ;
+;      - state~47     ; 0                 ; 0       ;
 ; opcode[0]           ;                   ;         ;
 ;      - state~27     ; 1                 ; 0       ;
 ;      - always0~0    ; 1                 ; 0       ;
@@ -1541,8 +1541,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - state~27     ; 0                 ; 0       ;
 ;      - always0~0    ; 0                 ; 0       ;
 ; opcode[2]           ;                   ;         ;
-;      - state~27     ; 1                 ; 0       ;
-;      - always0~0    ; 1                 ; 0       ;
+;      - state~27     ; 0                 ; 0       ;
+;      - always0~0    ; 0                 ; 0       ;
 ; ALU_op[0]           ;                   ;         ;
 ;      - state~27     ; 1                 ; 0       ;
 ;      - state~34     ; 1                 ; 0       ;
@@ -1583,14 +1583,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+------------------------+
 ; Routing Resource Type                       ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Block interconnects                         ; 39 / 289,320 ( < 1 % ) ;
+; Block interconnects                         ; 43 / 289,320 ( < 1 % ) ;
 ; C12 interconnects                           ; 0 / 13,420 ( 0 % )     ;
-; C2 interconnects                            ; 13 / 119,108 ( < 1 % ) ;
-; C4 interconnects                            ; 5 / 56,300 ( < 1 % )   ;
+; C2 interconnects                            ; 16 / 119,108 ( < 1 % ) ;
+; C4 interconnects                            ; 4 / 56,300 ( < 1 % )   ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )         ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )         ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )         ;
-; Direct links                                ; 5 / 289,320 ( < 1 % )  ;
+; Direct links                                ; 9 / 289,320 ( < 1 % )  ;
 ; Global clocks                               ; 1 / 16 ( 6 % )         ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )          ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )          ;
@@ -1646,12 +1646,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )          ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )         ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )         ;
-; Local interconnects                         ; 18 / 84,580 ( < 1 % )  ;
+; Local interconnects                         ; 15 / 84,580 ( < 1 % )  ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )         ;
-; R14 interconnects                           ; 0 / 12,676 ( 0 % )     ;
-; R14/C12 interconnect drivers                ; 0 / 20,720 ( 0 % )     ;
-; R3 interconnects                            ; 14 / 130,992 ( < 1 % ) ;
-; R6 interconnects                            ; 13 / 266,960 ( < 1 % ) ;
+; R14 interconnects                           ; 1 / 12,676 ( < 1 % )   ;
+; R14/C12 interconnect drivers                ; 1 / 20,720 ( < 1 % )   ;
+; R3 interconnects                            ; 24 / 130,992 ( < 1 % ) ;
+; R6 interconnects                            ; 9 / 266,960 ( < 1 % )  ;
 ; Spine clocks                                ; 1 / 360 ( < 1 % )      ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )     ;
 +---------------------------------------------+------------------------+
@@ -1799,7 +1799,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; clk             ; clk                  ; 2.6               ;
+; clk             ; clk                  ; 2.1               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -1810,24 +1810,27 @@ This will disable optimization of problematic paths and expose them for further 
 +-----------------+----------------------+-------------------+
 ; Source Register ; Destination Register ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; state.01111     ; state.00000          ; 0.222             ;
-; state.00010     ; state.00011          ; 0.204             ;
-; state.00000     ; state.01100          ; 0.198             ;
-; state.01001     ; state.01010          ; 0.196             ;
-; state.10001     ; state.10010          ; 0.196             ;
-; state.01101     ; state.01110          ; 0.196             ;
-; state.00011     ; state.00100          ; 0.188             ;
-; state.00100     ; state.00000          ; 0.175             ;
-; state.00001     ; state.00000          ; 0.152             ;
-; state.00111     ; state.00000          ; 0.148             ;
-; state.01011     ; state.00000          ; 0.135             ;
-; state.10011     ; state.00000          ; 0.114             ;
-; state.01010     ; state.01011          ; 0.073             ;
-; state.00110     ; state.00111          ; 0.061             ;
-; state.10010     ; state.10011          ; 0.061             ;
-; state.01110     ; state.01111          ; 0.043             ;
+; state.01111     ; state.00000          ; 0.221             ;
+; state.01010     ; state.01011          ; 0.203             ;
+; state.01101     ; state.01110          ; 0.203             ;
+; state.10000     ; state.10001          ; 0.196             ;
+; state.00011     ; state.00100          ; 0.187             ;
+; state.00110     ; state.00111          ; 0.187             ;
+; state.10010     ; state.10011          ; 0.187             ;
+; state.01000     ; state.01001          ; 0.185             ;
+; state.00100     ; state.00000          ; 0.165             ;
+; state.01110     ; state.01111          ; 0.160             ;
+; state.01011     ; state.00000          ; 0.158             ;
+; state.00111     ; state.00000          ; 0.131             ;
+; state.10011     ; state.00000          ; 0.121             ;
+; state.00101     ; state.00110          ; 0.075             ;
+; state.00010     ; state.00011          ; 0.074             ;
+; state.01001     ; state.01010          ; 0.060             ;
+; state.10001     ; state.10010          ; 0.060             ;
+; state.01100     ; state.01101          ; 0.060             ;
+; state.00001     ; state.00000          ; 0.036             ;
 +-----------------+----------------------+-------------------+
-Note: This table only shows the top 16 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 19 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1854,7 +1857,7 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Tim
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:09
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:08
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
@@ -1863,7 +1866,7 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X22_Y0 to location X32_Y10
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X78_Y0 to location X89_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
@@ -1875,10 +1878,10 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info (144001): Generated suppressed messages file C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller2/Quartus_vo/output_files/controller2.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 6505 megabytes
-    Info: Processing ended: Fri Nov 18 22:27:41 2022
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:48
+    Info: Peak virtual memory: 6544 megabytes
+    Info: Processing ended: Fri Nov 18 22:47:33 2022
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:46
 
 
 +----------------------------+
