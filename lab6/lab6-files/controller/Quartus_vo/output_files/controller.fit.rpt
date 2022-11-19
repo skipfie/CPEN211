@@ -1,5 +1,5 @@
 Fitter report for controller
-Fri Nov 18 19:14:15 2022
+Fri Nov 18 22:05:26 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -11,32 +11,33 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   3. Fitter Settings
   4. Parallel Compilation
   5. Fitter Netlist Optimizations
-  6. Incremental Compilation Preservation Summary
-  7. Incremental Compilation Partition Settings
-  8. Incremental Compilation Placement Preservation
-  9. Pin-Out File
- 10. Fitter Resource Usage Summary
- 11. Fitter Partition Statistics
- 12. Input Pins
- 13. Output Pins
- 14. I/O Bank Usage
- 15. All Package Pins
- 16. I/O Assignment Warnings
- 17. Fitter Resource Utilization by Entity
- 18. Delay Chain Summary
- 19. Pad To Core Delay Chain Fanout
- 20. Control Signals
- 21. Global & Other Fast Signals
- 22. Routing Usage Summary
- 23. I/O Rules Summary
- 24. I/O Rules Details
- 25. I/O Rules Matrix
- 26. Fitter Device Options
- 27. Operating Settings and Conditions
- 28. Estimated Delay Added for Hold Timing Summary
- 29. Estimated Delay Added for Hold Timing Details
- 30. Fitter Messages
- 31. Fitter Suppressed Messages
+  6. Ignored Assignments
+  7. Incremental Compilation Preservation Summary
+  8. Incremental Compilation Partition Settings
+  9. Incremental Compilation Placement Preservation
+ 10. Pin-Out File
+ 11. Fitter Resource Usage Summary
+ 12. Fitter Partition Statistics
+ 13. Input Pins
+ 14. Output Pins
+ 15. I/O Bank Usage
+ 16. All Package Pins
+ 17. I/O Assignment Warnings
+ 18. Fitter Resource Utilization by Entity
+ 19. Delay Chain Summary
+ 20. Pad To Core Delay Chain Fanout
+ 21. Control Signals
+ 22. Global & Other Fast Signals
+ 23. Routing Usage Summary
+ 24. I/O Rules Summary
+ 25. I/O Rules Details
+ 26. I/O Rules Matrix
+ 27. Fitter Device Options
+ 28. Operating Settings and Conditions
+ 29. Estimated Delay Added for Hold Timing Summary
+ 30. Estimated Delay Added for Hold Timing Details
+ 31. Fitter Messages
+ 32. Fitter Suppressed Messages
 
 
 
@@ -62,7 +63,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Fri Nov 18 19:14:15 2022       ;
+; Fitter Status                   ; Successful - Fri Nov 18 22:05:26 2022       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; controller                                  ;
 ; Top-level Entity Name           ; controller                                  ;
@@ -170,6 +171,272 @@ refer to the applicable agreement for further details.
 +------------------+---------+-----------+----------------------------+-----------+----------------+------------------+------------------+-----------------------+
 ; clk~inputCLKENA0 ; Created ; Placement ; Fitter Periphery Placement ;           ;                ;                  ;                  ;                       ;
 +------------------+---------+-----------+----------------------------+-----------+----------------+------------------+------------------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Ignored Assignments                                                                        ;
++----------+----------------+--------------+----------------+---------------+----------------+
+; Name     ; Ignored Entity ; Ignored From ; Ignored To     ; Ignored Value ; Ignored Source ;
++----------+----------------+--------------+----------------+---------------+----------------+
+; Location ;                ;              ; ADC_CS_N       ; PIN_AJ4       ; QSF Assignment ;
+; Location ;                ;              ; ADC_DIN        ; PIN_AK4       ; QSF Assignment ;
+; Location ;                ;              ; ADC_DOUT       ; PIN_AK3       ; QSF Assignment ;
+; Location ;                ;              ; ADC_SCLK       ; PIN_AK2       ; QSF Assignment ;
+; Location ;                ;              ; AUD_ADCDAT     ; PIN_K7        ; QSF Assignment ;
+; Location ;                ;              ; AUD_ADCLRCK    ; PIN_K8        ; QSF Assignment ;
+; Location ;                ;              ; AUD_BCLK       ; PIN_H7        ; QSF Assignment ;
+; Location ;                ;              ; AUD_DACDAT     ; PIN_J7        ; QSF Assignment ;
+; Location ;                ;              ; AUD_DACLRCK    ; PIN_H8        ; QSF Assignment ;
+; Location ;                ;              ; AUD_XCK        ; PIN_G7        ; QSF Assignment ;
+; Location ;                ;              ; CLOCK2_50      ; PIN_AA16      ; QSF Assignment ;
+; Location ;                ;              ; CLOCK3_50      ; PIN_Y26       ; QSF Assignment ;
+; Location ;                ;              ; CLOCK4_50      ; PIN_K14       ; QSF Assignment ;
+; Location ;                ;              ; CLOCK_50       ; PIN_AF14      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_ADDR[0]   ; PIN_AK14      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_ADDR[10]  ; PIN_AG12      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_ADDR[11]  ; PIN_AH13      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_ADDR[12]  ; PIN_AJ14      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_ADDR[1]   ; PIN_AH14      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_ADDR[2]   ; PIN_AG15      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_ADDR[3]   ; PIN_AE14      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_ADDR[4]   ; PIN_AB15      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_ADDR[5]   ; PIN_AC14      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_ADDR[6]   ; PIN_AD14      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_ADDR[7]   ; PIN_AF15      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_ADDR[8]   ; PIN_AH15      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_ADDR[9]   ; PIN_AG13      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_BA[0]     ; PIN_AF13      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_BA[1]     ; PIN_AJ12      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_CAS_N     ; PIN_AF11      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_CKE       ; PIN_AK13      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_CLK       ; PIN_AH12      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_CS_N      ; PIN_AG11      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_DQ[0]     ; PIN_AK6       ; QSF Assignment ;
+; Location ;                ;              ; DRAM_DQ[10]    ; PIN_AJ9       ; QSF Assignment ;
+; Location ;                ;              ; DRAM_DQ[11]    ; PIN_AH9       ; QSF Assignment ;
+; Location ;                ;              ; DRAM_DQ[12]    ; PIN_AH8       ; QSF Assignment ;
+; Location ;                ;              ; DRAM_DQ[13]    ; PIN_AH7       ; QSF Assignment ;
+; Location ;                ;              ; DRAM_DQ[14]    ; PIN_AJ6       ; QSF Assignment ;
+; Location ;                ;              ; DRAM_DQ[15]    ; PIN_AJ5       ; QSF Assignment ;
+; Location ;                ;              ; DRAM_DQ[1]     ; PIN_AJ7       ; QSF Assignment ;
+; Location ;                ;              ; DRAM_DQ[2]     ; PIN_AK7       ; QSF Assignment ;
+; Location ;                ;              ; DRAM_DQ[3]     ; PIN_AK8       ; QSF Assignment ;
+; Location ;                ;              ; DRAM_DQ[4]     ; PIN_AK9       ; QSF Assignment ;
+; Location ;                ;              ; DRAM_DQ[5]     ; PIN_AG10      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_DQ[6]     ; PIN_AK11      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_DQ[7]     ; PIN_AJ11      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_DQ[8]     ; PIN_AH10      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_DQ[9]     ; PIN_AJ10      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_LDQM      ; PIN_AB13      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_RAS_N     ; PIN_AE13      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_UDQM      ; PIN_AK12      ; QSF Assignment ;
+; Location ;                ;              ; DRAM_WE_N      ; PIN_AA13      ; QSF Assignment ;
+; Location ;                ;              ; FAN_CTRL       ; PIN_AA12      ; QSF Assignment ;
+; Location ;                ;              ; FPGA_I2C_SCLK  ; PIN_J12       ; QSF Assignment ;
+; Location ;                ;              ; FPGA_I2C_SDAT  ; PIN_K12       ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[0]      ; PIN_AC18      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[10]     ; PIN_AH18      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[11]     ; PIN_AH17      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[12]     ; PIN_AG16      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[13]     ; PIN_AE16      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[14]     ; PIN_AF16      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[15]     ; PIN_AG17      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[16]     ; PIN_AA18      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[17]     ; PIN_AA19      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[18]     ; PIN_AE17      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[19]     ; PIN_AC20      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[1]      ; PIN_Y17       ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[20]     ; PIN_AH19      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[21]     ; PIN_AJ20      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[22]     ; PIN_AH20      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[23]     ; PIN_AK21      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[24]     ; PIN_AD19      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[25]     ; PIN_AD20      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[26]     ; PIN_AE18      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[27]     ; PIN_AE19      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[28]     ; PIN_AF20      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[29]     ; PIN_AF21      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[2]      ; PIN_AD17      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[30]     ; PIN_AF19      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[31]     ; PIN_AG21      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[32]     ; PIN_AF18      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[33]     ; PIN_AG20      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[34]     ; PIN_AG18      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[35]     ; PIN_AJ21      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[3]      ; PIN_Y18       ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[4]      ; PIN_AK16      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[5]      ; PIN_AK18      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[6]      ; PIN_AK19      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[7]      ; PIN_AJ19      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[8]      ; PIN_AJ17      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_0[9]      ; PIN_AJ16      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[0]      ; PIN_AB17      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[10]     ; PIN_AG26      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[11]     ; PIN_AH24      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[12]     ; PIN_AH27      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[13]     ; PIN_AJ27      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[14]     ; PIN_AK29      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[15]     ; PIN_AK28      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[16]     ; PIN_AK27      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[17]     ; PIN_AJ26      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[18]     ; PIN_AK26      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[19]     ; PIN_AH25      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[1]      ; PIN_AA21      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[20]     ; PIN_AJ25      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[21]     ; PIN_AJ24      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[22]     ; PIN_AK24      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[23]     ; PIN_AG23      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[24]     ; PIN_AK23      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[25]     ; PIN_AH23      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[26]     ; PIN_AK22      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[27]     ; PIN_AJ22      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[28]     ; PIN_AH22      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[29]     ; PIN_AG22      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[2]      ; PIN_AB21      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[30]     ; PIN_AF24      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[31]     ; PIN_AF23      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[32]     ; PIN_AE22      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[33]     ; PIN_AD21      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[34]     ; PIN_AA20      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[35]     ; PIN_AC22      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[3]      ; PIN_AC23      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[4]      ; PIN_AD24      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[5]      ; PIN_AE23      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[6]      ; PIN_AE24      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[7]      ; PIN_AF25      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[8]      ; PIN_AF26      ; QSF Assignment ;
+; Location ;                ;              ; GPIO_1[9]      ; PIN_AG25      ; QSF Assignment ;
+; Location ;                ;              ; HEX0[0]        ; PIN_AE26      ; QSF Assignment ;
+; Location ;                ;              ; HEX0[1]        ; PIN_AE27      ; QSF Assignment ;
+; Location ;                ;              ; HEX0[2]        ; PIN_AE28      ; QSF Assignment ;
+; Location ;                ;              ; HEX0[3]        ; PIN_AG27      ; QSF Assignment ;
+; Location ;                ;              ; HEX0[4]        ; PIN_AF28      ; QSF Assignment ;
+; Location ;                ;              ; HEX0[5]        ; PIN_AG28      ; QSF Assignment ;
+; Location ;                ;              ; HEX0[6]        ; PIN_AH28      ; QSF Assignment ;
+; Location ;                ;              ; HEX1[0]        ; PIN_AJ29      ; QSF Assignment ;
+; Location ;                ;              ; HEX1[1]        ; PIN_AH29      ; QSF Assignment ;
+; Location ;                ;              ; HEX1[2]        ; PIN_AH30      ; QSF Assignment ;
+; Location ;                ;              ; HEX1[3]        ; PIN_AG30      ; QSF Assignment ;
+; Location ;                ;              ; HEX1[4]        ; PIN_AF29      ; QSF Assignment ;
+; Location ;                ;              ; HEX1[5]        ; PIN_AF30      ; QSF Assignment ;
+; Location ;                ;              ; HEX1[6]        ; PIN_AD27      ; QSF Assignment ;
+; Location ;                ;              ; HEX2[0]        ; PIN_AB23      ; QSF Assignment ;
+; Location ;                ;              ; HEX2[1]        ; PIN_AE29      ; QSF Assignment ;
+; Location ;                ;              ; HEX2[2]        ; PIN_AD29      ; QSF Assignment ;
+; Location ;                ;              ; HEX2[3]        ; PIN_AC28      ; QSF Assignment ;
+; Location ;                ;              ; HEX2[4]        ; PIN_AD30      ; QSF Assignment ;
+; Location ;                ;              ; HEX2[5]        ; PIN_AC29      ; QSF Assignment ;
+; Location ;                ;              ; HEX2[6]        ; PIN_AC30      ; QSF Assignment ;
+; Location ;                ;              ; HEX3[0]        ; PIN_AD26      ; QSF Assignment ;
+; Location ;                ;              ; HEX3[1]        ; PIN_AC27      ; QSF Assignment ;
+; Location ;                ;              ; HEX3[2]        ; PIN_AD25      ; QSF Assignment ;
+; Location ;                ;              ; HEX3[3]        ; PIN_AC25      ; QSF Assignment ;
+; Location ;                ;              ; HEX3[4]        ; PIN_AB28      ; QSF Assignment ;
+; Location ;                ;              ; HEX3[5]        ; PIN_AB25      ; QSF Assignment ;
+; Location ;                ;              ; HEX3[6]        ; PIN_AB22      ; QSF Assignment ;
+; Location ;                ;              ; HEX4[0]        ; PIN_AA24      ; QSF Assignment ;
+; Location ;                ;              ; HEX4[1]        ; PIN_Y23       ; QSF Assignment ;
+; Location ;                ;              ; HEX4[2]        ; PIN_Y24       ; QSF Assignment ;
+; Location ;                ;              ; HEX4[3]        ; PIN_W22       ; QSF Assignment ;
+; Location ;                ;              ; HEX4[4]        ; PIN_W24       ; QSF Assignment ;
+; Location ;                ;              ; HEX4[5]        ; PIN_V23       ; QSF Assignment ;
+; Location ;                ;              ; HEX4[6]        ; PIN_W25       ; QSF Assignment ;
+; Location ;                ;              ; HEX5[0]        ; PIN_V25       ; QSF Assignment ;
+; Location ;                ;              ; HEX5[1]        ; PIN_AA28      ; QSF Assignment ;
+; Location ;                ;              ; HEX5[2]        ; PIN_Y27       ; QSF Assignment ;
+; Location ;                ;              ; HEX5[3]        ; PIN_AB27      ; QSF Assignment ;
+; Location ;                ;              ; HEX5[4]        ; PIN_AB26      ; QSF Assignment ;
+; Location ;                ;              ; HEX5[5]        ; PIN_AA26      ; QSF Assignment ;
+; Location ;                ;              ; HEX5[6]        ; PIN_AA25      ; QSF Assignment ;
+; Location ;                ;              ; IRDA_RXD       ; PIN_AA30      ; QSF Assignment ;
+; Location ;                ;              ; IRDA_TXD       ; PIN_AB30      ; QSF Assignment ;
+; Location ;                ;              ; KEY[0]         ; PIN_AA14      ; QSF Assignment ;
+; Location ;                ;              ; KEY[1]         ; PIN_AA15      ; QSF Assignment ;
+; Location ;                ;              ; KEY[2]         ; PIN_W15       ; QSF Assignment ;
+; Location ;                ;              ; KEY[3]         ; PIN_Y16       ; QSF Assignment ;
+; Location ;                ;              ; LEDR[0]        ; PIN_V16       ; QSF Assignment ;
+; Location ;                ;              ; LEDR[1]        ; PIN_W16       ; QSF Assignment ;
+; Location ;                ;              ; LEDR[2]        ; PIN_V17       ; QSF Assignment ;
+; Location ;                ;              ; LEDR[3]        ; PIN_V18       ; QSF Assignment ;
+; Location ;                ;              ; LEDR[4]        ; PIN_W17       ; QSF Assignment ;
+; Location ;                ;              ; LEDR[5]        ; PIN_W19       ; QSF Assignment ;
+; Location ;                ;              ; LEDR[6]        ; PIN_Y19       ; QSF Assignment ;
+; Location ;                ;              ; LEDR[7]        ; PIN_W20       ; QSF Assignment ;
+; Location ;                ;              ; LEDR[8]        ; PIN_W21       ; QSF Assignment ;
+; Location ;                ;              ; LEDR[9]        ; PIN_Y21       ; QSF Assignment ;
+; Location ;                ;              ; PS2_CLK        ; PIN_AD7       ; QSF Assignment ;
+; Location ;                ;              ; PS2_CLK2       ; PIN_AD9       ; QSF Assignment ;
+; Location ;                ;              ; PS2_DAT        ; PIN_AE7       ; QSF Assignment ;
+; Location ;                ;              ; PS2_DAT2       ; PIN_AE9       ; QSF Assignment ;
+; Location ;                ;              ; SW[0]          ; PIN_AB12      ; QSF Assignment ;
+; Location ;                ;              ; SW[1]          ; PIN_AC12      ; QSF Assignment ;
+; Location ;                ;              ; SW[2]          ; PIN_AF9       ; QSF Assignment ;
+; Location ;                ;              ; SW[3]          ; PIN_AF10      ; QSF Assignment ;
+; Location ;                ;              ; SW[4]          ; PIN_AD11      ; QSF Assignment ;
+; Location ;                ;              ; SW[5]          ; PIN_AD12      ; QSF Assignment ;
+; Location ;                ;              ; SW[6]          ; PIN_AE11      ; QSF Assignment ;
+; Location ;                ;              ; SW[7]          ; PIN_AC9       ; QSF Assignment ;
+; Location ;                ;              ; SW[8]          ; PIN_AD10      ; QSF Assignment ;
+; Location ;                ;              ; SW[9]          ; PIN_AE12      ; QSF Assignment ;
+; Location ;                ;              ; TD_CLK27       ; PIN_H15       ; QSF Assignment ;
+; Location ;                ;              ; TD_DATA[0]     ; PIN_D2        ; QSF Assignment ;
+; Location ;                ;              ; TD_DATA[1]     ; PIN_B1        ; QSF Assignment ;
+; Location ;                ;              ; TD_DATA[2]     ; PIN_E2        ; QSF Assignment ;
+; Location ;                ;              ; TD_DATA[3]     ; PIN_B2        ; QSF Assignment ;
+; Location ;                ;              ; TD_DATA[4]     ; PIN_D1        ; QSF Assignment ;
+; Location ;                ;              ; TD_DATA[5]     ; PIN_E1        ; QSF Assignment ;
+; Location ;                ;              ; TD_DATA[6]     ; PIN_C2        ; QSF Assignment ;
+; Location ;                ;              ; TD_DATA[7]     ; PIN_B3        ; QSF Assignment ;
+; Location ;                ;              ; TD_HS          ; PIN_A5        ; QSF Assignment ;
+; Location ;                ;              ; TD_RESET_N     ; PIN_F6        ; QSF Assignment ;
+; Location ;                ;              ; TD_VS          ; PIN_A3        ; QSF Assignment ;
+; Location ;                ;              ; USB_B2_CLK     ; PIN_AF4       ; QSF Assignment ;
+; Location ;                ;              ; USB_B2_DATA[0] ; PIN_AH4       ; QSF Assignment ;
+; Location ;                ;              ; USB_B2_DATA[1] ; PIN_AH3       ; QSF Assignment ;
+; Location ;                ;              ; USB_B2_DATA[2] ; PIN_AJ2       ; QSF Assignment ;
+; Location ;                ;              ; USB_B2_DATA[3] ; PIN_AJ1       ; QSF Assignment ;
+; Location ;                ;              ; USB_B2_DATA[4] ; PIN_AH2       ; QSF Assignment ;
+; Location ;                ;              ; USB_B2_DATA[5] ; PIN_AG3       ; QSF Assignment ;
+; Location ;                ;              ; USB_B2_DATA[6] ; PIN_AG2       ; QSF Assignment ;
+; Location ;                ;              ; USB_B2_DATA[7] ; PIN_AG1       ; QSF Assignment ;
+; Location ;                ;              ; USB_EMPTY      ; PIN_AF5       ; QSF Assignment ;
+; Location ;                ;              ; USB_FULL       ; PIN_AG5       ; QSF Assignment ;
+; Location ;                ;              ; USB_OE_N       ; PIN_AF6       ; QSF Assignment ;
+; Location ;                ;              ; USB_RD_N       ; PIN_AG6       ; QSF Assignment ;
+; Location ;                ;              ; USB_RESET_N    ; PIN_AG7       ; QSF Assignment ;
+; Location ;                ;              ; USB_SCL        ; PIN_AG8       ; QSF Assignment ;
+; Location ;                ;              ; USB_SDA        ; PIN_AF8       ; QSF Assignment ;
+; Location ;                ;              ; USB_WR_N       ; PIN_AH5       ; QSF Assignment ;
+; Location ;                ;              ; VGA_BLANK_N    ; PIN_F10       ; QSF Assignment ;
+; Location ;                ;              ; VGA_B[0]       ; PIN_B13       ; QSF Assignment ;
+; Location ;                ;              ; VGA_B[1]       ; PIN_G13       ; QSF Assignment ;
+; Location ;                ;              ; VGA_B[2]       ; PIN_H13       ; QSF Assignment ;
+; Location ;                ;              ; VGA_B[3]       ; PIN_F14       ; QSF Assignment ;
+; Location ;                ;              ; VGA_B[4]       ; PIN_H14       ; QSF Assignment ;
+; Location ;                ;              ; VGA_B[5]       ; PIN_F15       ; QSF Assignment ;
+; Location ;                ;              ; VGA_B[6]       ; PIN_G15       ; QSF Assignment ;
+; Location ;                ;              ; VGA_B[7]       ; PIN_J14       ; QSF Assignment ;
+; Location ;                ;              ; VGA_CLK        ; PIN_A11       ; QSF Assignment ;
+; Location ;                ;              ; VGA_G[0]       ; PIN_J9        ; QSF Assignment ;
+; Location ;                ;              ; VGA_G[1]       ; PIN_J10       ; QSF Assignment ;
+; Location ;                ;              ; VGA_G[2]       ; PIN_H12       ; QSF Assignment ;
+; Location ;                ;              ; VGA_G[3]       ; PIN_G10       ; QSF Assignment ;
+; Location ;                ;              ; VGA_G[4]       ; PIN_G11       ; QSF Assignment ;
+; Location ;                ;              ; VGA_G[5]       ; PIN_G12       ; QSF Assignment ;
+; Location ;                ;              ; VGA_G[6]       ; PIN_F11       ; QSF Assignment ;
+; Location ;                ;              ; VGA_G[7]       ; PIN_E11       ; QSF Assignment ;
+; Location ;                ;              ; VGA_HS         ; PIN_B11       ; QSF Assignment ;
+; Location ;                ;              ; VGA_R[0]       ; PIN_A13       ; QSF Assignment ;
+; Location ;                ;              ; VGA_R[1]       ; PIN_C13       ; QSF Assignment ;
+; Location ;                ;              ; VGA_R[2]       ; PIN_E13       ; QSF Assignment ;
+; Location ;                ;              ; VGA_R[3]       ; PIN_B12       ; QSF Assignment ;
+; Location ;                ;              ; VGA_R[4]       ; PIN_C12       ; QSF Assignment ;
+; Location ;                ;              ; VGA_R[5]       ; PIN_D12       ; QSF Assignment ;
+; Location ;                ;              ; VGA_R[6]       ; PIN_E12       ; QSF Assignment ;
+; Location ;                ;              ; VGA_R[7]       ; PIN_F13       ; QSF Assignment ;
+; Location ;                ;              ; VGA_SYNC_N     ; PIN_C10       ; QSF Assignment ;
+; Location ;                ;              ; VGA_VS         ; PIN_D11       ; QSF Assignment ;
++----------+----------------+--------------+----------------+---------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------+
@@ -1818,6 +2085,265 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Tim
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
+Warning (15705): Ignored locations or region assignments to the following nodes
+    Warning (15706): Node "ADC_CS_N" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "ADC_DIN" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "ADC_DOUT" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "ADC_SCLK" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "AUD_ADCDAT" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "AUD_ADCLRCK" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "AUD_BCLK" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "AUD_DACDAT" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "AUD_DACLRCK" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "AUD_XCK" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "CLOCK2_50" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "CLOCK3_50" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "CLOCK4_50" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "CLOCK_50" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_ADDR[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_ADDR[10]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_ADDR[11]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_ADDR[12]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_ADDR[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_ADDR[2]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_ADDR[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_ADDR[4]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_ADDR[5]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_ADDR[6]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_ADDR[7]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_ADDR[8]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_ADDR[9]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_BA[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_BA[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_CAS_N" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_CKE" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_CLK" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_CS_N" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_DQ[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_DQ[10]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_DQ[11]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_DQ[12]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_DQ[13]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_DQ[14]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_DQ[15]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_DQ[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_DQ[2]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_DQ[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_DQ[4]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_DQ[5]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_DQ[6]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_DQ[7]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_DQ[8]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_DQ[9]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_LDQM" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_RAS_N" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_UDQM" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "DRAM_WE_N" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "FAN_CTRL" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "FPGA_I2C_SCLK" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "FPGA_I2C_SDAT" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[10]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[11]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[12]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[13]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[14]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[15]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[16]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[17]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[18]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[19]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[20]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[21]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[22]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[23]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[24]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[25]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[26]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[27]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[28]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[29]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[2]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[30]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[31]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[32]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[33]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[34]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[35]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[4]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[5]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[6]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[7]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[8]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_0[9]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[10]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[11]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[12]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[13]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[14]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[15]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[16]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[17]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[18]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[19]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[20]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[21]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[22]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[23]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[24]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[25]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[26]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[27]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[28]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[29]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[2]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[30]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[31]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[32]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[33]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[34]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[35]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[4]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[5]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[6]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[7]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[8]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "GPIO_1[9]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX0[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX0[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX0[2]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX0[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX0[4]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX0[5]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX0[6]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX1[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX1[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX1[2]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX1[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX1[4]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX1[5]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX1[6]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX2[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX2[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX2[2]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX2[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX2[4]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX2[5]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX2[6]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX3[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX3[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX3[2]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX3[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX3[4]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX3[5]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX3[6]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX4[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX4[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX4[2]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX4[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX4[4]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX4[5]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX4[6]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX5[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX5[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX5[2]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX5[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX5[4]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX5[5]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "HEX5[6]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "IRDA_RXD" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "IRDA_TXD" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "KEY[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "KEY[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "KEY[2]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "KEY[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "LEDR[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "LEDR[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "LEDR[2]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "LEDR[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "LEDR[4]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "LEDR[5]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "LEDR[6]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "LEDR[7]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "LEDR[8]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "LEDR[9]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "PS2_CLK" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "PS2_CLK2" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "PS2_DAT" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "PS2_DAT2" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "SW[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "SW[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "SW[2]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "SW[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "SW[4]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "SW[5]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "SW[6]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "SW[7]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "SW[8]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "SW[9]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TD_CLK27" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TD_DATA[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TD_DATA[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TD_DATA[2]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TD_DATA[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TD_DATA[4]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TD_DATA[5]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TD_DATA[6]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TD_DATA[7]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TD_HS" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TD_RESET_N" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "TD_VS" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "USB_B2_CLK" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "USB_B2_DATA[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "USB_B2_DATA[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "USB_B2_DATA[2]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "USB_B2_DATA[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "USB_B2_DATA[4]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "USB_B2_DATA[5]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "USB_B2_DATA[6]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "USB_B2_DATA[7]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "USB_EMPTY" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "USB_FULL" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "USB_OE_N" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "USB_RD_N" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "USB_RESET_N" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "USB_SCL" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "USB_SDA" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "USB_WR_N" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_BLANK_N" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_B[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_B[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_B[2]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_B[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_B[4]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_B[5]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_B[6]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_B[7]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_CLK" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_G[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_G[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_G[2]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_G[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_G[4]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_G[5]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_G[6]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_G[7]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_HS" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_R[0]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_R[1]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_R[2]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_R[3]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_R[4]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_R[5]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_R[6]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_R[7]" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_SYNC_N" is assigned to location or region, but does not exist in design
+    Warning (15706): Node "VGA_VS" is assigned to location or region, but does not exist in design
 Info (11798): Fitter preparation operations ending: elapsed time is 00:00:09
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
@@ -1831,18 +2357,19 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.22 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.24 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
+Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/Quartus_vo/output_files/controller.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 6541 megabytes
-    Info: Processing ended: Fri Nov 18 19:14:15 2022
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:48
+Info: Quartus Prime Fitter was successful. 0 errors, 265 warnings
+    Info: Peak virtual memory: 6546 megabytes
+    Info: Processing ended: Fri Nov 18 22:05:27 2022
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:51
 
 
 +----------------------------+

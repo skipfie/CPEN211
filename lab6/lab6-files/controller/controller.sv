@@ -339,6 +339,18 @@ module controller(input clk, input rst_n, input start,
                 _reg_sel = 2'b01;
                 _wb_sel = 2'b00;
             end
+            default: begin
+                _waiting = 1'b1;
+                _en_A = 1'b0;
+                _en_B = 1'b0;
+                _en_C = 1'b0;
+                _en_status = 1'b0;
+                _sel_A = 1'b0;
+                _sel_B = 1'b0;
+                _w_en = 1'b0;
+                _reg_sel = 2'b00;
+                _wb_sel = 2'b00;
+            end
         endcase
     end
 endmodule: controller
