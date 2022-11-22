@@ -21,11 +21,11 @@ module tb_controller(output err);
                    .en_A(en_A), .en_B(en_B), .en_C(en_C), .en_status(en_status),
                    .sel_A(sel_A), .sel_B(sel_B));
     initial begin
-        clk = 1'b1;
+        clk <= 1'b1;
         forever #5 clk = ~clk;
     end                   
 
-    task reset; rst_n = 1'b0; #10; rst_n = 1'b1; #10; endtask
+    task reset; rst_n = 1'b0; #30; rst_n = 1'b1; #10; endtask
     task MOVimm; opcode = 3'b110; ALU_op = 2'b10; start = 1'b1; #10; start = 1'b0; endtask
     task MOV; opcode = 3'b110; ALU_op = 2'b00; start = 1'b1; #10; start = 1'b0; endtask
     
@@ -45,7 +45,7 @@ module tb_controller(output err);
           nerr = 1'b1;
           failed = failed + 1;
         end
-        #10;
+
         $display("Testing add");
         add; //c1
         assert (waiting === 1'b0 && en_A === 1'b1 && en_B === 1'b0 && en_C === 1'b0 && en_status === 1'b0 && 

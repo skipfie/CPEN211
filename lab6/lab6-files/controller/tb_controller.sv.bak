@@ -22,17 +22,17 @@ module tb_controller(output err);
                    .sel_A(sel_A), .sel_B(sel_B));
     initial begin
         clk = 1'b1;
-        forever #5 clk = ~clk;
+        forever #10 clk = ~clk;
     end                   
 
-    task reset; rst_n = 1'b0; #10; rst_n = 1'b1; #10; endtask
-    task MOVimm; opcode = 3'b110; ALU_op = 2'b10; start = 1'b1; #10; start = 1'b0; endtask
-    task MOV; opcode = 3'b110; ALU_op = 2'b00; start = 1'b1; #10; start = 1'b0; endtask
+    task reset; rst_n = 1'b0; #20; rst_n = 1'b1; #20; endtask
+    task MOVimm; opcode = 3'b110; ALU_op = 2'b10; start = 1'b1; #20; start = 1'b0; endtask
+    task MOV; opcode = 3'b110; ALU_op = 2'b00; start = 1'b1; #20; start = 1'b0; endtask
     
-    task add; opcode = 3'b101; ALU_op = 2'b00; start = 1'b1; #10; start = 1'b0; endtask
-    task cmp; opcode = 3'b101; ALU_op = 2'b01; start = 1'b1; #10; start = 1'b0; endtask
-    task And; opcode = 3'b101; ALU_op = 2'b10; start = 1'b1; #10; start = 1'b0; endtask
-    task mvn; opcode = 3'b101; ALU_op = 2'b11; start = 1'b1; #10; start = 1'b0; endtask
+    task add; opcode = 3'b101; ALU_op = 2'b00; start = 1'b1; #20; start = 1'b0; endtask
+    task cmp; opcode = 3'b101; ALU_op = 2'b01; start = 1'b1; #20; start = 1'b0; endtask
+    task And; opcode = 3'b101; ALU_op = 2'b10; start = 1'b1; #20; start = 1'b0; endtask
+    task mvn; opcode = 3'b101; ALU_op = 2'b11; start = 1'b1; #20; start = 1'b0; endtask
     
     initial begin
         #7;
@@ -45,7 +45,7 @@ module tb_controller(output err);
           nerr = 1'b1;
           failed = failed + 1;
         end
-        #10;
+
         $display("Testing add");
         add; //c1
         assert (waiting === 1'b0 && en_A === 1'b1 && en_B === 1'b0 && en_C === 1'b0 && en_status === 1'b0 && 
@@ -57,7 +57,7 @@ module tb_controller(output err);
           nerr = 1'b1;
           failed = failed + 1;
         end
-        #10; //c2
+        #20; //c2
         assert (waiting === 1'b0 && en_A === 1'b0 && en_B === 1'b1 && en_C === 1'b0 && en_status === 1'b0 && 
                 sel_A === 1'b0 && sel_B === 1'b0 && w_en === 1'b0 && reg_sel === 2'b0 && wb_sel === 2'b00) 
           $display("[PASS] All the control signals are correct");
@@ -67,7 +67,7 @@ module tb_controller(output err);
           nerr = 1'b1;
           failed = failed + 1;
         end
-        #10; //c3
+        #20; //c3
         assert (waiting === 1'b0 && en_A === 1'b0 && en_B === 1'b0 && en_C === 1'b1 && en_status === 1'b0 && 
                 sel_A === 1'b0 && sel_B === 1'b0 && w_en === 1'b0 && reg_sel === 2'b00 && wb_sel === 2'b00) 
           $display("[PASS] All the control signals are correct");
@@ -77,7 +77,7 @@ module tb_controller(output err);
           nerr = 1'b1;
           failed = failed + 1;
         end
-        #10; //c4
+        #20; //c4
         assert (waiting === 1'b0 && en_A === 1'b0 && en_B === 1'b0 && en_C === 1'b0 && en_status === 1'b0 && 
                 sel_A === 1'b0 && sel_B === 1'b0 && w_en === 1'b1 && reg_sel === 2'b01 && wb_sel === 2'b00) 
           $display("[PASS] All the control signals are correct");
@@ -88,7 +88,7 @@ module tb_controller(output err);
           failed = failed + 1;
         end
 
-        #10;
+        #20;
         $display("Testing cmp");
         cmp; //c1
         assert (waiting === 1'b0 && en_A === 1'b1 && en_B === 1'b0 && en_C === 1'b0 && en_status === 1'b0 && 
@@ -100,7 +100,7 @@ module tb_controller(output err);
           nerr = 1'b1;
           failed = failed + 1;
         end
-        #10; //c2
+        #20; //c2
         assert (waiting === 1'b0 && en_A === 1'b0 && en_B === 1'b1 && en_C === 1'b0 && en_status === 1'b0 && 
                 sel_A === 1'b0 && sel_B === 1'b0 && w_en === 1'b0 && reg_sel === 2'b00 && wb_sel === 2'b00) 
           $display("[PASS] All the control signals are correct");
@@ -110,7 +110,7 @@ module tb_controller(output err);
           nerr = 1'b1;
           failed = failed + 1;
         end
-        #10; //c3
+        #20; //c3
         assert (waiting === 1'b0 && en_A === 1'b0 && en_B === 1'b0 && en_C === 1'b0 && en_status === 1'b0 && 
                 sel_A === 1'b0 && sel_B === 1'b0 && w_en === 1'b0 && reg_sel === 2'b00 && wb_sel === 2'b00) 
           $display("[PASS] All the control signals are correct");
@@ -120,7 +120,7 @@ module tb_controller(output err);
           nerr = 1'b1;
           failed = failed + 1;
         end
-        #10; //c4
+        #20; //c4
         assert (waiting === 1'b0 && en_A === 1'b0 && en_B === 1'b0 && en_C === 1'b0 && en_status === 1'b1 && 
                 sel_A === 1'b0 && sel_B === 1'b0 && w_en === 1'b0 && reg_sel === 2'b00 && wb_sel === 2'b00) 
           $display("[PASS] All the control signals are correct");
@@ -131,7 +131,7 @@ module tb_controller(output err);
           failed = failed + 1;
         end
 
-        #10;
+        #20;
         $display("Testing And");
         And; //c1
         assert (waiting === 1'b0 && en_A === 1'b1 && en_B === 1'b0 && en_C === 1'b0 && en_status === 1'b0 && 
@@ -143,7 +143,7 @@ module tb_controller(output err);
           nerr = 1'b1;
           failed = failed + 1;
         end
-        #10; //c2
+        #20; //c2
         assert (waiting === 1'b0 && en_A === 1'b0 && en_B === 1'b1 && en_C === 1'b0 && en_status === 1'b0 && 
                 sel_A === 1'b0 && sel_B === 1'b0 && w_en === 1'b0 && reg_sel === 2'b00 && wb_sel === 2'b00) 
           $display("[PASS] All the control signals are correct");
@@ -153,7 +153,7 @@ module tb_controller(output err);
           nerr = 1'b1;
           failed = failed + 1;
         end
-        #10; //c3
+        #20; //c3
         assert (waiting === 1'b0 && en_A === 1'b0 && en_B === 1'b0 && en_C === 1'b1 && en_status === 1'b0 && 
                 sel_A === 1'b0 && sel_B === 1'b0 && w_en === 1'b0 && reg_sel === 2'b00 && wb_sel === 2'b00) 
           $display("[PASS] All the control signals are correct");
@@ -163,7 +163,7 @@ module tb_controller(output err);
           nerr = 1'b1;
           failed = failed + 1;
         end
-        #10; //c4
+        #20; //c4
         assert (waiting === 1'b0 && en_A === 1'b0 && en_B === 1'b0 && en_C === 1'b0 && en_status === 1'b0 && 
                 sel_A === 1'b0 && sel_B === 1'b0 && w_en === 1'b1 && reg_sel === 2'b01 && wb_sel === 2'b00) 
           $display("[PASS] All the control signals are correct");
@@ -174,7 +174,7 @@ module tb_controller(output err);
           failed = failed + 1;
         end
 
-        #10;
+        #20;
         $display("Testing mvn");
         mvn; //c1
         assert (waiting === 1'b0 && en_A === 1'b0 && en_B === 1'b1 && en_C === 1'b0 && en_status === 1'b0 && 
@@ -186,7 +186,7 @@ module tb_controller(output err);
           nerr = 1'b1;
           failed = failed + 1;
         end
-        #10; //c2
+        #20; //c2
         assert (waiting === 1'b0 && en_A === 1'b0 && en_B === 1'b0 && en_C === 1'b1 && en_status === 1'b0 && 
                 sel_A === 1'b1 && sel_B === 1'b0 && w_en === 1'b0 && reg_sel === 2'b00 && wb_sel === 2'b00) 
           $display("[PASS] All the control signals are correct");
@@ -196,7 +196,7 @@ module tb_controller(output err);
           nerr = 1'b1;
           failed = failed + 1;
         end
-        #10; //c3
+        #20; //c3
         assert (waiting === 1'b0 && en_A === 1'b0 && en_B === 1'b0 && en_C === 1'b0 && en_status === 1'b0 && 
                 sel_A === 1'b0 && sel_B === 1'b0 && w_en === 1'b1 && reg_sel === 2'b01 && wb_sel === 2'b00) 
           $display("[PASS] All the control signals are correct");
@@ -207,7 +207,7 @@ module tb_controller(output err);
           failed = failed + 1;
         end
        
-        #10;
+        #20;
         $display("Testing MOVimm");
         MOVimm; //c1
         assert (waiting === 1'b0 && en_A === 1'b0 && en_B === 1'b0 && en_C === 1'b0 && en_status === 1'b0 && 
@@ -220,7 +220,7 @@ module tb_controller(output err);
           failed = failed + 1;
         end
 
-        #10;
+        #20;
         $display("Testing MOV");
         MOV; //c1
         assert (waiting === 1'b0 && en_A === 1'b0 && en_B === 1'b1 && en_C === 1'b0 && en_status === 1'b0 && 
@@ -232,7 +232,7 @@ module tb_controller(output err);
           nerr = 1'b1;
           failed = failed + 1;
         end
-        #10; //c2
+        #20; //c2
         assert (waiting === 1'b0 && en_A === 1'b0 && en_B === 1'b0 && en_C === 1'b1 && en_status === 1'b0 && 
                 sel_A === 1'b1 && sel_B === 1'b0 && w_en === 1'b0 && reg_sel === 2'b00 && wb_sel === 2'b00) 
           $display("[PASS] All the control signals are correct");
@@ -242,7 +242,7 @@ module tb_controller(output err);
           nerr = 1'b1;
           failed = failed + 1;
         end
-        #10; //c3
+        #20; //c3
         assert (waiting === 1'b0 && en_A === 1'b0 && en_B === 1'b0 && en_C === 1'b0 && en_status === 1'b0 && 
                 sel_A === 1'b0 && sel_B === 1'b0 && w_en === 1'b1 && reg_sel === 2'b01 && wb_sel === 2'b00) 
           $display("[PASS] All the control signals are correct");
@@ -253,7 +253,7 @@ module tb_controller(output err);
           failed = failed + 1;
         end
 
-        #10;
+        #20;
 		    $display("Testing reset during computing");
 		    $display("Testing MOV");
         MOV; //c1
@@ -266,7 +266,7 @@ module tb_controller(output err);
           nerr = 1'b1;
           failed = failed + 1;
         end
-        #10; //c2
+        #20; //c2
         assert (waiting === 1'b0 && en_A === 1'b0 && en_B === 1'b0 && en_C === 1'b1 && en_status === 1'b0 && 
                 sel_A === 1'b1 && sel_B === 1'b0 && w_en === 1'b0 && reg_sel === 2'b00 && wb_sel === 2'b00) 
           $display("[PASS] All the control signals are correct");

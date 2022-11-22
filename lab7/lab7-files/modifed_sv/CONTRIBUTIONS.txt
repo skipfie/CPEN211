@@ -1,0 +1,2 @@
+Partner 1: modified datapath, modified alu, controller, controller tb, generate vo, debug
+Partner 2: modified datapath, modified alu, cpu, cpu tb, idecoder, idecoder tb, debug
