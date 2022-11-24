@@ -7,11 +7,16 @@ add wave -noupdate /tb_task1/dut/cpu/ram_r_data
 add wave -noupdate /tb_task1/dut/cpu/ram_w_en
 add wave -noupdate /tb_task1/dut/cpu/ram_w_data
 add wave -noupdate /tb_task1/dut/cpu/out
+add wave -noupdate /tb_task1/dut/cpu/controller/state
 add wave -noupdate -divider registers
+add wave -noupdate /tb_task1/dut/cpu/load_ir
 add wave -noupdate /tb_task1/dut/cpu/instr_reg
-add wave -noupdate /tb_task1/dut/cpu/program_counter
+add wave -noupdate /tb_task1/dut/cpu/load_pc
+add wave -noupdate -radix decimal /tb_task1/dut/cpu/program_counter
+add wave -noupdate /tb_task1/dut/cpu/load_addr
 add wave -noupdate /tb_task1/dut/cpu/data_addr_reg
 add wave -noupdate -divider mux
+add wave -noupdate /tb_task1/dut/cpu/clear_pc
 add wave -noupdate /tb_task1/dut/cpu/next_pc
 add wave -noupdate /tb_task1/dut/cpu/ram_addr
 add wave -noupdate -divider {datapath signals}
@@ -32,15 +37,11 @@ add wave -noupdate /tb_task1/dut/cpu/en_status
 add wave -noupdate /tb_task1/dut/cpu/sel_addr
 add wave -noupdate /tb_task1/dut/cpu/reg_sel
 add wave -noupdate /tb_task1/dut/cpu/wb_sel
-add wave -noupdate /tb_task1/dut/cpu/load_pc
-add wave -noupdate /tb_task1/dut/cpu/clear_pc
-add wave -noupdate /tb_task1/dut/cpu/load_ir
-add wave -noupdate /tb_task1/dut/cpu/load_addr
 add wave -noupdate /tb_task1/dut/cpu/N
 add wave -noupdate /tb_task1/dut/cpu/V
 add wave -noupdate /tb_task1/dut/cpu/Z
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {20 ps} 0}
+WaveRestoreCursors {{Cursor 1} {11 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
@@ -56,4 +57,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {130 ps}
+WaveRestoreZoom {0 ps} {49 ps}
