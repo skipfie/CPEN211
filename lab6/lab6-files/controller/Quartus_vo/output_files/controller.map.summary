@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sun Nov 20 22:40:11 2022
+Analysis & Synthesis Status : Successful - Wed Nov 23 13:32:34 2022
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : controller
 Top-level Entity Name : controller
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 20
+Total registers : 1
 Total pins : 25
 Total virtual pins : 0
 Total block memory bits : 0

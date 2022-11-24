@@ -1,5 +1,5 @@
 Analysis & Synthesis report for controller
-Sun Nov 20 22:40:11 2022
+Wed Nov 23 13:32:34 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,12 +13,10 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |controller|state
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -44,13 +42,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Nov 20 22:40:11 2022       ;
+; Analysis & Synthesis Status     ; Successful - Wed Nov 23 13:32:34 2022       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; controller                                  ;
 ; Top-level Entity Name           ; controller                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 20                                          ;
+; Total registers                 ; 1                                           ;
 ; Total pins                      ; 25                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -177,31 +175,31 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 15          ;
-;                                             ;             ;
-; Combinational ALUT usage for logic          ; 29          ;
-;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 1           ;
-;     -- 5 input functions                    ; 7           ;
-;     -- 4 input functions                    ; 6           ;
-;     -- <=3 input functions                  ; 15          ;
-;                                             ;             ;
-; Dedicated logic registers                   ; 20          ;
-;                                             ;             ;
-; I/O pins                                    ; 25          ;
-;                                             ;             ;
-; Total DSP Blocks                            ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; rst_n~input ;
-; Maximum fan-out                             ; 20          ;
-; Total fan-out                               ; 171         ;
-; Average fan-out                             ; 1.73        ;
-+---------------------------------------------+-------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 1     ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 2     ;
+;     -- 7 input functions                    ; 0     ;
+;     -- 6 input functions                    ; 0     ;
+;     -- 5 input functions                    ; 1     ;
+;     -- 4 input functions                    ; 1     ;
+;     -- <=3 input functions                  ; 0     ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 1     ;
+;                                             ;       ;
+; I/O pins                                    ; 25    ;
+;                                             ;       ;
+; Total DSP Blocks                            ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; state ;
+; Maximum fan-out                             ; 4     ;
+; Total fan-out                               ; 39    ;
+; Average fan-out                             ; 0.74  ;
++---------------------------------------------+-------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -209,52 +207,9 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |controller                ; 29 (29)             ; 20 (20)                   ; 0                 ; 0          ; 25   ; 0            ; |controller         ; controller  ; work         ;
+; |controller                ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 25   ; 0            ; |controller         ; controller  ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |controller|state                                                                                                                                                                                                                                                  ;
-+-------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-------------+-------------+-------------+------------+------------+
-; Name        ; state.and4 ; state.and3 ; state.and2 ; state.and1 ; state.cmp4 ; state.cmp3 ; state.cmp2 ; state.cmp1 ; state.add4 ; state.add3 ; state.add2 ; state.add1 ; state.mvn3 ; state.mvn2 ; state.mvn1 ; state.mov_3 ; state.mov_2 ; state.mov_1 ; state.mov1 ; state.Wait ;
-+-------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-------------+-------------+-------------+------------+------------+
-; state.Wait  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0           ; 0           ; 0           ; 0          ; 0          ;
-; state.mov1  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0           ; 0           ; 0           ; 1          ; 1          ;
-; state.mov_1 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0           ; 0           ; 1           ; 0          ; 1          ;
-; state.mov_2 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0           ; 1           ; 0           ; 0          ; 1          ;
-; state.mov_3 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1           ; 0           ; 0           ; 0          ; 1          ;
-; state.mvn1  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0           ; 0           ; 0           ; 0          ; 1          ;
-; state.mvn2  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0           ; 0           ; 0           ; 0          ; 1          ;
-; state.mvn3  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0           ; 0           ; 0           ; 0          ; 1          ;
-; state.add1  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0           ; 0           ; 0           ; 0          ; 1          ;
-; state.add2  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0           ; 0           ; 0           ; 0          ; 1          ;
-; state.add3  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0           ; 0           ; 0           ; 0          ; 1          ;
-; state.add4  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0           ; 0           ; 0           ; 0          ; 1          ;
-; state.cmp1  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0           ; 0           ; 0           ; 0          ; 1          ;
-; state.cmp2  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0           ; 0           ; 0           ; 0          ; 1          ;
-; state.cmp3  ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0           ; 0           ; 0           ; 0          ; 1          ;
-; state.cmp4  ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0           ; 0           ; 0           ; 0          ; 1          ;
-; state.and1  ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0           ; 0           ; 0           ; 0          ; 1          ;
-; state.and2  ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0           ; 0           ; 0           ; 0          ; 1          ;
-; state.and3  ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0           ; 0           ; 0           ; 0          ; 1          ;
-; state.and4  ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0           ; 0           ; 0           ; 0          ; 1          ;
-+-------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+------------+-------------+-------------+-------------+------------+------------+
-
-
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; state~2                               ; Lost fanout        ;
-; state~3                               ; Lost fanout        ;
-; state~4                               ; Lost fanout        ;
-; state~5                               ; Lost fanout        ;
-; state~6                               ; Lost fanout        ;
-; Total Number of Removed Registers = 5 ;                    ;
-+---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -262,7 +217,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 20    ;
+; Total registers                              ; 1     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -277,21 +232,18 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 20                          ;
-;     plain             ; 20                          ;
-; arriav_lcell_comb     ; 34                          ;
-;     normal            ; 34                          ;
+; arriav_ff             ; 1                           ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 4                           ;
+;     normal            ; 4                           ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 14                          ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 6                           ;
-;         5 data inputs ; 7                           ;
-;         6 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         4 data inputs ; 1                           ;
+;         5 data inputs ; 1                           ;
 ; boundary_port         ; 25                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.42                        ;
+; Average LUT depth     ; 1.31                        ;
 +-----------------------+-----------------------------+
 
 
@@ -310,18 +262,38 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Nov 20 22:40:03 2022
+    Info: Processing started: Wed Nov 23 13:32:25 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off controller -c controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file /cpen211/labs/cpen211/lab6/lab6-files/controller/controller.sv
     Info (12023): Found entity 1: controller File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 1
 Info (12127): Elaborating entity "controller" for the top level hierarchy
+Warning (10858): Verilog HDL warning at controller.sv(8): object _en_B used but never assigned File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 8
+Warning (10858): Verilog HDL warning at controller.sv(8): object _en_C used but never assigned File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 8
+Warning (10858): Verilog HDL warning at controller.sv(8): object _en_status used but never assigned File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 8
+Warning (10858): Verilog HDL warning at controller.sv(8): object _sel_A used but never assigned File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 8
+Warning (10858): Verilog HDL warning at controller.sv(8): object _sel_B used but never assigned File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 8
+Warning (10858): Verilog HDL warning at controller.sv(8): object _w_en used but never assigned File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 8
+Warning (10858): Verilog HDL warning at controller.sv(9): object _wb_sel used but never assigned File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 9
+Warning (10030): Net "_wb_sel" at controller.sv(9) has no driver or initial value, using a default initial value '0' File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 9
+Warning (10030): Net "_en_B" at controller.sv(8) has no driver or initial value, using a default initial value '0' File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 8
+Warning (10030): Net "_en_C" at controller.sv(8) has no driver or initial value, using a default initial value '0' File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 8
+Warning (10030): Net "_en_status" at controller.sv(8) has no driver or initial value, using a default initial value '0' File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 8
+Warning (10030): Net "_sel_A" at controller.sv(8) has no driver or initial value, using a default initial value '0' File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 8
+Warning (10030): Net "_sel_B" at controller.sv(8) has no driver or initial value, using a default initial value '0' File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 8
+Warning (10030): Net "_w_en" at controller.sv(8) has no driver or initial value, using a default initial value '0' File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 8
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "reg_sel[0]" is stuck at GND File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 5
     Warning (13410): Pin "wb_sel[0]" is stuck at GND File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 5
+    Warning (13410): Pin "wb_sel[1]" is stuck at GND File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 5
+    Warning (13410): Pin "w_en" is stuck at GND File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 5
+    Warning (13410): Pin "en_B" is stuck at GND File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 6
+    Warning (13410): Pin "en_C" is stuck at GND File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 6
+    Warning (13410): Pin "en_status" is stuck at GND File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 6
+    Warning (13410): Pin "sel_A" is stuck at GND File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 7
     Warning (13410): Pin "sel_B" is stuck at GND File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 7
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 5 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 5 input pin(s) that do not drive logic
@@ -330,14 +302,14 @@ Warning (21074): Design contains 5 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "Z" File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 3
     Warning (15610): No output dependent on input pin "N" File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 3
     Warning (15610): No output dependent on input pin "V" File: C:/CPEN211/Labs/CPEN211/lab6/lab6-files/controller/controller.sv Line: 3
-Info (21057): Implemented 54 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 27 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 29 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4828 megabytes
-    Info: Processing ended: Sun Nov 20 22:40:11 2022
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:17
+    Info (21061): Implemented 2 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 31 warnings
+    Info: Peak virtual memory: 4829 megabytes
+    Info: Processing ended: Wed Nov 23 13:32:34 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:19
 
 

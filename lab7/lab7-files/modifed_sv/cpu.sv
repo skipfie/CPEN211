@@ -1,5 +1,5 @@
 module cpu(input clk, input rst_n, input load, input start, input [15:0] instr,
-           output waiting, output [15:0] out, output N, output V, output Z);
+           output waiting, output [15:0] out, output N, output V, output Z, );
     
     reg [15:0] instr_reg;
 
@@ -13,8 +13,8 @@ module cpu(input clk, input rst_n, input load, input start, input [15:0] instr,
     wire [1:0] reg_sel, wb_sel;
 
     // for datapath
-    reg [7:0] pc = 8'd0; // TODO: implement in lab7
-    reg [15:0] mdata = 16'd0; // TODO: implement in lab7
+    reg [7:0] pc = 8'd0; 
+    reg [15:0] mdata = 16'd0; 
 
     datapath datapath(.clk(clk), .mdata(mdata), .pc(pc), .wb_sel(wb_sel),
                       .w_addr(w_addr), .w_en(w_en), .r_addr(r_addr), .en_A(en_A),
