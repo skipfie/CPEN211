@@ -17,65 +17,49 @@ module controller(input clk, input rst_n, input start,
     assign w_en = _w_en;
     assign reg_sel = _reg_sel;
     assign wb_sel = _wb_sel;
-
-    // state will reset to one on rst_n, else it will goes to next state
-	//always_ff @(posedge clk) state <= rst_n ? nxstate : `Wait; 
     
-    // for state transition 
+    // define the name of each state
+    enum reg [4:0] {Wait, mov1, mov_1, mov_2, mov_3, mvn1, mvn2, mvn3, 
+                    add1, add2, add3, add4, cmp1, cmp2, cmp3, and1, and2, and3, and4} state;
 
-    enum reg {Wait, add1} state;
-    //define the name of each state
-    //enum reg [4:0] {Wait, mov1, mov_1, mov_2, mov_3, mvn1, mvn2, mvn3, 
-                    //add1, add2, add3, add4, cmp1, cmp2, cmp3, cmp4, and1, and2, and3, and4} state;
+     // for state transition
+    always_ff @(posedge clk) begin
+        if (~rst_n) state <= Wait; //active low reset
+        else begin 
+            case (state)
+            Wait: begin
+                if (start && opcode == 3'b101 && ALU_op == 2'b00) state <= add1;
+                else if (start && opcode == 3'b101 && ALU_op == 2'b01) state <= cmp1;
+                else if (start && opcode == 3'b101 && ALU_op == 2'b10) state <= and1;
+                else if (start && opcode == 3'b101 && ALU_op == 2'b11) state <= mvn1;
 
-    always_ff @(posedge clk) begin 
-        if (~rst_n) state <= Wait;
-        else begin
-            case (state) 
-                Wait: begin
-                    case ({start, opcode, ALU_op}) 
-                        6'b1_101_00: state <= add1;
-                        /*1'b1: begin //if start == 1
-                            case (opcode) 
-                                3'b101: begin //if opcode == 101, then go check ALU_op
-                                    case (ALU_op)
-                                        2'b00: state <= add1;
-                                        default: state <= Wait;
-                                    endcase
-                                end
-                                //3'b110:
-                                default: state <= Wait;
-                            endcase
-                        end */
-                        default: state <= Wait;
-                    endcase
-                end 
-            
-                /*mov1: state <= Wait;
-                mov_1: state <= mov_2;
-                mov_2: state <= mov_3;
-                mov_3: state <= Wait;
+                else if (start && opcode == 3'b110 && ALU_op == 2'b10) state <= mov1;
+                else if (start && opcode == 3'b110 && ALU_op == 2'b00) state <= mov_1;
+                else state <= Wait;
+            end 
+            mov1: state <= Wait;
+            mov_1: state <= mov_2;
+            mov_2: state <= mov_3;
+            mov_3: state <= Wait;
 
-                //add1: state <= add2;
-                add1: state <= Wait;
-                add2: state <= add3;
-                add3: state <= add4;
-                add4: state <= Wait;
+            add1: state <= add2;
+            add2: state <= add3;
+            add3: state <= add4;
+            add4: state <= Wait;
 
-                cmp1: state <= cmp2;
-                cmp2: state <= cmp3;
-                cmp3: state <= cmp4;
-                cmp4: state <= Wait;
+            cmp1: state <= cmp2;
+            cmp2: state <= cmp3;
+            cmp3: state <= Wait;
 
-                and1: state <= and2;
-                and2: state <= and3;
-                and3: state <= and4;
-                and4: state <= Wait;
+            and1: state <= and2;
+            and2: state <= and3;
+            and3: state <= and4;
+            and4: state <= Wait;
 
-                mvn1: state <= mvn2;
-                mvn2: state <= mvn3;
-                mvn3: state <= Wait;*/
-                default: state <= Wait;
+            mvn1: state <= mvn2;
+            mvn2: state <= mvn3;
+            mvn3: state <= Wait;
+            default: state <= Wait;
             endcase
         end
     end
@@ -84,10 +68,10 @@ module controller(input clk, input rst_n, input start,
     assign _waiting = (state == Wait) ? 1'b1 : 1'b0 ;
 
     assign _en_A = (state == add1) ? 1'b1 :
-                   /*(state == cmp1) ? 1'b1 :
-                   (state == and1) ? 1'b1 :*/ 1'b0 ;
+                   (state == cmp1) ? 1'b1 :
+                   (state == and1) ? 1'b1 : 1'b0 ;
 
-    /*assign _en_B = (state == add2) ? 1'b1 :
+    assign _en_B = (state == add2) ? 1'b1 :
                    (state == cmp2) ? 1'b1 :
                    (state == and2) ? 1'b1 :
                    (state == mvn1) ? 1'b1 :
@@ -98,7 +82,7 @@ module controller(input clk, input rst_n, input start,
                    (state == mvn2) ? 1'b1 :
                    (state == mov_2) ? 1'b1 : 1'b0 ;
 
-    assign _en_status = (state == cmp4) ? 1'b1 : 1'b0 ;
+    assign _en_status = (state == cmp3) ? 1'b1 : 1'b0 ;
 
     assign _sel_A = (state == mvn2) ? 1'b1 :
                     (state == mov_2) ? 1'b1 : 1'b0 ;
@@ -109,16 +93,16 @@ module controller(input clk, input rst_n, input start,
                    (state == mvn3) ? 1'b1 :
                    (state == and4) ? 1'b1 :
                    (state == mov1) ? 1'b1 :
-                   (state == mov_3) ? 1'b1 : 1'b0 ;*/
+                   (state == mov_3) ? 1'b1 : 1'b0 ;
     
     assign _reg_sel = (state == add1) ? 2'b10 :
-                      /*(state == cmp1) ? 2'b10 :
+                      (state == cmp1) ? 2'b10 :
                       (state == and1) ? 2'b10 :
                       (state == mov1) ? 2'b10 :
                       (state == add4) ? 2'b01 :
                       (state == and4) ? 2'b01 :
                       (state == mvn3) ? 2'b01 :
-                      (state == mov_3) ? 2'b01 :*/ 2'b00 ;
+                      (state == mov_3) ? 2'b01 : 2'b00 ;
     
-    //assign _wb_sel = (state == mov1) ? 2'b10 : 2'b00 ;
+    assign _wb_sel = (state == mov1) ? 2'b10 : 2'b00 ;
 endmodule: controller
