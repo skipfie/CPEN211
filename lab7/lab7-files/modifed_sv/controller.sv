@@ -25,7 +25,7 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
                 else if (opcode == 3'b111) state <= halt;
                 else state <= fd;
             end
-            mov1: state <= stall;
+            mov1: state <= stall1;
             stall1: state <= stall2;
             stall2: state <= fd;
             mov_1: state <= mov_2;
