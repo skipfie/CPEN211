@@ -1,6 +1,6 @@
 module cpu(input clk, input rst_n, input [7:0] start_pc, input [15:0] ram_r_data,
            output [15:0] out, 
-           output reg ram_w_en, output reg [7:0] ram_addr, output wire [15:0] ram_w_data);
+           output ram_w_en, output reg [7:0] ram_addr, output [15:0] ram_w_data);
     
     reg [15:0] instr_reg;
     reg [7:0] program_counter, data_addr_reg;
@@ -17,10 +17,10 @@ module cpu(input clk, input rst_n, input [7:0] start_pc, input [15:0] ram_r_data
     wire w_en, en_A, en_B, sel_A, sel_B, en_C, en_status, sel_addr;
     wire [1:0] reg_sel, wb_sel;
 
-    wire load_pc, clear_pc, load_ir;
+    wire load_pc, clear_pc, load_ir, load_addr;
 
     // for datapath
-    assign out = ram_w_data;
+    assign ram_w_data = out;
     wire N, V, Z;    
 
     datapath datapath(.clk(clk), .mdata(ram_r_data), .pc(program_counter), .wb_sel(wb_sel),
@@ -35,10 +35,9 @@ module cpu(input clk, input rst_n, input [7:0] start_pc, input [15:0] ram_r_data
                       .sximm5(sximm5), .sximm8(sximm8),
                       .r_addr(r_addr), .w_addr(w_addr));
 
-    controller controller(.clk(clk), .rst_n(rst_n), .load_ir(load_ir)
-                          .opcode(opcode), .ALU_op(ALU_op), .shift_op(shift_op),
-                          .Z(Z), .N(N), .V(V),
-                          .waiting(waiting),
+    controller controller(.clk(clk), .rst_n(rst_n), .opcode(opcode), .ALU_op(ALU_op),
+                          .load_pc(load_pc), .load_ir(load_ir), .load_addr(load_addr),
+                          .ram_w_en(ram_w_en), .sel_addr(sel_addr), .clear_pc(clear_pc),
                           .reg_sel(reg_sel), .wb_sel(wb_sel), .w_en(w_en),
                           .en_A(en_A), .en_B(en_B), .en_C(en_C), .en_status(en_status),
                           .sel_A(sel_A), .sel_B(sel_B));
