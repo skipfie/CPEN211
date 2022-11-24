@@ -97,7 +97,7 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
     assign load_ir = (state == fdr) ? 1'b1 :
                      (state == fd) ? 1'b1 :
                      (state == add4) ? 1'b1 : 
-                     (state == cmp4) ? 1'b1 :
+                     (state == cmp3) ? 1'b1 :
                      (state == and4) ? 1'b1 :
                      (state == mvn3) ? 1'b1 :
                      (state == mov1) ? 1'b1 :
