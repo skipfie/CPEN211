@@ -325,7 +325,8 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
 
     //assign ram_w_en = (state)
 
-    //assign sel_addr = 
+    assign sel_addr = (state == fd) ? 1'b1 :
+                      (state == fdr) ? 1'b1 : 1'b0; 
 
     //assign load_addr = (state == )
 
