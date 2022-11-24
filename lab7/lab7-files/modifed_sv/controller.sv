@@ -102,10 +102,10 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
 
     assign clear_pc = (state == fd&rs) ? 1'b1 : 1'b0;
 
-    assign ram_w_en = (state)
+    //assign ram_w_en = (state)
 
-    assign sel_addr = 
+    //assign sel_addr = 
 
-    assign load_addr = (state == )
+    //assign load_addr = (state == )
 
 endmodule: controller
