@@ -246,37 +246,37 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
                 else if (opcode == 3'b111) state <= halt;
                 else state <= fd;
             end
-            mov1: state <= Wait;
+            mov1: state <= fd;
             mov_1: state <= mov_2;
             mov_2: state <= mov_3;
-            mov_3: state <= Wait;
+            mov_3: state <= fd;
 
             add1: state <= add2;
             add2: state <= add3;
             add3: state <= add4;
-            add4: state <= Wait;
+            add4: state <= fd;
 
             cmp1: state <= cmp2;
             cmp2: state <= cmp3;
-            cmp3: state <= Wait;
+            cmp3: state <= fd;
 
             and1: state <= and2;
             and2: state <= and3;
             and3: state <= and4;
-            and4: state <= Wait;
+            and4: state <= fd;
 
             mvn1: state <= mvn2;
             mvn2: state <= mvn3;
-            mvn3: state <= Wait;
+            mvn3: state <= fd;
 
             halt: state <= halt;
-            default: state <= Wait;
+            default: state <= fd;
             endcase
         end
     end
 
     // for output logic
-    assign waiting = (state == Wait) ? 1'b1 : 1'b0;
+    assign waiting = (state == fd) ? 1'b1 : 1'b0;
 
     assign en_A = (state == add1) ? 1'b1 :
                    (state == cmp1) ? 1'b1 :
