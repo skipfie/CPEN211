@@ -1,7 +1,8 @@
-module cpu(input clk, input rst_n, input load, input start, input [15:0] instr,
+module cpu(input clk, input rst_n, input start, input [15:0] instr,
            output waiting, output [15:0] out, output N, output V, output Z);
     
     reg [15:0] instr_reg;
+    reg [7:0] program_counter, data_addr_reg;
 
     // for instruction decoder
     wire [1:0] ALU_op, shift_op;
@@ -16,6 +17,8 @@ module cpu(input clk, input rst_n, input load, input start, input [15:0] instr,
     reg [7:0] pc = 8'd0; // TODO: implement in lab7
     reg [15:0] mdata = 16'd0; // TODO: implement in lab7
 
+    
+
     datapath datapath(.clk(clk), .mdata(mdata), .pc(pc), .wb_sel(wb_sel),
                       .w_addr(w_addr), .w_en(w_en), .r_addr(r_addr), .en_A(en_A),
                       .en_B(en_B), .shift_op(shift_op), .sel_A(sel_A), .sel_B(sel_B),
@@ -28,17 +31,21 @@ module cpu(input clk, input rst_n, input load, input start, input [15:0] instr,
                       .sximm5(sximm5), .sximm8(sximm8),
                       .r_addr(r_addr), .w_addr(w_addr));
 
-    controller controller(.clk(clk), .rst_n(rst_n), .start(start),
+    controller controller(.clk(clk), .rst_n(rst_n), .start(start), .load_ir(load_ir)
                           .opcode(opcode), .ALU_op(ALU_op), .shift_op(shift_op),
                           .Z(Z), .N(N), .V(V),
                           .waiting(waiting),
                           .reg_sel(reg_sel), .wb_sel(wb_sel), .w_en(w_en),
                           .en_A(en_A), .en_B(en_B), .en_C(en_C), .en_status(en_status),
                           .sel_A(sel_A), .sel_B(sel_B));
+
+    
     
     // instuction register
     always_ff @(posedge clk) begin
-        if (load) instr_reg <= instr;
+        if (load_ir) instr_reg <= instr;
+        if (load_pc) program_counter <= next_pc;
+        if (load_addr) data_addr_reg <= out;
     end
 
 endmodule: cpu
