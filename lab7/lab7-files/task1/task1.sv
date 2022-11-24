@@ -60,7 +60,7 @@ module cpu(input clk, input rst_n, input [7:0] start_pc, input [15:0] ram_r_data
     // muxes
     always_comb begin
         if (clear_pc) next_pc = start_pc;
-        else next_pc = program_counter + 1;
+        else next_pc = program_counter + 8'd1;
 
         if (sel_addr) ram_addr = program_counter;
         else ram_addr = data_addr_reg;

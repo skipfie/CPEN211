@@ -1,3 +1,4 @@
+`timescale 1 ps/ 1 ps
 module tb_task1(output err);
     // tb vars
     reg nerr = 1'b0;
