@@ -325,9 +325,9 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
                      (state == mov_3) ? 1'b1 : 1'b0; 
 
     assign load_pc = (state == fdr) ? 1'b1 :
-                     (state == add2) ? 1'b1 : 
+                     (state == add1) ? 1'b1 : 
                      (state == cmp1) ? 1'b1 :
-                     (state == and2) ? 1'b1 :
+                     (state == and1) ? 1'b1 :
                      (state == mvn1) ? 1'b1 :
                      (state == mov1) ? 1'b1 :
                      (state == mov_1) ? 1'b1 : 1'b0; 
