@@ -276,8 +276,6 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
     end
 
     // for output logic
-    assign waiting = (state == Wait) ? 1'b1 : 1'b0;
-
     assign en_A = (state == add1) ? 1'b1 :
                    (state == cmp1) ? 1'b1 :
                    (state == and1) ? 1'b1 : 1'b0;
@@ -320,7 +318,7 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
     assign load_ir = (state == fd) ? 1'b1 : 
                      (state == fdr) ? 1'b1 : 1'b0; 
 
-    assign load_pc = (state == fd) ? 1'b1 : 1'b0;
+    assign load_pc = (state == fd) ? 1'b1 :
                      (state == fdr) ? 1'b1 : 1'b0; 
 
     assign clear_pc = (state == fdr) ? 1'b1 : 1'b0;
