@@ -6,7 +6,7 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
                   output reg sel_A, output reg sel_B);
     
     // define the name of each state, fd == fetch & decode, fdr == fd & reset
-    enum reg [4:0] {fd, fdr, halt, mov1, mov_1, mov_2, mov_3, mvn1, mvn2, mvn3, 
+    enum reg [4:0] {fd, fdr, halt, stall, mov1, mov_1, mov_2, mov_3, mvn1, mvn2, mvn3, 
                     add1, add2, add3, add4, cmp1, cmp2, cmp3, and1, and2, and3, and4} state;
 
     // for state transition
@@ -25,7 +25,8 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
                 else if (opcode == 3'b111) state <= halt;
                 else state <= fd;
             end
-            mov1: state <= fd;
+            mov1: state <= stall;
+            stall: state <= fd;
             mov_1: state <= mov_2;
             mov_2: state <= mov_3;
             mov_3: state <= fd;
