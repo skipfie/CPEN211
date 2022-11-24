@@ -20,7 +20,7 @@ module controller(input clk, input rst_n, input start,
     
     // define the name of each state
     enum reg [4:0] {Wait, mov1, mov_1, mov_2, mov_3, mvn1, mvn2, mvn3, 
-                    add1, add2, add3, add4, cmp1, cmp2, cmp3, cmp4, and1, and2, and3, and4} state;
+                    add1, add2, add3, add4, cmp1, cmp2, cmp3, and1, and2, and3, and4} state;
 
      // for state transition
     always_ff @(posedge clk) begin
@@ -49,8 +49,7 @@ module controller(input clk, input rst_n, input start,
 
             cmp1: state <= cmp2;
             cmp2: state <= cmp3;
-            cmp3: state <= cmp4;
-            cmp4: state <= Wait;
+            cmp3: state <= Wait;
 
             and1: state <= and2;
             and2: state <= and3;
@@ -83,7 +82,7 @@ module controller(input clk, input rst_n, input start,
                    (state == mvn2) ? 1'b1 :
                    (state == mov_2) ? 1'b1 : 1'b0 ;
 
-    assign _en_status = (state == cmp4) ? 1'b1 : 1'b0 ;
+    assign _en_status = (state == cmp3) ? 1'b1 : 1'b0 ;
 
     assign _sel_A = (state == mvn2) ? 1'b1 :
                     (state == mov_2) ? 1'b1 : 1'b0 ;
