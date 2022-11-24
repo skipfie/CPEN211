@@ -108,7 +108,7 @@ module tb_task1(output err);
         //AND(3'd7, 3'd6, 3'd5, 2'b00);
         check_output(16'b0000000010000000, "r7=r6 & r5");
 
-        #1000;
+        #3000;
 
         $display("err is %b", err);
         $display("Total number of tests failed is: %d", failed);
