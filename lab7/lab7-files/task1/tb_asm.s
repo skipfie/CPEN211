@@ -28,7 +28,7 @@
 
     mov r6, r0, LSL#1
 
-    mov r0, r6, LSL#1
+    mov r0, r6
 
     mvn r5, r6
 
