@@ -16,16 +16,6 @@ module tb_task1(output err);
     task reset; rst_n = 1'b0; #30; rst_n = 1'b1; #10; endtask
 
     task check_output(integer expected_out, string msg);
-        assert (waiting === 1'b1) begin
-            $display("[PASS] %s: is waiting for next instruction", msg);
-            passed = passed + 1;
-        end
-        else begin
-            $error("[FAIL] %s: is not waiting for next instruction", msg);
-            nerr = 1'b1;
-            failed = failed + 1;
-        end
-        
         assert (out === expected_out) begin
             $display("[PASS] %s: output is %d (expected: %d)", msg, out, expected_out);
             passed = passed + 1;
