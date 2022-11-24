@@ -33,7 +33,7 @@ module tb_task1(output err);
     end
 
     initial begin
-        start_pc = 2'h00; // run prg from from 00 to 1a
+        start_pc = 'h00; // run prg from from 00 to 1a
         #7;
         reset;
 
