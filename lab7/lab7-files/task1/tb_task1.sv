@@ -13,7 +13,7 @@ module tb_task1(output err);
 
     task1 dut(.clk(clk), .rst_n(rst_n), .start_pc(start_pc), .out(out));
 
-    task reset; rst_n = 1'b0; #30; rst_n = 1'b1; #10; endtask
+    task reset; rst_n = 1'b0; #10; rst_n = 1'b1; #10; endtask
 
     task check_output(integer expected_out, string msg);
         assert (out === expected_out) begin
@@ -107,6 +107,8 @@ module tb_task1(output err);
 
         //AND(3'd7, 3'd6, 3'd5, 2'b00);
         check_output(16'b0000000010000000, "r7=r6 & r5");
+
+        #1000;
 
         $display("err is %b", err);
         $display("Total number of tests failed is: %d", failed);
