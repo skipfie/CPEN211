@@ -1,5 +1,5 @@
 module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op,
-                  output reg load_pc, output reg load_ir, //waiting in lab6
+                  output reg load_pc, output reg load_ir, output reg load_addr, //waiting in lab6
                   output reg ram_w_en, output reg sel_addr, output reg clear_pc, 
                   output reg [1:0] reg_sel, output reg [1:0] wb_sel, output reg w_en,
                   output reg en_A, output reg en_B, output reg en_C, output reg en_status,
