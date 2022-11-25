@@ -34,80 +34,33 @@ module tb_task1(output err);
     end
 
     initial begin
-        start_pc = 'h00; // run prg from from 00 to 1a
+        start_pc = 'h1b; // run prg from from 00 to 1a
         #7; 
-        reset; //17
+        reset;
+        #200; // more than enough time to complete execution
+        check_output(69, "mov r3, r0");
 
-        #30; 
-        #40; // r0 = 69
-        #40; // r1 = -69
+        #200;
+        check_output(69, "nothing changes in HALT");
 
-        #40; // r7 = r0 = 69
-        check_output(69, "r7=r0 (r0 = 69)");
+        start_pc = 'h1f;
+        reset;
+        #200;
+        check_output(50, "add r3, r0, r1, LSL#1 (72+(-11*2)");
 
-        #40; // r2 = r0*2 = 138
-        check_output(138, "r2=r0<<1 (r0 = 69)");
-        
-        #50; // r7 = 0
-        check_output(0, "r7=r0+r1 (r0 = 69, r1 = -69)");
+        start_pc = 'h23;
+        #200;
+        check_output(50, "start pc changed does not change execution");
+        reset;
+        #200;
+        check_output(16'b0000_0000_0001_0000, "and r3, r0, r1 (50 & 20)");
 
-        #40; // r0 = r0*2 = 138
-        check_output(138, "r0=r0<<1 (r0 = 69)");
+        start_pc = 'h27;
+        reset;
+        #150;
+        check_output(16'b1111_1111_1001_0000, "mvn r1, r0 (~0000 0000 0110 1111)");
 
-        #40; // CMP(3'd0, 3'd2, 2'b00);
-        check_output(138, "CMP 138 with 138 (output discarded)");
-
-        #50; // ADD r0, r0, r2, LSL#1
-        check_output(414, "ADD r0, r0, r2, LSL#1");
-
-        #40; //CMP(3'd2, 3'd0, 2'b00);
-        check_output(414, "CMP 138 with 414 (output discarded)");
-
-        #40; //MOVimm(3'd6, 8'b0111_1111); // r6 = 127
-        check_output(414, "MOVimm shouldn't update output (output discarded)");
-
-        #50; //ADD(3'd0, 3'd0, 3'd6, 2'b01);
-        check_output(668, "414 + 127 * 2");
-
-        #40; //MOV(3'd6, 3'd0, 2'b01);
-        check_output(1336, "r6 = 668 * 2");
-
-        #40; //MOV(3'd0, 3'd6, 2'b01);
-        check_output(2672, "r0 = 1336 * 2");
-
-        #40; //MOV(3'd6, 3'd0, 2'b01);
-        check_output(5344, "r6 = 2672 * 2");
-
-        #40; //MOV(3'd0, 3'd6, 2'b01);
-        check_output(10688, "r0 = 5344 * 2");
-
-        #40; //MOV(3'd6, 3'd0, 2'b01);
-        check_output(21376, "r6 = 10688 * 2");
-
-        #40; //MOV(3'd0, 3'd6, 2'b00);
-        check_output(21376, "r0 = 21376");
-
-        #40; //MVN(3'd5, 3'd6, 2'b00);
-        check_output(16'b1010110001111111, "r5=~r6");
-
-        #40; //MOVimm(3'd7, 8'd1);
-        #50; //ADD(3'd5, 3'd5, 3'd7, 2'b00);
-        check_output(16'b1010110010000000, "perform two's compliment");
-
-        // d6 = 21376
-        // d5 = -21376
-
-        #40; //CMP(3'd6, 3'd5, 2'b00);
-
-        #40; //CMP(3'd5, 3'd6, 2'b00);
-
-        #40; //MOVimm(3'd3, 8'b01101111);
-        #40; //MOVimm(3'd4, 8'b10101010);
-        #50; //AND(3'd7, 3'd3, 3'd4, 2'b00);
-        check_output(16'b0000000000101010, "r7=r3 & r4");
-
-        #50; //AND(3'd7, 3'd6, 3'd5, 2'b00);
-        check_output(16'b0000000010000000, "r7=r6 & r5");
+        #10;
 
         $display("err is %b", err);
         $display("Total number of tests failed is: %d", failed);

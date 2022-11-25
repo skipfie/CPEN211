@@ -46,3 +46,26 @@
     and r7, r6, r5
 
     halt
+
+    mov r0, #69
+    mov r1, #70
+    mov r3, r0
+
+    halt
+
+    mov r0, #72
+    mov r1, #-11
+    add r3, r0, r1, LSL#1
+
+    halt 
+
+    mov r0, #50
+    mov r1, #20
+    and r3, r0, r1
+
+    halt
+
+    mov r0, #111
+    mvn r1, r0
+
+    halt
