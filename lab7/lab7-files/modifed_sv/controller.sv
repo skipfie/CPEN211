@@ -7,7 +7,7 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
     
     // define the name of each state, fd == fetch & decode, fdr == fd & reset
     enum reg [4:0] {fdr, fd, halt, stall1, stall2, mov1, mov_1, mov_2, mov_3, mvn1, mvn2, mvn3, 
-                    add1, add2, add3, add4, cmp1, cmp2, cmp3, and1, and2, and3, and4} state;
+                    add1, add2, add3, add4, cmp1, cmp2, cmp3, and1, and2, and3, and4, ldr1, ldr2, ldr3, ldr4, ldr5} state;
 
     // for state transition
     always_ff @(posedge clk) begin
@@ -55,6 +55,12 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
             mvn2: state <= mvn3;
             mvn3: state <= fd;
 
+            ldr1: state <= ldr2;
+            ldr2: state <= ldr3;
+            ldr3: state <= ldr4;
+            ldr4: state <= ldr5;
+            ldr5: state <= fd;
+
             halt: state <= halt;
             default: state <= fd;
             endcase
@@ -63,43 +69,49 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
 
     // for output logic
     assign en_A = (state == add1) ? 1'b1 :
-                   (state == cmp1) ? 1'b1 :
-                   (state == and1) ? 1'b1 : 1'b0;
+                  (state == cmp1) ? 1'b1 :
+                  (state == and1) ? 1'b1 : 
+                  (state == ldr1) ? 1'b1 : 1'b0;
 
     assign en_B = (state == add2) ? 1'b1 :
-                   (state == cmp2) ? 1'b1 :
-                   (state == and2) ? 1'b1 :
-                   (state == mvn1) ? 1'b1 :
-                   (state == mov_1) ? 1'b1 : 1'b0;
+                  (state == cmp2) ? 1'b1 :
+                  (state == and2) ? 1'b1 :
+                  (state == mvn1) ? 1'b1 :
+                  (state == mov_1) ? 1'b1 : 1'b0;
 
     assign en_C = (state == add3) ? 1'b1 :
-                   (state == and3) ? 1'b1 :
-                   (state == mvn2) ? 1'b1 :
-                   (state == mov_2) ? 1'b1 : 1'b0;
+                  (state == and3) ? 1'b1 :
+                  (state == mvn2) ? 1'b1 :
+                  (state == mov_2) ? 1'b1 :
+                  (state == ldr2) ? 1'b1 : 1'b0;
 
     assign en_status = (state == cmp3) ? 1'b1 : 1'b0;
 
     assign sel_A = (state == mvn2) ? 1'b1 :
-                    (state == mov_2) ? 1'b1 : 1'b0;
+                   (state == mov_2) ? 1'b1 : 1'b0;
 
-    assign sel_B = 1'b0;
+    assign sel_B = (state == ldr2) ? 1'b1: 1'b0;
 
     assign w_en = (state == add4) ? 1'b1 :
-                   (state == mvn3) ? 1'b1 :
-                   (state == and4) ? 1'b1 :
-                   (state == mov1) ? 1'b1 :
-                   (state == mov_3) ? 1'b1 : 1'b0;
+                  (state == mvn3) ? 1'b1 :
+                  (state == and4) ? 1'b1 :
+                  (state == mov1) ? 1'b1 :
+                  (state == mov_3) ? 1'b1 :
+                  (state == ldr5) ? 1'b1 : 1'b0;
     
     assign reg_sel = (state == add1) ? 2'b10 :
-                      (state == cmp1) ? 2'b10 :
-                      (state == and1) ? 2'b10 :
-                      (state == mov1) ? 2'b10 :
-                      (state == add4) ? 2'b01 :
-                      (state == and4) ? 2'b01 :
-                      (state == mvn3) ? 2'b01 :
-                      (state == mov_3) ? 2'b01 : 2'b00;
+                     (state == cmp1) ? 2'b10 :
+                     (state == and1) ? 2'b10 :
+                     (state == mov1) ? 2'b10 :
+                     (state == ldr1) ? 2'b10 :
+                     (state == add4) ? 2'b01 :
+                     (state == and4) ? 2'b01 :
+                     (state == mvn3) ? 2'b01 :
+                     (state == mov_3) ? 2'b01 :
+                     (state == ldr5) ? 2'b01 : 2'b00;
     
-    assign wb_sel = (state == mov1) ? 2'b10 : 2'b00;
+    assign wb_sel = (state == mov1) ? 2'b10 :
+                    (state == ldr5) ? 2'b11 : 2'b00;
 
     assign load_ir = (state == fdr) ? 1'b1 :
                      (state == fd) ? 1'b1 :
@@ -124,9 +136,8 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
 
     //assign ram_w_en = (state)
 
-    assign sel_addr = (state == fd) ? 1'b1 :
-                      (state == fdr) ? 1'b1 : 1'b1; 
+    assign sel_addr = (state == ldr4) ? 1'b0 : 1'b1; // THIS LOGIC IS FLIPPED FROM OTHER BRANCHES
 
-    //assign load_addr = (state == )
+    assign load_addr = (state == ldr3) ? 1'b1 : 1'b0;
 
 endmodule: controller
