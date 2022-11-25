@@ -75,7 +75,8 @@
 
     halt
 
-    mov r0 #254
+    mov r0 #127
+    mov r0, r0, LSL#1
     ldr r1 [r0, #1]
     mov r2, r1
 

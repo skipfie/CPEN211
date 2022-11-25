@@ -1,3 +1,4 @@
+`timescale 1 ps/ 1 ps
 module tb_task2(output err);
     // tb vars
     reg nerr = 1'b0;
@@ -61,12 +62,12 @@ module tb_task2(output err);
 
         start_pc = 'h2a;
         reset;
-        #200;
+        #250;
         check_output(255, "ldr r1, [r0, #1] (254+1) being tested");
 
-        start_pc = 'h2d;
+        start_pc = 'h2e;
         reset;
-        #250;
+        #300;
         check_output(6969, "ldr r1, [r0, #1] (testing data inside)");
 
         #10;

@@ -267,6 +267,7 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
 
                 else if (opcode == 3'b110 && ALU_op == 2'b10) state <= mov1;
                 else if (opcode == 3'b110 && ALU_op == 2'b00) state <= mov_1;
+                else if (opcode == 3'b011 && ALU_op == 2'b00) state <= ldr1;
                 else if (opcode == 3'b111) state <= halt;
                 else state <= fd;
             end
@@ -367,7 +368,8 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
                      (state == and4) ? 1'b1 :
                      (state == mvn3) ? 1'b1 :
                      (state == mov1) ? 1'b1 :
-                     (state == mov_3) ? 1'b1 : 1'b0; 
+                     (state == mov_3) ? 1'b1 :
+                     (state == ldr5) ? 1'b1: 1'b0; 
 
     assign load_pc = (state == fdr) ? 1'b1 :
                      (state == add1) ? 1'b1 : 
@@ -375,7 +377,8 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
                      (state == and1) ? 1'b1 :
                      (state == mvn1) ? 1'b1 :
                      (state == mov1) ? 1'b1 :
-                     (state == mov_1) ? 1'b1 : 1'b0; 
+                     (state == mov_1) ? 1'b1 :
+                     (state == ldr1) ? 1'b1 : 1'b0; 
 
     assign clear_pc = (state == fdr) ? 1'b1 : 1'b0;
 
