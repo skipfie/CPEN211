@@ -1,4 +1,9 @@
 module task3(input clk, input rst_n, input [7:0] start_pc, output[15:0] out);
+    /*
+    implementing str:
+    str1:
+    
+    */
     // to ram
     wire ram_w_en;
     wire [7:0] ram_addr;
