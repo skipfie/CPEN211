@@ -11,14 +11,149 @@ mov r7, #127
 mov r7, r7, LSL#1
 ldr r0, [r7, #1] // r0 = n
 // start fibonacci
-mov r1, #1 // a
-mov r2, #1 // b
+//1
+mov r1, #1      // a = 1
+add r0, r0, r5  // n--
 str r1, [r7]
-add r0, r0, r5 // n--
+//2
+mov r2, #1      // b = 1
+add r0, r0, r5  // n--
 str r2, [r7]
-add r0, r0, r5 // n--
-add r3, r1, r2 // c
-mov r1, r2
-mov r2, r3
-str r2, [r7]
-add r0, r0, r5 // n--
+//3
+add r3, r1, r2  // sum = a+b
+mov r1, r2      // a=b
+mov r2, r3      // b=sum
+add r0, r0, r5  // n--
+str r2, [r7] 
+//4
+add r3, r1, r2  // sum = a+b
+mov r1, r2      // a=b
+mov r2, r3      // b=sum
+add r0, r0, r5  // n--
+str r2, [r7] 
+//5
+add r3, r1, r2  // sum = a+b
+mov r1, r2      // a=b
+mov r2, r3      // b=sum
+add r0, r0, r5  // n--
+str r2, [r7] 
+//6
+add r3, r1, r2  // sum = a+b
+mov r1, r2      // a=b
+mov r2, r3      // b=sum
+add r0, r0, r5  // n--
+str r2, [r7] 
+//7
+add r3, r1, r2  // sum = a+b
+mov r1, r2      // a=b
+mov r2, r3      // b=sum
+add r0, r0, r5  // n--
+str r2, [r7] 
+//8
+add r3, r1, r2  // sum = a+b
+mov r1, r2      // a=b
+mov r2, r3      // b=sum
+add r0, r0, r5  // n--
+str r2, [r7] 
+//9
+add r3, r1, r2  // sum = a+b
+mov r1, r2      // a=b
+mov r2, r3      // b=sum
+add r0, r0, r5  // n--
+str r2, [r7] 
+//10
+add r3, r1, r2  // sum = a+b
+mov r1, r2      // a=b
+mov r2, r3      // b=sum
+add r0, r0, r5  // n--
+str r2, [r7] 
+//11
+add r3, r1, r2  // sum = a+b
+mov r1, r2      // a=b
+mov r2, r3      // b=sum
+add r0, r0, r5  // n--
+str r2, [r7] 
+//12
+add r3, r1, r2  // sum = a+b
+mov r1, r2      // a=b
+mov r2, r3      // b=sum
+add r0, r0, r5  // n--
+str r2, [r7] 
+//13
+add r3, r1, r2  // sum = a+b
+mov r1, r2      // a=b
+mov r2, r3      // b=sum
+add r0, r0, r5  // n--
+str r2, [r7] 
+//14
+add r3, r1, r2  // sum = a+b
+mov r1, r2      // a=b
+mov r2, r3      // b=sum
+add r0, r0, r5  // n--
+str r2, [r7] 
+//15
+add r3, r1, r2  // sum = a+b
+mov r1, r2      // a=b
+mov r2, r3      // b=sum
+add r0, r0, r5  // n--
+str r2, [r7] 
+//16
+add r3, r1, r2  // sum = a+b
+mov r1, r2      // a=b
+mov r2, r3      // b=sum
+add r0, r0, r5  // n--
+str r2, [r7] 
+//17
+add r3, r1, r2  // sum = a+b
+mov r1, r2      // a=b
+mov r2, r3      // b=sum
+add r0, r0, r5  // n--
+str r2, [r7] 
+//18
+add r3, r1, r2  // sum = a+b
+mov r1, r2      // a=b
+mov r2, r3      // b=sum
+add r0, r0, r5  // n--
+str r2, [r7] 
+//19
+add r3, r1, r2  // sum = a+b
+mov r1, r2      // a=b
+mov r2, r3      // b=sum
+add r0, r0, r5  // n--
+str r2, [r7] 
+//20
+add r3, r1, r2  // sum = a+b
+mov r1, r2      // a=b
+mov r2, r3      // b=sum
+add r0, r0, r5  // n--
+str r2, [r7] 
+//21
+add r3, r1, r2  // sum = a+b
+mov r1, r2      // a=b
+mov r2, r3      // b=sum
+add r0, r0, r5  // n--
+str r2, [r7] 
+//22
+add r3, r1, r2  // sum = a+b
+mov r1, r2      // a=b
+mov r2, r3      // b=sum
+add r0, r0, r5  // n--
+str r2, [r7] 
+//23
+add r3, r1, r2  // sum = a+b
+mov r1, r2      // a=b
+mov r2, r3      // b=sum
+add r0, r0, r5  // n--
+str r2, [r7] 
+//24
+add r3, r1, r2  // sum = a+b
+mov r1, r2      // a=b
+mov r2, r3      // b=sum
+add r0, r0, r5  // n--
+str r2, [r7] 
+//25
+add r3, r1, r2  // sum = a+b
+mov r1, r2      // a=b
+mov r2, r3      // b=sum
+add r0, r0, r5  // n--
+str r2, [r7] 
