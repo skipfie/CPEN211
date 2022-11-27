@@ -1,22 +1,22 @@
 module task3(input clk, input rst_n, input [7:0] start_pc, output[15:0] out);
     /*
     implementing str:
-    str1: load Rd address
-    reg_sel = 01
+    str1: load Rn address
+    reg_sel = 10
     en_A = 1
     
-    str2: compute (shifted) Rd
+    str2: compute (shifted) Rn
     sel_A = 0
     sel_B = 1
     en_C = 1
 
     str3: Read address in regfile
-    load_addr = 1 to hold the Rd address value
-    reg_sel = 10 to read Rn
+    load_addr = 1 to hold the Rn address value
+    reg_sel = 01 to read Rd
     en_A = 1 
     
-    str4: pass the value of Rn to datapath out
-    load_addr = 0
+    str4: pass the value of Rd to datapath out
+    load_addr = 0 to not interfer with Rn in the DAR
     sel_A = 0 
     en_C = 1
 
@@ -364,8 +364,8 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
                      (state == cmp1) ? 2'b10 :
                      (state == and1) ? 2'b10 :
                      (state == mov1) ? 2'b10 :
-                     (state == str1) ? 2'b01 :
-                     (state == str3) ? 2'b10 :
+                     (state == str1) ? 2'b10 :
+                     (state == str3) ? 2'b01 :
                      (state == ldr1) ? 2'b10 :
                      (state == add4) ? 2'b01 :
                      (state == and4) ? 2'b01 :
