@@ -12,11 +12,14 @@ module task3(input clk, input rst_n, input [7:0] start_pc, output[15:0] out);
 
     str3: Read address in regfile
     load_addr = 1 to hold the Rn address value
+    sel_addr = 0
     reg_sel = 01 to read Rd
-    en_A = 1 
+    en_B = 1 
     
     str4: pass the value of Rd to datapath out
-    sel_A = 0 
+    sel_addr = 0 
+    sel_A = 1
+    sel_B = 0 
     en_C = 1
 
     str5: 
@@ -326,13 +329,13 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
                   (state == cmp1) ? 1'b1 :
                   (state == and1) ? 1'b1 : 
                   (state == str1) ? 1'b1 : 
-                  (state == str3) ? 1'b1 :
                   (state == ldr1) ? 1'b1 : 1'b0;
 
     assign en_B = (state == add2) ? 1'b1 :
                   (state == cmp2) ? 1'b1 :
                   (state == and2) ? 1'b1 :
                   (state == mvn1) ? 1'b1 :
+                  (state == str3) ? 1'b1 :
                   (state == mov_1) ? 1'b1 : 1'b0;
 
     assign en_C = (state == add3) ? 1'b1 :
@@ -346,6 +349,7 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
     assign en_status = (state == cmp3) ? 1'b1 : 1'b0;
 
     assign sel_A = (state == mvn2) ? 1'b1 :
+                   (state == str4) ? 1'b1 :
                    (state == mov_2) ? 1'b1 : 1'b0;
 
     assign sel_B = (state == str2) ? 1'b1 :
@@ -385,8 +389,8 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
                      (state == mvn3) ? 1'b1 :
                      (state == mov1) ? 1'b1 :
                      (state == mov_3) ? 1'b1 :
-                     (state == ldr5) ? 1'b1 :
-                     (state == str5) ? 1'b1 : 1'b0; 
+                     (state == ldr4) ? 1'b1 :
+                     (state == str4) ? 1'b1 : 1'b0; 
 
     assign load_pc = (state == fdr) ? 1'b1 :
                      (state == add1) ? 1'b1 : 
@@ -396,13 +400,15 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
                      (state == mov1) ? 1'b1 :
                      (state == mov_1) ? 1'b1 :
                      (state == ldr1) ? 1'b1 :
-                     (state == str1) ? 1'b1 : 1'b0; 
+                     (state == str1) ? 1'b1 : 1'b0;
 
     assign clear_pc = (state == fdr) ? 1'b1 : 1'b0;
 
     assign ram_w_en = (state == str5) ? 1'b1 : 1'b0; 
 
     assign sel_addr = (state == str5) ? 1'b0 : 
+                      (state == str4) ? 1'b0 :
+                      (state == str3) ? 1'b0 :
                       (state == ldr4) ? 1'b0 : 1'b1; // THIS LOGIC IS FLIPPED FROM OTHER BRANCHES
 
     assign load_addr = (state == str3) ? 1'b1 :
