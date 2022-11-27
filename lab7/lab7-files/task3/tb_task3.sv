@@ -76,12 +76,12 @@ module tb_task3(output err);
         start_pc = 'h33;
         reset;
         #250;
-        check_output(255, "str r1, [r0, #1] (254+1) being tested");
+        check_output(69, "str r1, [r0, #1] (254+1) (write tested)");
 
         start_pc = 'h38;
         reset;
         #400;
-        check_output(69, "str r1, [r0, #1] (testing data inside)");
+        check_output(69, "str r1, [r0, #1] (checking data inside is written)");
 
         #10;
 
