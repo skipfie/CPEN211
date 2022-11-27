@@ -21,7 +21,6 @@ module task2(input clk, input rst_n, input [7:0] start_pc, output[15:0] out);
     reg_sel = 01
     w_en = 1
 
-
     */
     // to ram
     wire ram_w_en;
