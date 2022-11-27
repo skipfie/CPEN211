@@ -3,9 +3,9 @@ quietly WaveActivateNextPane {} 0
 add wave -noupdate /tb_task3/dut/clk
 add wave -noupdate /tb_task3/dut/cpu/rst_n
 add wave -noupdate /tb_task3/dut/cpu/start_pc
-add wave -noupdate /tb_task3/dut/cpu/ram_r_data
+add wave -noupdate -radix binary /tb_task3/dut/cpu/ram_r_data
 add wave -noupdate /tb_task3/dut/cpu/ram_w_en
-add wave -noupdate /tb_task3/dut/cpu/ram_w_data
+add wave -noupdate -radix unsigned /tb_task3/dut/cpu/ram_w_data
 add wave -noupdate -radix decimal /tb_task3/dut/cpu/out
 add wave -noupdate /tb_task3/dut/cpu/controller/state
 add wave -noupdate -divider registers
@@ -39,7 +39,7 @@ add wave -noupdate -radix binary /tb_task3/dut/cpu/en_status
 add wave -noupdate /tb_task3/dut/cpu/reg_sel
 add wave -noupdate /tb_task3/dut/cpu/wb_sel
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {2039 ps} 0}
+WaveRestoreCursors {{Cursor 1} {2410 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 172
 configure wave -valuecolwidth 100
@@ -55,4 +55,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {1898 ps} {2048 ps}
+WaveRestoreZoom {2299 ps} {2449 ps}
