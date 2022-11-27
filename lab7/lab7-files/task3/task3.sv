@@ -1,24 +1,28 @@
 module task3(input clk, input rst_n, input [7:0] start_pc, output[15:0] out);
     /*
     implementing str:
-    str1: 
-    reg_sel = 10
+    str1: load Rd address
+    reg_sel = 01
     en_A = 1
     
-    str2:
+    str2: compute (shifted) Rd
     sel_A = 0
     sel_B = 1
     en_C = 1
 
-    str3:
-    load_addr = 1 
-
-    str4:
-    sel_addr = 0 
+    str3: Read address in regfile
+    load_addr = 1 to hold the Rd address value
+    reg_sel = 10 to read Rn
+    en_A = 1 
+    
+    str4: pass the value of Rn to datapath out
+    load_addr = 0
+    sel_A = 0 
+    en_C = 1
 
     str5: 
+    sel_addr = 0 
     ram_w_en = 1
-
     */
     // to ram
     wire ram_w_en;
@@ -323,6 +327,7 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
                   (state == cmp1) ? 1'b1 :
                   (state == and1) ? 1'b1 : 
                   (state == str1) ? 1'b1 : 
+                  (state == str3) ? 1'b1 :
                   (state == ldr1) ? 1'b1 : 1'b0;
 
     assign en_B = (state == add2) ? 1'b1 :
@@ -336,6 +341,7 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
                   (state == mvn2) ? 1'b1 :
                   (state == mov_2) ? 1'b1 :
                   (state == str2) ? 1'b1 :
+                  (state == str4) ? 1'b1 :
                   (state == ldr2) ? 1'b1 : 1'b0;
 
     assign en_status = (state == cmp3) ? 1'b1 : 1'b0;
@@ -359,6 +365,7 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
                      (state == and1) ? 2'b10 :
                      (state == mov1) ? 2'b10 :
                      (state == str1) ? 2'b01 :
+                     (state == str3) ? 2'b10 :
                      (state == ldr1) ? 2'b10 :
                      (state == add4) ? 2'b01 :
                      (state == and4) ? 2'b01 :
@@ -394,7 +401,7 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
 
     assign ram_w_en = (state == str5) ? 1'b1 : 1'b0; 
 
-    assign sel_addr = (state == str4) ? 1'b0 : 
+    assign sel_addr = (state == str5) ? 1'b0 : 
                       (state == ldr4) ? 1'b0 : 1'b1; // THIS LOGIC IS FLIPPED FROM OTHER BRANCHES
 
     assign load_addr = (state == str3) ? 1'b1 :
