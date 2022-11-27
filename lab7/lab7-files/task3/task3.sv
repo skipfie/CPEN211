@@ -408,7 +408,7 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
 
     assign sel_addr = (state == str5) ? 1'b0 : 
                       (state == str4) ? 1'b0 :
-                      (state == str3) ? 1'b0 :
+                      //(state == str3) ? 1'b0 :
                       (state == ldr4) ? 1'b0 : 1'b1; // THIS LOGIC IS FLIPPED FROM OTHER BRANCHES
 
     assign load_addr = (state == str3) ? 1'b1 :
