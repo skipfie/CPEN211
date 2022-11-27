@@ -16,7 +16,6 @@ module task3(input clk, input rst_n, input [7:0] start_pc, output[15:0] out);
     en_A = 1 
     
     str4: pass the value of Rd to datapath out
-    load_addr = 0 to not interfer with Rn in the DAR
     sel_A = 0 
     en_C = 1
 
