@@ -1,5 +1,5 @@
 Assembler report for task3
-Sun Nov 27 22:31:15 2022
+Sun Nov 27 22:37:02 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Nov 27 22:31:15 2022 ;
+; Assembler Status      ; Successful - Sun Nov 27 22:37:02 2022 ;
 ; Revision Name         ; task3                                 ;
 ; Top-level Entity Name ; task3                                 ;
 ; Family                ; Cyclone V                             ;
@@ -77,14 +77,14 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Nov 27 22:30:59 2022
+    Info: Processing started: Sun Nov 27 22:36:56 2022
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off task3 -c task3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4828 megabytes
-    Info: Processing ended: Sun Nov 27 22:31:16 2022
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:13
+    Info: Processing ended: Sun Nov 27 22:37:02 2022
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:06
 
 
