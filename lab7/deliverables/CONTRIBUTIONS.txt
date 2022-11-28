@@ -1,2 +1,2 @@
-Partner 1: modified datapath, modified alu, controller, controller tb, generate vo, debug
-Partner 2: modified datapath, modified alu, cpu, cpu tb, idecoder, idecoder tb, debug
+Partner 1: task1, task3, task1 vo, task2 vo, task3 vo, debug
+Partner 2: task1, task1 tb, task2, task2 tb, task3 tb debug
