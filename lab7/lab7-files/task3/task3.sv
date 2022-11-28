@@ -246,7 +246,7 @@ module shifter(input [15:0] shift_in, input [1:0] shift_op, output reg [15:0] sh
     end
 endmodule: shifter
 
-module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op, input [2:0] shift_op_decoder,
+module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op, input [1:0] shift_op_decoder,
                   output reg load_pc, output reg load_ir, output reg load_addr, //waiting in lab6
                   output reg ram_w_en, output reg sel_addr, output reg clear_pc, 
                   output reg [1:0] reg_sel, output reg [1:0] wb_sel, output reg w_en,
