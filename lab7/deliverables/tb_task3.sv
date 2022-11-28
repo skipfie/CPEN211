@@ -61,7 +61,6 @@ module tb_task3(output err);
         check_output(16'b1111_1111_1001_0000, "mvn r1, r0 (~0000 0000 0110 1111)");
 
         //ldr instr
-
         start_pc = 'h2a;
         reset;
         #250;
@@ -72,7 +71,7 @@ module tb_task3(output err);
         #300;
         check_output(6969, "ldr r1, [r0, #1] (testing data inside)");
 
-        // insert tests for str
+        //insert tests for str
         start_pc = 'h33;
         reset;
         #250;
