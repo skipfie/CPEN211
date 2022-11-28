@@ -33,7 +33,7 @@ module tb_task3(output err);
         forever #5 clk = ~clk;
     end
 
-    initial begin/*
+    initial begin
         start_pc = 'h1b; // run prg from from 00 to 1a
         #7; 
         reset;
@@ -69,7 +69,7 @@ module tb_task3(output err);
         start_pc = 'h2e;
         reset;
         #300;
-        check_output(6969, "ldr r1, [r0, #1] (testing data inside)");*/
+        check_output(6969, "ldr r1, [r0, #1] (testing data inside)");
 
         //insert tests for str
         start_pc = 'h33;
