@@ -99,12 +99,15 @@
 
     halt
 
-    mov r0, #127
-    mov r0, r0, LSL#1
-    mov r1, #69
-    str r1, [r0, #1]
-    ldr r3, [r0, #1]
-    mov r4, #13
-    mov r4, r4
+    mov r7, #254
+    ldr r0, [r7, #1] // r0 = n
+    mov r4, r0, LSL#1
+    mov r4, r4, LSL#1 // r1 = n * 4
+    str r7, [r4, #5] // write HALT to correct address (hopefully)
+
+    // start fibonacci
+    //1
+    mov r1, #13      // a = 1
+    mov r1, r1
 
     halt

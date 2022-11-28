@@ -316,7 +316,7 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
             str2: state <= str3;
             str3: state <= str4;
             str4: state <= str5;
-            str5: state <= fd;
+            str5: state <= stall1;
 
             halt: state <= halt;
             default: state <= fd;

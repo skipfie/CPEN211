@@ -85,7 +85,7 @@ module tb_task3(output err);
         start_pc = 'h3f;
         reset;
         #450;
-        check_output(13, "check if prog counter is fucked up")
+        check_output(13, "check if prog counter is fucked up");
 
         #10;
 
