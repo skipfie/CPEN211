@@ -82,6 +82,11 @@ module tb_task3(output err);
         #400;
         check_output(69, "str r1, [r0, #1] (checking data inside is written)");
 
+        start_pc = 'h3f;
+        reset;
+        #450;
+        check_output(13, "check if prog counter is fucked up")
+
         #10;
 
         $display("err is %b", err);

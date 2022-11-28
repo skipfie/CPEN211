@@ -98,3 +98,13 @@
     mov r3, r3
 
     halt
+
+    mov r0, #127
+    mov r0, r0, LSL#1
+    mov r1, #69
+    str r1, [r0, #1]
+    ldr r3, [r0, #1]
+    mov r4, #13
+    mov r4, r4
+
+    halt
