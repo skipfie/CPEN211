@@ -1,2 +1,2 @@
 Partner 1: task1, task3, generated vo files, debug
-Partner 2: task1, task1 tb, task2, task2 tb, task3 tb debug
+Partner 2: task1, task1 tb, task2, task2 tb, task3 tb, debug, fib, task3

@@ -5,7 +5,7 @@ module task3(input clk, input rst_n, input [7:0] start_pc, output[15:0] out);
     reg_sel = 10
     en_A = 1
     
-    str2: compute (shifted) Rn
+    str2: compute Rn with sximm5
     sel_A = 0
     sel_B = 1
     en_C = 1
@@ -51,13 +51,13 @@ module cpu(input clk, input rst_n, input [7:0] start_pc, input [15:0] ram_r_data
     reg [7:0] next_pc;
 
     // for instruction decoder
-    wire [1:0] ALU_op, shift_op;
+    wire [1:0] ALU_op, shift_op_decoder;
     wire [2:0] opcode, r_addr, w_addr;
     wire [15:0] sximm5, sximm8;
 
     // for controller fsm
     wire w_en, en_A, en_B, sel_A, sel_B, en_C, en_status, sel_addr;
-    wire [1:0] reg_sel, wb_sel;
+    wire [1:0] reg_sel, wb_sel, shift_op_controller;
 
     wire load_pc, clear_pc, load_ir, load_addr;
 
@@ -67,21 +67,21 @@ module cpu(input clk, input rst_n, input [7:0] start_pc, input [15:0] ram_r_data
 
     datapath datapath(.clk(clk), .mdata(ram_r_data), .pc(program_counter), .wb_sel(wb_sel),
                       .w_addr(w_addr), .w_en(w_en), .r_addr(r_addr), .en_A(en_A),
-                      .en_B(en_B), .shift_op(shift_op), .sel_A(sel_A), .sel_B(sel_B),
+                      .en_B(en_B), .shift_op(shift_op_controller), .sel_A(sel_A), .sel_B(sel_B),
                       .ALU_op(ALU_op), .en_C(en_C), .en_status(en_status),
                       .sximm8(sximm8), .sximm5(sximm5),
                       .datapath_out(out), .Z_out(Z), .N_out(N), .V_out(V));
 
     idecoder idecoder(.ir(instr_reg), .reg_sel(reg_sel),
-                      .opcode(opcode), .ALU_op(ALU_op), .shift_op(shift_op),
+                      .opcode(opcode), .ALU_op(ALU_op), .shift_op(shift_op_decoder),
                       .sximm5(sximm5), .sximm8(sximm8),
                       .r_addr(r_addr), .w_addr(w_addr));
 
-    controller controller(.clk(clk), .rst_n(rst_n), .opcode(opcode), .ALU_op(ALU_op),
+    controller controller(.clk(clk), .rst_n(rst_n), .opcode(opcode), .ALU_op(ALU_op), .shift_op_decoder(shift_op_decoder),
                           .load_pc(load_pc), .load_ir(load_ir), .load_addr(load_addr),
                           .ram_w_en(ram_w_en), .sel_addr(sel_addr), .clear_pc(clear_pc),
                           .reg_sel(reg_sel), .wb_sel(wb_sel), .w_en(w_en),
-                          .en_A(en_A), .en_B(en_B), .en_C(en_C), .en_status(en_status),
+                          .en_A(en_A), .en_B(en_B), .en_C(en_C), .en_status(en_status), .shift_op_controller(shift_op_controller),
                           .sel_A(sel_A), .sel_B(sel_B));
 
     // muxes
@@ -135,7 +135,7 @@ module datapath(input clk, input [15:0] mdata, input [7:0] pc, input [1:0] wb_se
                 input [2:0] w_addr, input w_en, input [2:0] r_addr, input en_A,
                 input en_B, input [1:0] shift_op, input sel_A, input sel_B,
                 input [1:0] ALU_op, input en_C, input en_status,
-		            input [15:0] sximm8, input [15:0] sximm5,
+		        input [15:0] sximm8, input [15:0] sximm5,
                 output [15:0] datapath_out, output Z_out, output N_out, output V_out);
   //for regfile
   reg [15:0] w_data;
@@ -246,12 +246,12 @@ module shifter(input [15:0] shift_in, input [1:0] shift_op, output reg [15:0] sh
     end
 endmodule: shifter
 
-module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op,
+module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op, input [1:0] shift_op_decoder,
                   output reg load_pc, output reg load_ir, output reg load_addr, //waiting in lab6
                   output reg ram_w_en, output reg sel_addr, output reg clear_pc, 
                   output reg [1:0] reg_sel, output reg [1:0] wb_sel, output reg w_en,
                   output reg en_A, output reg en_B, output reg en_C, output reg en_status,
-                  output reg sel_A, output reg sel_B);
+                  output reg sel_A, output reg sel_B, output reg [1:0] shift_op_controller);
     
     // define the name of each state, fd == fetch & decode, fdr == fd & reset
     enum reg [5:0] {fdr, fd, halt, stall1, stall2, mov1, mov_1, mov_2, mov_3, mvn1, mvn2, mvn3, 
@@ -412,4 +412,16 @@ module controller(input clk, input rst_n, input [2:0] opcode, input [1:0] ALU_op
 
     assign load_addr = (state == str3) ? 1'b1 :
                        (state == ldr3) ? 1'b1 : 1'b0;
+
+    assign shift_op_controller = (state == mov1) ? 2'b00 :
+                                 (state == ldr1) ? 2'b00 :
+                                 (state == ldr2) ? 2'b00 :
+                                 (state == ldr3) ? 2'b00 :
+                                 (state == ldr4) ? 2'b00 :
+                                 (state == ldr5) ? 2'b00 :
+                                 (state == str1) ? 2'b00 :
+                                 (state == str2) ? 2'b00 :
+                                 (state == str3) ? 2'b00 :
+                                 (state == str4) ? 2'b00 :
+                                 (state == str5) ? 2'b00 : shift_op_decoder;
 endmodule: controller
