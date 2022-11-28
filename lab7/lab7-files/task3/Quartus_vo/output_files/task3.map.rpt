@@ -1,5 +1,5 @@
 Analysis & Synthesis report for task3
-Sun Nov 27 22:09:13 2022
+Sun Nov 27 22:28:40 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -51,7 +51,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Nov 27 22:09:13 2022       ;
+; Analysis & Synthesis Status     ; Successful - Sun Nov 27 22:28:40 2022       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; task3                                       ;
 ; Top-level Entity Name           ; task3                                       ;
@@ -163,15 +163,15 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -205,12 +205,12 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Estimate of Logic utilization (ALMs needed) ; 173       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 179       ;
+; Combinational ALUT usage for logic          ; 178       ;
 ;     -- 7 input functions                    ; 32        ;
-;     -- 6 input functions                    ; 25        ;
+;     -- 6 input functions                    ; 26        ;
 ;     -- 5 input functions                    ; 62        ;
-;     -- 4 input functions                    ; 17        ;
-;     -- <=3 input functions                  ; 43        ;
+;     -- 4 input functions                    ; 16        ;
+;     -- <=3 input functions                  ; 42        ;
 ;                                             ;           ;
 ; Dedicated logic registers                   ; 240       ;
 ;                                             ;           ;
@@ -223,7 +223,7 @@ refer to the applicable agreement for further details.
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 256       ;
 ; Total fan-out                               ; 1816      ;
-; Average fan-out                             ; 3.73      ;
+; Average fan-out                             ; 3.74      ;
 +---------------------------------------------+-----------+
 
 
@@ -232,9 +232,9 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                              ; Entity Name     ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------+-----------------+--------------+
-; |task3                                    ; 179 (0)             ; 240 (0)                   ; 4096              ; 0          ; 26   ; 0            ; |task3                                                           ; task3           ; work         ;
-;    |cpu:cpu|                              ; 179 (16)            ; 240 (32)                  ; 0                 ; 0          ; 0    ; 0            ; |task3|cpu:cpu                                                   ; cpu             ; work         ;
-;       |controller:controller|             ; 50 (50)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |task3|cpu:cpu|controller:controller                             ; controller      ; work         ;
+; |task3                                    ; 178 (0)             ; 240 (0)                   ; 4096              ; 0          ; 26   ; 0            ; |task3                                                           ; task3           ; work         ;
+;    |cpu:cpu|                              ; 178 (16)            ; 240 (32)                  ; 0                 ; 0          ; 0    ; 0            ; |task3|cpu:cpu                                                   ; cpu             ; work         ;
+;       |controller:controller|             ; 49 (49)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |task3|cpu:cpu|controller:controller                             ; controller      ; work         ;
 ;       |datapath:datapath|                 ; 109 (35)            ; 176 (48)                  ; 0                 ; 0          ; 0    ; 0            ; |task3|cpu:cpu|datapath:datapath                                 ; datapath        ; work         ;
 ;          |ALU:alu|                        ; 34 (34)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |task3|cpu:cpu|datapath:datapath|ALU:alu                         ; ALU             ; work         ;
 ;          |regfile:regfile|                ; 40 (40)             ; 128 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |task3|cpu:cpu|datapath:datapath|regfile:regfile                 ; regfile         ; work         ;
@@ -462,18 +462,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SLD           ; 24                          ;
 ;     SCLR              ; 2                           ;
 ;     plain             ; 30                          ;
-; arriav_lcell_comb     ; 179                         ;
+; arriav_lcell_comb     ; 178                         ;
 ;     arith             ; 25                          ;
 ;         1 data inputs ; 9                           ;
 ;         5 data inputs ; 16                          ;
 ;     extend            ; 32                          ;
 ;         7 data inputs ; 32                          ;
-;     normal            ; 122                         ;
-;         2 data inputs ; 26                          ;
+;     normal            ; 121                         ;
+;         2 data inputs ; 25                          ;
 ;         3 data inputs ; 8                           ;
-;         4 data inputs ; 17                          ;
+;         4 data inputs ; 16                          ;
 ;         5 data inputs ; 46                          ;
-;         6 data inputs ; 25                          ;
+;         6 data inputs ; 26                          ;
 ; boundary_port         ; 26                          ;
 ; stratixv_ram_block    ; 16                          ;
 ;                       ;                             ;
@@ -487,7 +487,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -497,10 +497,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Nov 27 22:09:04 2022
+    Info: Processing started: Sun Nov 27 22:28:21 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off task3 -c task3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 7 design units, including 7 entities, in source file /cpen211/labs/cpen211/lab7/lab7-files/task3/task3.sv
     Info (12023): Found entity 1: task3 File: C:/CPEN211/Labs/CPEN211/lab7/lab7-files/task3/task3.sv Line: 1
     Info (12023): Found entity 2: cpu File: C:/CPEN211/Labs/CPEN211/lab7/lab7-files/task3/task3.sv Line: 43
@@ -566,15 +566,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 407 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 406 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 365 logic cells
+    Info (21061): Implemented 364 logic cells
     Info (21064): Implemented 16 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4837 megabytes
-    Info: Processing ended: Sun Nov 27 22:09:13 2022
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Peak virtual memory: 4913 megabytes
+    Info: Processing ended: Sun Nov 27 22:28:40 2022
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:42
 
 
