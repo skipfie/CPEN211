@@ -1,5 +1,5 @@
 # CPEN211
-CPEN 211 2022W1 with Prof. Lis
+CPEN 211: Introduction to Microcomputers in 2022W1 session with Professor Miesko Lis
 
 This repository holds lab code written by Joe Li and Marcus Cheng.
 
